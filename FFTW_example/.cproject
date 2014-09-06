@@ -30,7 +30,7 @@
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1902999107" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.317617115" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug">
-								<option id="gnu.c.link.option.libs.956082575" superClass="gnu.c.link.option.libs" valueType="libs">
+								<option id="gnu.c.link.option.libs.956082575" name="Libraries (-l)" superClass="gnu.c.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="fftw3"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.1064956376" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
@@ -328,6 +328,9 @@
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1190173533" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.2084457529" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release">
+								<option id="gnu.c.link.option.libs.1346023611" superClass="gnu.c.link.option.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="fftw3"/>
+								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.468781930" superClass="cdt.managedbuild.tool.gnu.c.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
