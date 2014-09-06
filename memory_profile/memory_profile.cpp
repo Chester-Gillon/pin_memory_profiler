@@ -79,6 +79,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
     std::map<ADDRINT,region_info>::iterator begin_it, end_it, current_it, next_it;
     bool region_processed = false;
     bool region_addrs_changed = false;
+    ADDRINT modified_start_addr = access_start_addr;
 
     if (!memory_regions.empty())
     {
@@ -105,6 +106,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                 end_it = memory_regions.upper_bound(access_end_addr + 1);
                 region_processed = true;
                 region_addrs_changed = true;
+                modified_start_addr = access_start_addr;
             }
             else if ((access_start_addr >= current_it->first) && (access_end_addr <= current_it->second.region_end_addr))
             {
@@ -120,6 +122,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                 current_it->second.total_bytes += bytes_accessed;
                 region_processed = true;
                 region_addrs_changed = true;
+                modified_start_addr = current_it->first;
             }
         }
     }
@@ -131,14 +134,24 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
         new_region.total_bytes = bytes_accessed;
         memory_regions[access_start_addr] = new_region;
         region_addrs_changed = true;
+        modified_start_addr = access_start_addr;
     }
 
     if (region_addrs_changed)
     {
         /* Combine adjacent regions */
-        current_it = memory_regions.begin();
+        begin_it = memory_regions.lower_bound (modified_start_addr);
+        if (begin_it != memory_regions.begin())
+        {
+            --begin_it;
+        }
+
+        current_it = begin_it;
         next_it = current_it;
-        ++next_it;
+        if (next_it != memory_regions.end())
+        {
+            ++next_it;
+        }
         while (next_it != memory_regions.end())
         {
             while ((next_it != memory_regions.end()) && ((current_it->second.region_end_addr + 1) >= next_it->first))
