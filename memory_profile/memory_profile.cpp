@@ -180,12 +180,26 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
 void memory_regions_usage::display (const std::string &prefix)
 {
     std::map<ADDRINT,region_info>::const_iterator it;
+    ADDRINT previous_end_addr = 0;
+    bool first_region = true;
 
     for (it = memory_regions.begin(); it != memory_regions.end(); ++it)
     {
         trace_file << prefix << ",start_addr=" << it->first << ",end_addr=" << it->second.region_end_addr
                 << ",size=" << (it->second.region_end_addr - it->first + 1)
                 << ",total_bytes_accessed=" << it->second.total_bytes << endl;
+        if (first_region)
+        {
+            first_region = false;
+        }
+        else
+        {
+            if ((previous_end_addr + 1) == it->first)
+            {
+                trace_file << prefix << ",**ERROR** merge of adjacent regions failed" << endl;
+            }
+        }
+        previous_end_addr = it->second.region_end_addr;
     }
 }
 
