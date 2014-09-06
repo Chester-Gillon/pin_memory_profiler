@@ -76,14 +76,20 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
 {
     const ADDRINT access_end_addr = access_start_addr + bytes_accessed - 1;
     region_info new_region;
-    std::map<ADDRINT,region_info>::iterator current_it, next_it;
+    std::map<ADDRINT,region_info>::iterator begin_it, end_it, current_it, next_it;
     bool region_processed = false;
     bool region_addrs_changed = false;
 
     if (!memory_regions.empty())
     {
         /* Determine if the memory access overlaps any existing region */
-        for (current_it = memory_regions.begin(); !region_processed && (current_it != memory_regions.end()); ++current_it)
+        begin_it = memory_regions.lower_bound (access_start_addr);
+        if (begin_it != memory_regions.begin())
+        {
+            --begin_it;
+        }
+        end_it = memory_regions.upper_bound(access_end_addr + 1);
+        for (current_it = begin_it; !region_processed && (current_it != end_it); ++current_it)
         {
             if ((access_start_addr < current_it->first) && (access_end_addr >= current_it->first))
             {
@@ -96,6 +102,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                 }
                 memory_regions.erase (current_it);
                 memory_regions[access_start_addr] = new_region;
+                end_it = memory_regions.upper_bound(access_end_addr + 1);
                 region_processed = true;
                 region_addrs_changed = true;
             }

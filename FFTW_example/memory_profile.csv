@@ -9146,7 +9146,7 @@ fft_initialise,memory read,start_addr=0x7fffe59a2e70,end_addr=0x7fffe59a2e7f,siz
 fft_initialise,memory read,start_addr=0x7fffe59a2efc,end_addr=0x7fffe59a2eff,size=0x4,total_bytes_accessed=0x10
 fft_initialise,memory read,start_addr=0x7fffe59a2fa0,end_addr=0x7fffe59a2faf,size=0x10,total_bytes_accessed=0x10
 fft_initialise,memory read,start_addr=0x7fffe59a2fb8,end_addr=0x7fffe59a2fbb,size=0x4,total_bytes_accessed=0x4
-fft_initialise,memory read,start_addr=0x7ffff7ffe680,end_addr=0x7ffff7ffe687,size=0x8,total_bytes_accessed=0x18b8
+fft_initialise,memory read,start_addr=0x7ffff7ffe680,end_addr=0x7ffff7ffe687,size=0x8,total_bytes_accessed=0x58
 fft_initialise,memory read,start_addr=0x7fffffffd128,end_addr=0x7fffffffd14f,size=0x28,total_bytes_accessed=0x50
 fft_initialise,memory read,start_addr=0x7fffffffd158,end_addr=0x7fffffffd163,size=0xc,total_bytes_accessed=0x18
 fft_initialise,memory read,start_addr=0x7fffffffd168,end_addr=0x7fffffffd187,size=0x20,total_bytes_accessed=0x50
@@ -9155,7 +9155,7 @@ fft_initialise,memory read,start_addr=0x7fffffffd1c8,end_addr=0x7fffffffd207,siz
 fft_initialise,memory read,start_addr=0x7fffffffd218,end_addr=0x7fffffffd27f,size=0x68,total_bytes_accessed=0x164
 fft_initialise,memory read,start_addr=0x7fffffffd288,end_addr=0x7fffffffd2d3,size=0x4c,total_bytes_accessed=0xf0
 fft_initialise,memory read,start_addr=0x7fffffffd2d8,end_addr=0x7fffffffd2e3,size=0xc,total_bytes_accessed=0x28
-fft_initialise,memory read,start_addr=0x7fffffffd2e8,end_addr=0x7fffffffdd8f,size=0xaa8,total_bytes_accessed=0x1461ef
+fft_initialise,memory read,start_addr=0x7fffffffd2e8,end_addr=0x7fffffffdd8f,size=0xaa8,total_bytes_accessed=0x14582f
 fft_initialise,memory read,start_addr=0x7fffffffdd98,end_addr=0x7fffffffdd9f,size=0x8,total_bytes_accessed=0x20
 fft_initialise,memory read,start_addr=0x7fffffffdda8,end_addr=0x7fffffffddb7,size=0x10,total_bytes_accessed=0x10
 fft_initialise,memory read,start_addr=0x7fffffffded8,end_addr=0x7fffffffe06f,size=0x198,total_bytes_accessed=0x198
@@ -9209,9 +9209,9 @@ fft_initialise,memory read,start_addr=0x7fffffffecc8,end_addr=0x7fffffffecc8,siz
 fft_initialise,memory read,start_addr=0x7fffffffecf8,end_addr=0x7fffffffecf8,size=0x1,total_bytes_accessed=0x1
 fft_initialise,memory read,start_addr=0x7fffffffed08,end_addr=0x7fffffffed08,size=0x1,total_bytes_accessed=0x1
 fft_initialise,memory read,start_addr=0x7fffffffeeb9,end_addr=0x7fffffffeeb9,size=0x1,total_bytes_accessed=0x1
-fft_initialise,memory read,start_addr=0xffffffffff600180,end_addr=0xffffffffff600183,size=0x4,total_bytes_accessed=0x4f0
-fft_initialise,memory read,start_addr=0xffffffffff600188,end_addr=0xffffffffff600197,size=0x10,total_bytes_accessed=0x76c
-fft_initialise,memory read,start_addr=0xffffffffff6001a0,end_addr=0xffffffffff6001bf,size=0x20,total_bytes_accessed=0x18b8
+fft_initialise,memory read,start_addr=0xffffffffff600180,end_addr=0xffffffffff600183,size=0x4,total_bytes_accessed=0x10
+fft_initialise,memory read,start_addr=0xffffffffff600188,end_addr=0xffffffffff600197,size=0x10,total_bytes_accessed=0x1c
+fft_initialise,memory read,start_addr=0xffffffffff6001a0,end_addr=0xffffffffff6001bf,size=0x20,total_bytes_accessed=0x58
 fft_initialise,memory write,start_addr=0x601270,end_addr=0x60127f,size=0x10,total_bytes_accessed=0x10
 fft_initialise,memory write,start_addr=0x6012a8,end_addr=0x6012af,size=0x8,total_bytes_accessed=0x8
 fft_initialise,memory write,start_addr=0x6012c8,end_addr=0x6012df,size=0x18,total_bytes_accessed=0x18
@@ -9585,7 +9585,7 @@ fft_initialise,memory write,start_addr=0x7fffffffd198,end_addr=0x7fffffffd207,si
 fft_initialise,memory write,start_addr=0x7fffffffd218,end_addr=0x7fffffffd27f,size=0x68,total_bytes_accessed=0x190
 fft_initialise,memory write,start_addr=0x7fffffffd288,end_addr=0x7fffffffd2d3,size=0x4c,total_bytes_accessed=0xe0
 fft_initialise,memory write,start_addr=0x7fffffffd2d8,end_addr=0x7fffffffd2e3,size=0xc,total_bytes_accessed=0x28
-fft_initialise,memory write,start_addr=0x7fffffffd2e8,end_addr=0x7fffffffdd8f,size=0xaa8,total_bytes_accessed=0x12b4c1
+fft_initialise,memory write,start_addr=0x7fffffffd2e8,end_addr=0x7fffffffdd8f,size=0xaa8,total_bytes_accessed=0x12a141
 fft_initialise,memory write,start_addr=0x7fffffffdd98,end_addr=0x7fffffffdd9f,size=0x8,total_bytes_accessed=0x8
 fft_initialise,memory write,start_addr=0x7fffffffdda8,end_addr=0x7fffffffddb7,size=0x10,total_bytes_accessed=0x10
 set_fft_data,enter
