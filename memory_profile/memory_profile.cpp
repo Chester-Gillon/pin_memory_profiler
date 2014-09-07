@@ -1,9 +1,10 @@
 /*
- * memory_profile.cpp
- *
- *  Created on: 5 Sep 2014
- *      Author: Mr_Halfword
+ * @file memory_profile.cpp
+ * @date 5 Sep 2014
+ * @author Chester Gillon
  */
+
+#include <unistd.h>
 
 #include "pin.H"
 #include <iostream>
@@ -40,6 +41,7 @@ static ADDRINT malloc_return_ip;
  */
 static std::map<ADDRINT,ADDRINT> outstanding_allocations;
 
+/** Used to record the memory profile for either read or writes */
 class memory_regions_usage
 {
 public:
@@ -47,6 +49,7 @@ public:
     void display (const std::string &prefix);
     void record_access (ADDRINT memory_addr, UINT32 bytes_accessed);
 
+    memory_regions_usage() : cache_line_size(sysconf (_SC_LEVEL1_DCACHE_LINESIZE)) {};
 private:
     /** The information maintained for each non-consecutive memory region */
     struct region_info
@@ -55,28 +58,79 @@ private:
         UINT64 region_end_addr;
         /** The total number of bytes which have been accessed in the region */
         UINT64 total_bytes;
+        /** Count of the number of times the region has been extended to cover a incrementing cache line */
+        UINT32 cache_line_increments;
+        /** Count of the number of times the region has been extended to cover a decrementing cache line */
+        UINT32 cache_line_decrements;
     };
 
     /** Which memory regions have been accessed.
      *  Key is the start address, data is the region information
      */
     std::map<ADDRINT,region_info> memory_regions;
+    typedef std::map<ADDRINT,region_info>::iterator region_iter;
+
+    const ADDRINT cache_line_size;
+
+    /**
+     * @details
+     *  Called when an instruction memory access extends the upper address of an existing region,
+     *  to check when the region extends to a new cache line at a higher address.
+     * @param[in,out] it Iterator referencing the region being extended
+     * @param[in] access_end_addr The end address of the memory access
+     */
+    inline void update_addr_inc_cache_line_counts (region_iter &it, const ADDRINT access_end_addr)
+    {
+        const ADDRINT previous_end_cache_line = it->second.region_end_addr / cache_line_size;
+        const ADDRINT access_end_cache_line = access_end_addr / cache_line_size;
+
+        if (access_end_cache_line > previous_end_cache_line)
+        {
+            it->second.cache_line_increments++;
+        }
+    }
+
+    /**
+     * @details
+     *  Called when an instruction memory access extends the lower address of an existing region,
+     *  to check when the region extends to a new cache line at a lower address.
+     * @param[in,out] it Iterator referencing the region being extended
+     * @param[in] access_start_addr The start address of the memory access
+     */
+    inline void update_addr_dec_cache_line_counts (region_iter &it, const ADDRINT access_start_addr)
+    {
+        const ADDRINT previous_start_cache_line = it->first / cache_line_size;
+        const ADDRINT access_start_cache_line = access_start_addr / cache_line_size;
+
+        if (access_start_cache_line < previous_start_cache_line)
+        {
+            it->second.cache_line_decrements++;
+        }
+    }
 };
 
 /** Used to record the memory regions read/written by the current active top level function */
 static memory_regions_usage read_memory_regions;
 static memory_regions_usage write_memory_regions;
 
+/**
+ * @brief Clear the memory profile
+ */
 void memory_regions_usage::clear(void)
 {
     memory_regions.clear();
 }
 
+/**
+ * @brief Called when an instruction reads or write memory to update the memory profile
+ * @param[in] access_start_address Start address read or written
+ * @param[in] bytes_accessed The number of bytes read or written by the instruction
+ */
 void memory_regions_usage::record_access (const ADDRINT access_start_addr, const UINT32 bytes_accessed)
 {
     const ADDRINT access_end_addr = access_start_addr + bytes_accessed - 1;
     region_info new_region;
-    std::map<ADDRINT,region_info>::iterator begin_it, end_it, current_it, next_it;
+    region_iter begin_it, end_it, current_it, next_it;
     bool region_processed = false;
     bool region_addrs_changed = false;
     bool region_merge_complete;
@@ -97,6 +151,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
             if ((access_start_addr < current_it->first) && (access_end_addr >= current_it->first))
             {
                 /* The memory access overlaps the beginning of an existing region */
+                update_addr_dec_cache_line_counts (current_it, access_start_addr);
                 new_region = current_it->second;
                 new_region.total_bytes += bytes_accessed;
                 if (access_end_addr > new_region.region_end_addr)
@@ -120,11 +175,24 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                      (access_end_addr > current_it->second.region_end_addr))
             {
                 /* The memory access overlaps the end of an existing region */
+                update_addr_inc_cache_line_counts (current_it, access_end_addr);
                 current_it->second.region_end_addr = access_end_addr;
                 current_it->second.total_bytes += bytes_accessed;
                 region_processed = true;
                 region_addrs_changed = true;
                 modified_start_addr = current_it->first;
+            }
+            else
+            {
+                /* Update cache line counts for a memory access which will be combined with an adjacent region */
+                if (access_start_addr == (current_it->second.region_end_addr + 1))
+                {
+                    update_addr_inc_cache_line_counts (current_it, access_end_addr);
+                }
+                if ((access_end_addr + 1) == current_it->first)
+                {
+                    update_addr_dec_cache_line_counts (current_it, access_start_addr);
+                }
             }
         }
     }
@@ -134,6 +202,8 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
         /* Insert as a new region */
         new_region.region_end_addr = access_end_addr;
         new_region.total_bytes = bytes_accessed;
+        new_region.cache_line_increments = 0;
+        new_region.cache_line_decrements = 0;
         memory_regions[access_start_addr] = new_region;
         region_addrs_changed = true;
     }
@@ -161,6 +231,8 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                 /* Regions are adjacent - so combine */
                 current_it->second.region_end_addr = next_it->second.region_end_addr;
                 current_it->second.total_bytes += next_it->second.total_bytes;
+                current_it->second.cache_line_increments += next_it->second.cache_line_increments;
+                current_it->second.cache_line_decrements += next_it->second.cache_line_decrements;
                 memory_regions.erase (next_it);
                 next_it = current_it;
                 ++next_it;
@@ -177,6 +249,10 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
     }
 }
 
+/**
+ * @brief Output the the trace file the read or write memory profile
+ * @param[in] prefix Output at the start of each line of trace output to identify the top-level function and if read or write
+ */
 void memory_regions_usage::display (const std::string &prefix)
 {
     std::map<ADDRINT,region_info>::const_iterator it;
@@ -187,7 +263,16 @@ void memory_regions_usage::display (const std::string &prefix)
     {
         trace_file << prefix << ",start_addr=" << it->first << ",end_addr=" << it->second.region_end_addr
                 << ",size=" << (it->second.region_end_addr - it->first + 1)
-                << ",total_bytes_accessed=" << it->second.total_bytes << endl;
+                << ",total_bytes_accessed=" << it->second.total_bytes;
+        if (it->second.cache_line_increments > 0)
+        {
+            trace_file << ",cache_line_increments=" << it->second.cache_line_increments;
+        }
+        if (it->second.cache_line_decrements > 0)
+        {
+            trace_file << ",cache_line_decrements=" << it->second.cache_line_decrements;
+        }
+        trace_file << endl;
         if (first_region)
         {
             first_region = false;
@@ -203,6 +288,13 @@ void memory_regions_usage::display (const std::string &prefix)
     }
 }
 
+/**
+ * @brief Analysis function called when an instruction reads or writes memory
+ * @details When a top-level function is active updates the memory profile
+ * @param[in,out] memory_regions The read or write memory regions to update
+ * @param[in] memory_addr The memory address being read or written
+ * @param[in] bytes_accessed The number of bytes read or written by the instruction
+ */
 static void memory_access_analysis (memory_regions_usage *const memory_regions, ADDRINT memory_addr, UINT32 bytes_accessed)
 {
     if (active_top_level_func_index != -1)
@@ -213,8 +305,10 @@ static void memory_access_analysis (memory_regions_usage *const memory_regions, 
 
 /**
  * @brief Is called for every instruction and instruments memory reads and writes
+ * @details When a top-level function is active updates the memory read / write profiles for the top-level function.
+ * @param[in] arg Instrumentation context - not used
  */
-static void instrument_memory_access (INS ins, void *v)
+static void instrument_memory_access (INS ins, void *arg)
 {
     /* Instruments memory accesses using a predicated call, i.e.
        the instrumentation is called if the instruction will actually be executed.
@@ -249,6 +343,11 @@ static void instrument_memory_access (INS ins, void *v)
     }
 }
 
+/**
+ * @brief Instrumentation function called before entry to a top-level function.
+ * @details Traces entry to the top-level function and re-initialises the memory profile to empty.
+ * @param[in] func_index Index into top_level_func_names[] for the top-level function
+ */
 static void before_top_level_function (ADDRINT func_index)
 {
    if (active_top_level_func_index == -1)
@@ -260,6 +359,11 @@ static void before_top_level_function (ADDRINT func_index)
    }
 }
 
+/**
+ * @brief Instrumentation function called after exit from a top-level function.
+ * @details Outputs the memory profile for the top-level function to the trace file.
+ * @param[in] func_index Index into top_level_func_names[] for the top-level function
+ */
 static void after_top_level_function (ADDRINT func_index)
 {
     if (active_top_level_func_index == (INT32) func_index)
@@ -271,12 +375,23 @@ static void after_top_level_function (ADDRINT func_index)
     }
 }
 
+/**
+ * @brief Instrumentation function called before malloc() to save parameters used in after_malloc()
+ * @param[in] size malloc() parameter for the requested size to be allocated
+ * @param[in] return_ip Return IP for malloc() call, which is traced
+ */
 static void before_malloc (ADDRINT size, ADDRINT return_ip)
 {
     malloc_requested_size = size;
     malloc_return_ip = return_ip;
 }
 
+/**
+ * @brief Instrumentation function called after malloc()
+ * @details Traces the memory allocation, and records the allocation as outstanding.
+ *          Only takes action when a top-level function is active.
+ * @param[in] data_ptr Return value from malloc(), i.e. if non-zero the allocated memory pointer
+ */
 static void after_malloc (ADDRINT data_ptr)
 {
     if ((active_top_level_func_index != -1) && (data_ptr != 0))
@@ -289,6 +404,14 @@ static void after_malloc (ADDRINT data_ptr)
     malloc_return_ip = 0;
 }
 
+/**
+ * @brief Instrumentation function called before free()
+ * @details Traces the buffer which is being freed, and removes the buffer from the outstanding allocations.
+ *          if the buffer is on the list of outstanding allocations, also traces the size of the allocation being freed.
+ *          Only takes action when a top-level function is active.
+ * @param[in] data_ptr Data buffer being freed
+ * @param[in] return_ip Return IP for free() call, which is traced
+ */
 static void before_free (ADDRINT data_ptr, ADDRINT return_ip)
 {
     if (active_top_level_func_index != -1)
@@ -309,6 +432,12 @@ static void before_free (ADDRINT data_ptr, ADDRINT return_ip)
     }
 }
 
+/**
+ * @brief Called at image load to insert instrumentation for a "top level" function in the program under test
+ * @details The memory profile is gather for each "top level" function, where the top level functions are assumed
+ *          to be called in series, i.e. not nested.
+ * @param[in] image The image being loaded
+ */
 static void hook_top_level_function (IMG image, const char *func_name)
 {
     const size_t func_index = top_level_func_names.size();
@@ -329,6 +458,9 @@ static void hook_top_level_function (IMG image, const char *func_name)
     }
 }
 
+/**
+ * @brief Called at image load to insert instrumentation for the malloc() and free() memory allocation functions
+ */
 static void hook_memory_allocation (IMG image)
 {
     RTN malloc_rtn = RTN_FindByName (image, "malloc");
@@ -357,6 +489,11 @@ static void hook_memory_allocation (IMG image)
     }
 }
 
+/**
+ * @brief Called on a image load to instrument fixed functions
+ * @param[in] image The image being loaded
+ * @param[in] arg Instrumentation context - not used
+ */
 static void image_insert_calls (IMG image, void *arg)
 {
     hook_top_level_function (image, "fft_initialise");
@@ -366,7 +503,12 @@ static void image_insert_calls (IMG image, void *arg)
     hook_memory_allocation (image);
 }
 
-static void display_outstanding_allocations (INT32 code, void *v)
+/**
+ * @brief Called at program exit to display memory allocations which have not been explicitly freed.
+ * @param[in] code Exit status from program - not used
+ * @param[in] arg Instrumentation context - not used
+ */
+static void display_outstanding_allocations (INT32 code, void *arg)
 {
     std::map<ADDRINT,ADDRINT>::const_iterator it;
 
@@ -388,6 +530,9 @@ static INT32 Usage()
     return -1;
 }
 
+/**
+ * @brief Pin tool entry point
+ */
 int main(int argc, char *argv[])
 {
     /* Initialise pin & symbol manager */
