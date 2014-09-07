@@ -2,9 +2,34 @@
  * @file memory_profile.cpp
  * @date 5 Sep 2014
  * @author Chester Gillon
+ * @details
+ *  A demonstration of a Pin tool which instruments a program to determine the memory profile usage
+ *  of a fixed set of "top-level" functions in the FFTW_example program. The information obtained is:
+ *  1) When memory allocations and frees occur. Currently, only malloc() and free() are instrumented
+ *     as they are the memory allocation functions used by the FFTW_example program.
+ *
+ *  2) The unique regions of memory which are read/written by each top level function. For each region
+ *     which is read or written the following is collected:
+ *     a) The total number of bytes accessed in the region.
+ *        If the total number of bytes accessed is greater than the region size, then same region was
+ *        read or written multiple times.
+ *
+ *     b) A histogram of how many accessed to the memory region were made with different sized accesses.
+ *        This can show if vector instructions are being used to access the memory region.
+ *
+ *     c) Counts of how many times the memory region was expanded with incrementing or decrementing cache lines:
+ *        - If only cache_line_increments is non-zero then the region was accessed with increasing addresses.
+ *        - If only cache_line_decrements is non-zero then the region was accessed with decreasing addresses.
+ *        - If both cache_line_increments and cache_line_decrements the region was accessed with non-uniform
+ *          address sequence.
+ *
+ *  The FFTW_example is single threaded so the memory profile is maintained for the whole process.
+ *  This program could be expanded with Pin thread-local-storage to maintain the memory profile for
+ *  individual threads as required.
  */
 
 #include <unistd.h>
+#include <string.h>
 
 #include "pin.H"
 #include <iostream>
@@ -51,6 +76,8 @@ public:
 
     memory_regions_usage() : cache_line_size(sysconf (_SC_LEVEL1_DCACHE_LINESIZE)) {};
 private:
+    static const UINT32 max_mem_access_size = 64;
+
     /** The information maintained for each non-consecutive memory region */
     struct region_info
     {
@@ -62,6 +89,9 @@ private:
         UINT32 cache_line_increments;
         /** Count of the number of times the region has been extended to cover a decrementing cache line */
         UINT32 cache_line_decrements;
+        /** Count of total instruction memory accesses to the region, indexed by the number of bytes in each access.
+         *  Index zero is used for sizes outside of the expected range. */
+        UINT64 mem_access_size_counts[max_mem_access_size + 1];
     };
 
     /** Which memory regions have been accessed.
@@ -107,6 +137,24 @@ private:
             it->second.cache_line_decrements++;
         }
     }
+
+    /**
+     * @brief Called after each instruction memory access to update the count of memory accesses
+     * @param[in,out] region The region to update the counter for
+     * @param[in] bytes_accessed How many bytes were accessed by the instruction
+     */
+    inline void update_access_counts (region_info &region, const UINT32 bytes_accessed)
+    {
+        region.total_bytes += bytes_accessed;
+        if (bytes_accessed <= max_mem_access_size)
+        {
+            region.mem_access_size_counts[bytes_accessed]++;
+        }
+        else
+        {
+            region.mem_access_size_counts[0]++;
+        }
+    }
 };
 
 /** Used to record the memory regions read/written by the current active top level function */
@@ -136,6 +184,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
     bool region_merge_complete;
     ADDRINT modified_start_addr = access_start_addr;
     ADDRINT modified_end_addr = access_end_addr;
+    UINT32 mem_access_size;
 
     if (!memory_regions.empty())
     {
@@ -153,7 +202,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                 /* The memory access overlaps the beginning of an existing region */
                 update_addr_dec_cache_line_counts (current_it, access_start_addr);
                 new_region = current_it->second;
-                new_region.total_bytes += bytes_accessed;
+                update_access_counts (new_region, bytes_accessed);
                 if (access_end_addr > new_region.region_end_addr)
                 {
                     new_region.region_end_addr = access_end_addr;
@@ -168,7 +217,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
             else if ((access_start_addr >= current_it->first) && (access_end_addr <= current_it->second.region_end_addr))
             {
                 /* The memory access is entirely within an existing region */
-                current_it->second.total_bytes += bytes_accessed;
+                update_access_counts (current_it->second, bytes_accessed);
                 region_processed = true;
             }
             else if ((access_start_addr <= current_it->second.region_end_addr) &&
@@ -177,7 +226,7 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                 /* The memory access overlaps the end of an existing region */
                 update_addr_inc_cache_line_counts (current_it, access_end_addr);
                 current_it->second.region_end_addr = access_end_addr;
-                current_it->second.total_bytes += bytes_accessed;
+                update_access_counts (current_it->second, bytes_accessed);
                 region_processed = true;
                 region_addrs_changed = true;
                 modified_start_addr = current_it->first;
@@ -201,9 +250,11 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
     {
         /* Insert as a new region */
         new_region.region_end_addr = access_end_addr;
-        new_region.total_bytes = bytes_accessed;
+        new_region.total_bytes = 0;
         new_region.cache_line_increments = 0;
         new_region.cache_line_decrements = 0;
+        memset (&new_region.mem_access_size_counts, 0, sizeof (new_region.mem_access_size_counts));
+        update_access_counts (new_region, bytes_accessed);
         memory_regions[access_start_addr] = new_region;
         region_addrs_changed = true;
     }
@@ -233,6 +284,11 @@ void memory_regions_usage::record_access (const ADDRINT access_start_addr, const
                 current_it->second.total_bytes += next_it->second.total_bytes;
                 current_it->second.cache_line_increments += next_it->second.cache_line_increments;
                 current_it->second.cache_line_decrements += next_it->second.cache_line_decrements;
+                for (mem_access_size = 0; mem_access_size <= max_mem_access_size; mem_access_size++)
+                {
+                    current_it->second.mem_access_size_counts[mem_access_size] +=
+                            next_it->second.mem_access_size_counts[mem_access_size];
+                }
                 memory_regions.erase (next_it);
                 next_it = current_it;
                 ++next_it;
@@ -258,6 +314,7 @@ void memory_regions_usage::display (const std::string &prefix)
     std::map<ADDRINT,region_info>::const_iterator it;
     ADDRINT previous_end_addr = 0;
     bool first_region = true;
+    UINT32 mem_access_size;
 
     for (it = memory_regions.begin(); it != memory_regions.end(); ++it)
     {
@@ -271,6 +328,18 @@ void memory_regions_usage::display (const std::string &prefix)
         if (it->second.cache_line_decrements > 0)
         {
             trace_file << ",cache_line_decrements=" << it->second.cache_line_decrements;
+        }
+        if (it->second.mem_access_size_counts[0] > 0)
+        {
+            trace_file << ",unknown size accesses=" << it->second.mem_access_size_counts[0];
+        }
+        for (mem_access_size = 1; mem_access_size <= max_mem_access_size; mem_access_size++)
+        {
+            if (it->second.mem_access_size_counts[mem_access_size] > 0)
+            {
+                trace_file << "," << dec << mem_access_size << hex << " byte accesses="
+                        << it->second.mem_access_size_counts[mem_access_size];
+            }
         }
         trace_file << endl;
         if (first_region)
