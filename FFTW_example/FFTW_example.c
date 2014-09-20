@@ -9,6 +9,7 @@
 
 #include <stdlib.h>
 #include <complex.h>
+#include <stdio.h>
 #include <fftw3.h>
 
 #define N 65536

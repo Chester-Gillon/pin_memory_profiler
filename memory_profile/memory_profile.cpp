@@ -5,7 +5,7 @@
  * @details
  *  A demonstration of a Pin tool which instruments a program to determine the memory profile usage
  *  of a fixed set of "top-level" functions in the FFTW_example program. The information obtained is:
- *  1) When memory allocations and frees occur. Currently, only malloc() and free() are instrumented
+ *  1) When memory allocations and frees occur. Currently, only malloc(), memalign() and free() are instrumented
  *     as they are the memory allocation functions used by the FFTW_example program.
  *
  *  2) The unique regions of memory which are read/written by each top level function. For each region
@@ -59,6 +59,15 @@ static ADDRINT malloc_requested_size = 0;
 
 /** Return Instruction Pointer at entry to malloc */
 static ADDRINT malloc_return_ip;
+
+/** The alignment requested at entry to memalign, to correlate with the allocated address at exit from memalign */
+static ADDRINT memalign_boundary = 0;
+
+/** The allocation size requested at entry to memalign, to correlate with the allocated address at exit from memalign */
+static ADDRINT memalign_requested_size = 0;
+
+/** Return Instruction Pointer at entry to memalign */
+static ADDRINT memalign_return_ip;
 
 /** Records memory allocations, which are then removed when freed.
  *  Used to report memory which is allocated but not freed upon program completion.
@@ -474,6 +483,40 @@ static void after_malloc (ADDRINT data_ptr)
 }
 
 /**
+ * @brief Instrumention function called before memalign() to save parameters used in after_malloc()
+ * @param[in] boundary memalign() parameter for the alignment
+ * @param[in] size memalign() parameter for the allocation size
+ * @param[in] return_ip Return IP for memalign() call, which is traced
+ */
+static void before_memalign (ADDRINT boundary, ADDRINT size, ADDRINT return_ip)
+{
+    memalign_boundary = boundary;
+    memalign_requested_size = size;
+    memalign_return_ip = return_ip;
+}
+
+/**
+ * @brief Instrumentation function called after memalign()
+ * @details Traces the memory allocation, and records the allocation as outstanding.
+ *          Only takes action when a top-level function is active.
+ * @param[in] data_ptr Return value from memalign(), i.e. if non-zero the allocated memory pointer
+ */
+static void after_memalign (ADDRINT data_ptr)
+{
+    if ((active_top_level_func_index != -1) && (data_ptr != 0))
+    {
+        outstanding_allocations[data_ptr] = memalign_requested_size;
+        trace_file << top_level_func_names[active_top_level_func_index] << ",memalign,boundary=" << memalign_boundary
+                << ",size=" << memalign_requested_size
+                << ",data_ptr=" << data_ptr << ",caller=" << RTN_FindNameByAddress (memalign_return_ip) << endl;
+    }
+
+    memalign_boundary = 0;
+    memalign_requested_size = 0;
+    memalign_return_ip = 0;
+}
+
+/**
  * @brief Instrumentation function called before free()
  * @details Traces the buffer which is being freed, and removes the buffer from the outstanding allocations.
  *          if the buffer is on the list of outstanding allocations, also traces the size of the allocation being freed.
@@ -544,6 +587,21 @@ static void hook_memory_allocation (IMG image)
                         IARG_FUNCRET_EXITPOINT_VALUE,
                         IARG_END);
         RTN_Close (malloc_rtn);
+    }
+
+    RTN memalign_rtn = RTN_FindByName (image, "memalign");
+    if (RTN_Valid (memalign_rtn))
+    {
+        RTN_Open (memalign_rtn);
+        RTN_InsertCall (memalign_rtn, IPOINT_BEFORE, (AFUNPTR) before_memalign,
+                        IARG_FUNCARG_ENTRYPOINT_VALUE, 0,
+                        IARG_FUNCARG_ENTRYPOINT_VALUE, 1,
+                        IARG_RETURN_IP,
+                        IARG_END);
+        RTN_InsertCall (memalign_rtn, IPOINT_AFTER, (AFUNPTR) after_memalign,
+                        IARG_FUNCRET_EXITPOINT_VALUE,
+                        IARG_END);
+        RTN_Close (memalign_rtn);
     }
 
     RTN free_rtn = RTN_FindByName (image, "free");
