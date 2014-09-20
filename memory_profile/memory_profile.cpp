@@ -170,6 +170,9 @@ private:
 static memory_regions_usage read_memory_regions;
 static memory_regions_usage write_memory_regions;
 
+/** Used to record the memory regions prefetched using cache-hint instructions by the current active top level function */
+static memory_regions_usage prefetch_memory_regions;
+
 /**
  * @brief Clear the memory profile
  */
@@ -398,25 +401,36 @@ static void instrument_memory_access (INS ins, void *arg)
     /* Iterate over each memory operand of the instruction. */
     for (UINT32 mem_op = 0; mem_op < mem_operands; mem_op++)
     {
-        if (INS_MemoryOperandIsRead (ins, mem_op))
+        if (INS_IsPrefetch (ins))
         {
             INS_InsertPredicatedCall (ins, IPOINT_BEFORE, (AFUNPTR) memory_access_analysis,
-                                      IARG_PTR, &read_memory_regions,
+                                      IARG_PTR, &prefetch_memory_regions,
                                       IARG_MEMORYOP_EA, mem_op,
                                       IARG_MEMORYREAD_SIZE,
                                       IARG_END);
         }
-
-        /* Note that in some architectures a single memory operand can be
-           both read and written (for instance incl (%eax) on IA-32)
-           In that case we instrument it once for read and once for write. */
-        if (INS_MemoryOperandIsWritten (ins, mem_op))
+        else
         {
-            INS_InsertPredicatedCall (ins, IPOINT_BEFORE, (AFUNPTR) memory_access_analysis,
-                                      IARG_PTR, &write_memory_regions,
-                                      IARG_MEMORYOP_EA, mem_op,
-                                      IARG_MEMORYWRITE_SIZE,
-                                      IARG_END);
+            if (INS_MemoryOperandIsRead (ins, mem_op))
+            {
+                INS_InsertPredicatedCall (ins, IPOINT_BEFORE, (AFUNPTR) memory_access_analysis,
+                                          IARG_PTR, &read_memory_regions,
+                                          IARG_MEMORYOP_EA, mem_op,
+                                          IARG_MEMORYREAD_SIZE,
+                                          IARG_END);
+            }
+
+            /* Note that in some architectures a single memory operand can be
+               both read and written (for instance incl (%eax) on IA-32)
+               In that case we instrument it once for read and once for write. */
+            if (INS_MemoryOperandIsWritten (ins, mem_op))
+            {
+                INS_InsertPredicatedCall (ins, IPOINT_BEFORE, (AFUNPTR) memory_access_analysis,
+                                          IARG_PTR, &write_memory_regions,
+                                          IARG_MEMORYOP_EA, mem_op,
+                                          IARG_MEMORYWRITE_SIZE,
+                                          IARG_END);
+            }
         }
     }
 }
@@ -433,6 +447,7 @@ static void before_top_level_function (ADDRINT func_index)
        trace_file << top_level_func_names[func_index] << ",enter" << endl;
        read_memory_regions.clear();
        write_memory_regions.clear();
+       prefetch_memory_regions.clear();
        active_top_level_func_index = func_index;
    }
 }
@@ -449,6 +464,7 @@ static void after_top_level_function (ADDRINT func_index)
         trace_file << top_level_func_names[func_index] << ",exit" << endl;
         read_memory_regions.display(top_level_func_names[func_index] + ",memory read");
         write_memory_regions.display(top_level_func_names[func_index] + ",memory write");
+        prefetch_memory_regions.display(top_level_func_names[func_index] + ",memory prefetch");
         active_top_level_func_index = -1;
     }
 }
@@ -625,6 +641,7 @@ static void image_insert_calls (IMG image, void *arg)
 {
     hook_top_level_function (image, "fft_initialise");
     hook_top_level_function (image, "set_fft_data");
+    hook_top_level_function (image, "copy_input_data");
     hook_top_level_function (image, "fft_execute");
     hook_top_level_function (image, "fft_free");
     hook_memory_allocation (image);
