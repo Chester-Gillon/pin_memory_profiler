@@ -14,7 +14,7 @@ make check
 sudo make install
 
 
-1) out-of-place complex double forward FFT run, where FFT_example was the current working directory:
+1) out-of-place complex double forward FFT run, where FFTW_example was the current working directory:
 /usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTW_example
 Out of place selected
 fftw_plan_dft_1d returned 0x77df80
@@ -54,7 +54,7 @@ fft_initialise,memalign,boundary=0x20,size=0x100000,data_ptr=0x7fffe4b95040,call
 b) Initialised with random values with C code one double at a time, with an incrementing address:
 set_fft_data,memory write,start_addr=0x7fffe4b95040,end_addr=0x7fffe4c9503f,size=0x100000,total_bytes_accessed=0x100000,cache_line_increments=0x3fff,8 byte accesses=0x20000
 
-c) Read during each FFT execution. Read one double complex, with mainly incrementing addresses. Each double is read once, using 16 byte accesses so may be using SSE vectors:
+c) Read during each FFT execution. Read one double complex at time, with mainly incrementing addresses. Each double is read once, using 16 byte accesses so may be using SSE vectors:
 fft_execute,memory read,start_addr=0x7fffe4b95040,end_addr=0x7fffe4c9503f,size=0x100000,total_bytes_accessed=0x100000,cache_line_increments=0x3800,cache_line_decrements=0x7ff,16 byte accesses=0x10000
 
 d) Freed during termination:
@@ -74,7 +74,7 @@ fft_execute,memory read,start_addr=0x7fffe4a8b040,end_addr=0x7fffe4b8b03f,size=0
 *written* 3 times during each FFT execution, with a mix of incrementing and decrementing addresses. May be one write with 16 byte SSE vectors and two writes with 32 byte AVX vectors:
 fft_execute,memory write,start_addr=0x7fffe4a8b040,end_addr=0x7fffe4b8b03f,size=0x100000,total_bytes_accessed=0x300000,cache_line_increments=0x1ff,cache_line_decrements=0x3e00,16 byte accesses=0x10000,32 byte accesses=0x10000
 
-i.e. the output buffer from the FFT is read/written multiple times during the FFT execution. All accesses are 16 or 32 bytes so a sign of SSE and AVXn of vector instructions.
+i.e. the output buffer from the FFT is read/written multiple times during the FFT execution. All accesses are 16 or 32 bytes so a sign of SSE and AVX of vector instructions.
 
 d) Freed during termination:
 fft_free,free,data_ptr=0x7fffe4a8b040,size=0x100000,caller=fft_free
@@ -86,7 +86,7 @@ fft_execute,memory read,start_addr=0x7fffe4809040,end_addr=0x7fffe482903f,size=0
 And a 4K region is read 32 times, using 32 byte access so AVX vectors:
 fft_execute,memory read,start_addr=0x78a900,end_addr=0x78b8ff,size=0x1000,total_bytes_accessed=0x20000,cache_line_increments=0x3f,32 byte accesses=0x1000
 
-Believe that these regions contains the FFT "twiddle factors". Allocated from:
+Believe that these regions contain the FFT "twiddle factors". Allocated from:
 fft_initialise,memalign,boundary=0x20,size=0x20000,data_ptr=0x7fffe4809040,caller=fftw_malloc_plain
 fft_initialise,memalign,boundary=0x20,size=0x1000,data_ptr=0x78a900,caller=fftw_malloc_plain
 
@@ -95,7 +95,7 @@ fft_free,free,data_ptr=0x7fffe4809040,size=0x20000,caller=fftw_twiddle_awake
 fft_free,free,data_ptr=0x78a900,size=0x1000,caller=fftw_twiddle_awake
 
 
-2) in-place complex double forward FFT run, where FFT_example was the current working directory:
+2) in-place complex double forward FFT run, where FFTW_example was the current working directory:
 /usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTW_example -in_place
 In place selected
 fftw_plan_dft_1d returned 0x78a5e0
@@ -141,6 +141,7 @@ copy_input_data,memory read,start_addr=0x7fffe4b92040,end_addr=0x7fffe4c9203f,si
 d) Freed during termination:
 fft_free,free,data_ptr=0x7fffe4b92040,size=0x100000,caller=fft_free
 
+
 The 1M output buffer, used for in-place execution, was at address 0x7fffe4a8e040 for the run. Looking at the various stages in the memory profile:
 a) Allocated during initialisation:
 fft_initialise,memalign,boundary=0x20,size=0x100000,data_ptr=0x7fffe4a8e040,caller=fft_initialise
@@ -154,8 +155,10 @@ copy_input_data,memory write,start_addr=0x7fffe4a8e040,end_addr=0x7fffe4b8e03f,s
 d) *read* 5 times during each FFT execution, with a mix of incrementing and decrementing addresses. May be 4 reads with 16 byte SSE vectors, and 1 read with 32 byte AVX vectors:
 fft_execute,memory read,start_addr=0x7fffe4a8e040,end_addr=0x7fffe4b8e03f,size=0x100000,total_bytes_accessed=0x500000,cache_line_increments=0x2ff8,cache_line_decrements=0x1007,16 byte accesses=0x40000,32 byte accesses=0x8000
 
-d) *written* 5 times during each FFT execution, with a mix of incrementing and decrementing addresses. May be 4 writes with 16 byte SSE vectors, and 1 write with 32 byte AVX vectors:
+*written* 5 times during each FFT execution, with a mix of incrementing and decrementing addresses. May be 4 writes with 16 byte SSE vectors, and 1 write with 32 byte AVX vectors:
 fft_execute,memory write,start_addr=0x7fffe4a8e040,end_addr=0x7fffe4b8e03f,size=0x100000,total_bytes_accessed=0x500000,cache_line_increments=0xff8,cache_line_decrements=0x3007,16 byte accesses=0x40000,32 byte accesses=0x8000
+
+i.e. the in-place buffer from the FFT is read/written multiple times during the FFT execution. All accesses are 16 or 32 bytes so a sign of SSE and AVX of vector instructions.
 
 e) Freed during termination:
 fft_free,free,data_ptr=0x7fffe4a8e040,size=0x100000,caller=fft_free
@@ -170,7 +173,7 @@ fft_execute,memory read,start_addr=0x793460,end_addr=0x796c5f,size=0x3800,total_
 And a 112K region 8 times, using 32 byte accesses so AVX vectors:
 fft_execute,memory read,start_addr=0x796ca0,end_addr=0x7b2c9f,size=0x1c000,total_bytes_accessed=0xe0000,cache_line_increments=0x400,cache_line_decrements=0x300,32 byte accesses=0x7000
 
-Believe that these regions contains the FFT "twiddle factors". Allocated from:
+Believe that these regions contain the FFT "twiddle factors". Allocated from:
 fft_initialise,memalign,boundary=0x20,size=0x60000,data_ptr=0x7fffe46e0040,caller=fftw_malloc_plain
 fft_execute,memory read,start_addr=0x793460,end_addr=0x796c5f,size=0x3800,total_bytes_accessed=0xe0000,cache_line_increments=0x80,cache_line_decrements=0x60,32 byte accesses=0x7000
 fft_execute,memory read,start_addr=0x796ca0,end_addr=0x7b2c9f,size=0x1c000,total_bytes_accessed=0xe0000,cache_line_increments=0x400,cache_line_decrements=0x300,32 byte accesses=0x7000
@@ -180,3 +183,169 @@ fft_free,free,data_ptr=0x7fffe46e0040,size=0x60000,caller=fftw_twiddle_awake
 fft_free,free,data_ptr=0x793460,size=0x3800,caller=fftw_twiddle_awake
 fft_free,free,data_ptr=0x796ca0,size=0x1c000,caller=fftw_twiddle_awake
 
+
+3) out-of-place complex float forward FFT run, where FFTWf_example was the current working directory:
+/usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTWf_example
+Out of place selected
+fftwf_plan_dft_1d returned 0x78dfc0
+in=0x7fffe4c16040[524288] out=0x7fffe4b8c040[524288]
+	Command being timed: "setarch x86_64 -R /home/Mr_Halfword/pin-2.14-67254-gcc.4.4.7-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTWf_example"
+	User time (seconds): 1.70
+	System time (seconds): 0.18
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.89
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 134000
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 59210
+	Voluntary context switches: 23
+	Involuntary context switches: 204
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 2840
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+The profile is for a 64K point float complex forward FFT, performed out of place.
+
+The 512K input buffer was at address 0x7fffe4c16040 for the run. Looking at the various stages in the memory profile::
+a) Allocated during initialisation:
+fft_initialise,memalign,boundary=0x20,size=0x80000,data_ptr=0x7fffe4c16040,caller=fft_initialise
+
+b) Initialised with random values with C code one float at a time, with an incrementing address:
+set_fft_data,memory write,start_addr=0x7fffe4c16040,end_addr=0x7fffe4c9603f,size=0x80000,total_bytes_accessed=0x80000,cache_line_increments=0x1fff,4 byte accesses=0x20000
+
+c) Read during each FFT execution. Read one float complex at a time, with mainly incrementing addresses. Each float complex is read once, using 8 byte accesses:
+fft_execute,memory read,start_addr=0x7fffe4c16040,end_addr=0x7fffe4c9603f,size=0x80000,total_bytes_accessed=0x80000,cache_line_increments=0x1800,cache_line_decrements=0x7ff,8 byte accesses=0x10000
+
+d) Freed during termination:
+fft_free,free,data_ptr=0x7fffe4c16040,size=0x80000,caller=fft_free
+
+
+The 512K output buffer was at address 0x7fffe4b8c040 for the run. Looking at the various stages in the memory profile:
+a) Allocated during initialisation:
+fft_initialise,memalign,boundary=0x20,size=0x80000,data_ptr=0x7fffe4b8c040,caller=fft_initialise
+
+b) Initialised with zero values with C code one double at a time, with a decrementing address (decrementing address chosen to demonstrate shown in the memory profile):
+set_fft_data,memory write,start_addr=0x7fffe4b8c040,end_addr=0x7fffe4c0c03f,size=0x80000,total_bytes_accessed=0x80000,cache_line_decrements=0x1fff,4 byte accesses=0x20000
+
+c) *read* 2 times during each FFT execution, with a mix of incrementing and decrementing addresses. Uses 32 byte accesses so using AVX vectors:
+fft_execute,memory read,start_addr=0x7fffe4b8c040,end_addr=0x7fffe4c0c03f,size=0x80000,total_bytes_accessed=0x100000,cache_line_increments=0x1c1f,cache_line_decrements=0x3e0,32 byte accesses=0x8000
+
+*written* 3 times during each FFT execution, with a mix of incrementing and decrementing addresses. May be one write with 8 byte writes and two writes with 32 byte AVX vectors:
+fft_execute,memory write,start_addr=0x7fffe4b8c040,end_addr=0x7fffe4c0c03f,size=0x80000,total_bytes_accessed=0x180000,cache_line_increments=0xff,cache_line_decrements=0x1f00,8 byte accesses=0x10000,32 byte accesses=0x8000
+
+i.e. the output buffer from the FFT is read/written multiple times during the FFT execution. Some accesses are 16 or 32 bytes so a sign of SSE and AVX of vector instructions.
+
+d) Freed during termination:
+fft_free,free,data_ptr=0x7fffe4b8c040,size=0x80000,caller=fft_free
+
+
+Each FFT execution is shown to read a 2K region 32 times, using 32 byte accesses so AVX vectors:
+fft_execute,memory read,start_addr=0x78fe40,end_addr=0x79063f,size=0x800,total_bytes_accessed=0x10000,cache_line_increments=0x1f,32 byte accesses=0x800
+
+Each FFT execution is shown to read a 64K region once, using 32 byte accesses so AVX vectors:
+fft_execute,memory read,start_addr=0x79bb60,end_addr=0x7abb5f,size=0x10000,total_bytes_accessed=0x10000,cache_line_increments=0x400,32 byte accesses=0x800
+
+Believe that these regions contain the FFT "twiddle factors". Allocated from:
+fft_initialise,memalign,boundary=0x20,size=0x800,data_ptr=0x78fe40,caller=fftwf_malloc_plain
+fft_initialise,memalign,boundary=0x20,size=0x10000,data_ptr=0x79bb60,caller=fftwf_malloc_plain
+
+And freed from:
+fft_free,free,data_ptr=0x78fe40,size=0x800,caller=fftwf_twiddle_awake
+fft_free,free,data_ptr=0x79bb60,size=0x10000,caller=fftwf_twiddle_awake
+
+
+4) in-place complex float forward FFT run, where FFTWf_example was the current working directory:
+/usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTWf_example -in_place
+In place selected
+fftwf_plan_dft_1d returned 0x78d180
+in=0x7fffe4c10040[524288] out=0x7fffe4b82040[524288]
+	Command being timed: "setarch x86_64 -R /home/Mr_Halfword/pin-2.14-67254-gcc.4.4.7-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTWf_example -in_place"
+	User time (seconds): 2.21
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 139440
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 66915
+	Voluntary context switches: 23
+	Involuntary context switches: 259
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 3240
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Resulting memory_profile is in FFTW_example/in_place_memory_profile.csv 
+
+The profile is for a 64K point float complex forward FFT, performed in place.
+
+The 512K input buffer was at address 0x7fffe4c10040 for the run. Looking at the various stages in the memory profile:
+a) Allocated during initialisation:
+fft_initialise,memalign,boundary=0x20,size=0x80000,data_ptr=0x7fffe4c10040,caller=fft_initialise
+
+b) Initialised with random values with C code one float at a time, with an incrementing address:
+set_fft_data,memory write,start_addr=0x7fffe4c10040,end_addr=0x7fffe4c9003f,size=0x80000,total_bytes_accessed=0x80000,cache_line_increments=0x1fff,4 byte accesses=0x20000
+
+c) Read during copy_input_data with memcpy one complex float at a time, with an incrementing address:
+copy_input_data,memory read,start_addr=0x7fffe4c10040,end_addr=0x7fffe4c9003f,size=0x80000,total_bytes_accessed=0x80000,cache_line_increments=0x1fff,8 byte accesses=0x10000
+
+d) Freed during termination:
+fft_free,free,data_ptr=0x7fffe4c10040,size=0x80000,caller=fft_free
+
+
+The 512K output buffer, used for in-place execution, was at address 0x7fffe4b82040 for the run. Looking at the various stages in the memory profile:
+a) Allocated during initialisation:
+fft_initialise,memalign,boundary=0x20,size=0x80000,data_ptr=0x7fffe4b82040,caller=fft_initialise
+
+b) Initialised with zero values with C code one float at a time, with a decrementing address (decrementing address chosen to demonstrate shown in the memory profile):
+set_fft_data,memory write,start_addr=0x7fffe4b82040,end_addr=0x7fffe4c0203f,size=0x80000,total_bytes_accessed=0x80000,cache_line_decrements=0x1fff,4 byte accesses=0x20000
+
+c) Write to with a copy of the input data using memcpy() one complex float at a time, with an incrementing address:
+copy_input_data,memory write,start_addr=0x7fffe4b82040,end_addr=0x7fffe4c0203f,size=0x80000,total_bytes_accessed=0x80000,cache_line_increments=0x1fff,8 byte accesses=0x10000
+
+d) *read* twice during each FFT execution, with a mix of incrementing and decrementing addresses. May be 1 read with using 8 byte accesses, and 1 read with 32 byte AVX vectors:
+fft_execute,memory read,start_addr=0x7fffe4b82040,end_addr=0x7fffe4c0203f,size=0x80000,total_bytes_accessed=0x100000,cache_line_increments=0x1800,cache_line_decrements=0x7ff,8 byte accesses=0x10000,32 byte accesses=0x4000
+
+*written* twice during each FFT execution, with a mix of incrementing and decrementing addresses. May be 1 write with 16 byte SSE vectors, and 1 write with 32 byte AVX vectors:
+fft_execute,memory write,start_addr=0x7fffe4b82040,end_addr=0x7fffe4c0203f,size=0x80000,total_bytes_accessed=0x100000,cache_line_increments=0x1fff,16 byte accesses=0x8000,32 byte accesses=0x4000
+
+e) Freed during termination:
+fft_free,free,data_ptr=0x7fffe4b82040,size=0x80000,caller=fft_free
+
+
+Each FFT execution is shown to read a 2K region 32 times, using 32 byte accesses so AVX vectors:
+fft_execute,memory read,start_addr=0x799300,end_addr=0x799aff,size=0x800,total_bytes_accessed=0x10000,cache_line_increments=0x1f,32 byte accesses=0x800
+
+Each FFT execution is shown to read a 64K region once, using 32 byte accesses so AVX vectors:
+fft_execute,memory read,start_addr=0x79c420,end_addr=0x7ac41f,size=0x10000,total_bytes_accessed=0x10000,cache_line_increments=0x400,32 byte accesses=0x800
+
+Believe that these regions contain the FFT "twiddle factors". Allocated from:
+fft_initialise,memalign,boundary=0x20,size=0x800,data_ptr=0x799300,caller=fftwf_malloc_plain
+fft_initialise,memalign,boundary=0x20,size=0x10000,data_ptr=0x79c420,caller=fftwf_malloc_plain
+
+And freed from:
+fft_free,free,data_ptr=0x799300,size=0x800,caller=fftwf_twiddle_awake
+fft_free,free,data_ptr=0x79c420,size=0x10000,caller=fftwf_twiddle_awake
+
+Each fft_execute call dynamically allocates a 513.5K buffer, which is read/written during each FFT execution so is probably a working buffer:
+fft_execute,memalign,boundary=0x20,size=0x80600,data_ptr=0x7ac480,caller=fftwf_malloc_plain
+fft_execute,free,data_ptr=0x7ac480,size=0x80600,caller=apply
+
+(The working buffer is accessed as 32 32K chunks)
