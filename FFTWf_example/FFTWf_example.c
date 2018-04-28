@@ -70,6 +70,7 @@ int main (int argc, char *argv[])
 {
     int iteration;
     int index;
+    char *temp;
 
     in_place = false;
     for (index = 1; index < argc; index++)
@@ -79,6 +80,11 @@ int main (int argc, char *argv[])
             in_place = true;
         }
     }
+
+    /* @todo Perform a dummy allocation and free, so that the first fftw_malloc() call in fft_initialise()
+     *       has its memory allocation traced. */
+    temp = fftwf_malloc (0x100000);
+    fftwf_free (temp);
 
     fft_initialise ();
     set_fft_data ();

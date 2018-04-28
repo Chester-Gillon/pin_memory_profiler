@@ -1,4 +1,6 @@
-.metadata
-Debug
-Release
+RemoteSystemsTempFiles/
+.metadata/
+.settings/
+Debug/
+Release/
 *~
