@@ -14,46 +14,56 @@ make check
 sudo make install
 
 
-The memory_profile project was originally developed using pin-2.14-67254-gcc.4.4.7-linux under CentOS 6.1.
-When attempted to build using gcc 5.4.0 under Ubuntu 16.04.LTS had to add the following compile option to fix the abi version to that
-supported by pin 2.14:
--fabi-version=2
+The memory_profile project was compiled with gcc 5.4.0 and pin-3.6-97554-gcc-linux, and run under Ubuntu 16.04.LTS with a 4.4 series Kernel.
 
-However, attempting to run pin failed with:
-E:4.4 is not a supported linux release
+memory_profile is an Eclipse project, and the compiler and linker options were set to match those used in the pin makefiles.
+The complete options are:
 
-Adding the -injection child option (see https://github.com/s5z/zsim/issues/109) to pin suppresses the error about an unsupported Linux release,
-but then get an undefined symbol:
-/usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTW_example
-E:Unable to load /home/mr_halfword/pin_memory_profiler/FFTW_example/../memory_profile/Release/libmemory_profile.so: /home/mr_halfword/pin_memory_profiler/FFTW_example/../memory_profile/Release/libmemory_profile.so: undefined symbol: _ZN10LEVEL_BASE9KNOBVALUEINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4TypeEv
-Command exited with non-zero status 255
+make all 
+Building file: ../memory_profile.cpp
+Invoking: GCC C++ Compiler
+g++ -DBIGARRAY_MULTIPLIER=1 -DTARGET_IA32E -DHOST_IA32E -DTARGET_LINUX -D_GLIBCXX_USE_CXX11_ABI=0 -DPIN_CRT=1 -D__PIN__=1 -I"/home/mr_halfword/pin-3.6-97554-gcc-linux/source/include/pin" -I"/home/mr_halfword/pin-3.6-97554-gcc-linux/source/include/pin/gen" -I"/home/mr_halfword/pin-3.6-97554-gcc-linux/extras/components/include" -I"/home/mr_halfword/pin-3.6-97554-gcc-linux/extras/xed-intel64/include/xed" -I"/home/mr_halfword/pin-3.6-97554-gcc-linux/source/tools/InstLib" -O3 -Wall -fno-stack-protector -fno-exceptions -funwind-tables -fasynchronous-unwind-tables -fno-rtti -c -fmessage-length=0 -fPIC -fabi-version=2 -isystem /home/mr_halfword/pin-3.6-97554-gcc-linux/extras/stlport/include -isystem /home/mr_halfword/pin-3.6-97554-gcc-linux/extras/libstdc++/include -isystem /home/mr_halfword/pin-3.6-97554-gcc-linux/extras/crt/include -isystem /home/mr_halfword/pin-3.6-97554-gcc-linux/extras/crt/include/arch-x86_64 -isystem /home/mr_halfword/pin-3.6-97554-gcc-linux/extras/crt/include/kernel/uapi -isystem /home/mr_halfword/pin-3.6-97554-gcc-linux/extras/crt/include/kernel/uapi/asm-x86 -MMD -MP -MF"memory_profile.d" -MT"memory_profile.o" -o "memory_profile.o" "../memory_profile.cpp"
+Finished building: ../memory_profile.cpp
+ 
+Building target: libmemory_profile.so
+Invoking: GCC C++ Linker
+g++ -nostdlib -L"/home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt" -L"/home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/lib" -L"/home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/lib-ext" -L"/home/mr_halfword/pin-3.6-97554-gcc-linux/extras/xed-intel64/lib" -Xlinker --hash-style=sysv -Xlinker --version-script="/home/mr_halfword/pin-3.6-97554-gcc-linux/source/include/pin/pintool.ver" -Xlinker -Bsymbolic -shared -o "libmemory_profile.so"  ./memory_profile.o  /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt/crtbeginS.o /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt/crtendS.o /home/mr_halfword/pin-3.6-97554-gcc-linux/source/tools/InstLib/obj-intel64/controller.a -lpin -lxed -lpin3dwarf -ldl-dynamic -lstlport-dynamic -lm-dynamic -lc-dynamic -lunwind-dynamic
+Finished building target: libmemory_profile.so
 
-The undefined symbol error can be removed by adding the following predefined symbol (see https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_dual_abi.html):
-_GLIBCXX_USE_CXX11_ABI=0
+The generated libmemory_profile.so pin tool only has dependencies on the Pin runtime, i.e. doesn't use any standard system libraries:
+(PIN_ROOT=~/pin-3.6-97554-gcc-linux; export LD_LIBRARY_PATH=${PIN_ROOT}/extras/xed-intel64/lib:${PIN_ROOT}/intel64/lib-ext:${PIN_ROOT}/intel64/runtime/pincrt; ldd memory_profile/Release/libmemory_profile.so)
+	linux-vdso.so.1 =>  (0x00007ffdd41e8000)
+	libxed.so => /home/mr_halfword/pin-3.6-97554-gcc-linux/extras/xed-intel64/lib/libxed.so (0x00007fb1cf84b000)
+	libpin3dwarf.so => /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/lib-ext/libpin3dwarf.so (0x00007fb1cf362000)
+	libdl-dynamic.so => /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt/libdl-dynamic.so (0x00007fb1d0336000)
+	libstlport-dynamic.so => /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt/libstlport-dynamic.so (0x00007fb1d0271000)
+	libc-dynamic.so => /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt/libc-dynamic.so (0x00007fb1d01dc000)
+	libunwind-dynamic.so => /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt/libunwind-dynamic.so (0x00007fb1d01c7000)
+	libm-dynamic.so => /home/mr_halfword/pin-3.6-97554-gcc-linux/intel64/runtime/pincrt/libm-dynamic.so (0x00007fb1d0197000)
 
 
 1) out-of-place complex double forward FFT run, where FFTW_example was the current working directory:
-/usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTW_example
+/usr/bin/time -v setarch x86_64 -R ~/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTW_example
 Out of place selected
 fftw_plan_dft_1d returned 0x982040
 in=0x761040[1048576] out=0x8610a0[1048576]
-	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTW_example"
-	User time (seconds): 1.72
-	System time (seconds): 0.14
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.88
+	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTW_example"
+	User time (seconds): 1.80
+	System time (seconds): 0.19
+	Percent of CPU this job got: 95%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.10
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 26168
+	Maximum resident set size (kbytes): 35248
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 54037
-	Voluntary context switches: 30
-	Involuntary context switches: 16
+	Major (requiring I/O) page faults: 15
+	Minor (reclaiming a frame) page faults: 82773
+	Voluntary context switches: 47
+	Involuntary context switches: 8
 	Swaps: 0
-	File system inputs: 0
+	File system inputs: 5584
 	File system outputs: 1096
 	Socket messages sent: 0
 	Socket messages received: 0
@@ -114,28 +124,27 @@ fft_free,free,data_ptr=0x98e9c0,size=0x1000,caller=fftw_twiddle_awake
 
 
 2) in-place complex double forward FFT run, where FFTW_example was the current working directory:
-/usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTW_example -in_place
-In place selected
+/usr/bin/time -v setarch x86_64 -R ~/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTW_example -in_placeIn place selected
 fftw_plan_dft_1d returned 0x983680
 in=0x761040[1048576] out=0x8610a0[1048576]
-	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTW_example -in_place"
-	User time (seconds): 2.24
-	System time (seconds): 0.17
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.42
+	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTW_example -in_place"
+	User time (seconds): 2.28
+	System time (seconds): 0.26
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.53
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 28136
+	Maximum resident set size (kbytes): 37480
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 63120
-	Voluntary context switches: 30
-	Involuntary context switches: 19
+	Minor (reclaiming a frame) page faults: 96272
+	Voluntary context switches: 22
+	Involuntary context switches: 13
 	Swaps: 0
 	File system inputs: 0
-	File system outputs: 2208
+	File system outputs: 2216
 	Socket messages sent: 0
 	Socket messages received: 0
 	Signals delivered: 0
@@ -203,28 +212,27 @@ fft_free,free,data_ptr=0x998460,size=0x1c000,caller=fftw_twiddle_awake
 
 
 3) out-of-place complex float forward FFT run, where FFTWf_example was the current working directory:
-/usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTWf_example
-Out of place selected
+/usr/bin/time -v setarch x86_64 -R ~/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTWf_exampleOut of place selected
 fftwf_plan_dft_1d returned 0x88e080
 in=0x76c040[524288] out=0x7ec0a0[524288]
-	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTWf_example"
-	User time (seconds): 1.61
-	System time (seconds): 0.14
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.76
+	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o out_of_place_memory_profile.csv -- Debug/FFTWf_example"
+	User time (seconds): 1.64
+	System time (seconds): 0.26
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.92
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 25208
+	Maximum resident set size (kbytes): 34280
 	Average resident set size (kbytes): 0
-	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 54113
-	Voluntary context switches: 31
-	Involuntary context switches: 19
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 83018
+	Voluntary context switches: 36
+	Involuntary context switches: 9
 	Swaps: 0
-	File system inputs: 0
-	File system outputs: 1088
+	File system inputs: 3176
+	File system outputs: 1096
 	Socket messages sent: 0
 	Socket messages received: 0
 	Signals delivered: 0
@@ -282,27 +290,27 @@ fft_free,free,data_ptr=0x89bc20,size=0x10000,caller=fftwf_twiddle_awake
 
 
 4) in-place complex float forward FFT run, where FFTWf_example was the current working directory:
-/usr/bin/time -v setarch x86_64 -R ~/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTWf_example -in_place
+/usr/bin/time -v setarch x86_64 -R ~/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTWf_example -in_place 
 In place selected
 fftwf_plan_dft_1d returned 0x88d240
 in=0x76c040[524288] out=0x7ec0a0[524288]
-	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-2.14-67254-gcc.4.4.7-linux/pin -injection child -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTWf_example -in_place"
-	User time (seconds): 1.92
-	System time (seconds): 0.15
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.08
+	Command being timed: "setarch x86_64 -R /home/mr_halfword/pin-3.6-97554-gcc-linux/pin -t ../memory_profile/Release/libmemory_profile.so -o in_place_memory_profile.csv -- Debug/FFTWf_example -in_place"
+	User time (seconds): 1.99
+	System time (seconds): 0.24
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.22
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 26584
+	Maximum resident set size (kbytes): 35856
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 61638
-	Voluntary context switches: 30
-	Involuntary context switches: 15
+	Minor (reclaiming a frame) page faults: 94168
+	Voluntary context switches: 22
+	Involuntary context switches: 9
 	Swaps: 0
-	File system inputs: 0
+	File system inputs: 8
 	File system outputs: 1448
 	Socket messages sent: 0
 	Socket messages received: 0

@@ -2974,194 +2974,194 @@ fft_initialise,memory read,start_addr=0x89b3b0,end_addr=0x89ba7f,size=0x6d0,tota
 fft_initialise,memory read,start_addr=0x89bbe0,end_addr=0x89bbf7,size=0x18,total_bytes_accessed=0x5d,1 byte accesses=0x1,4 byte accesses=0x1,8 byte accesses=0xb
 fft_initialise,memory read,start_addr=0x89bc18,end_addr=0x89bc1f,size=0x8,total_bytes_accessed=0x29,1 byte accesses=0x1,8 byte accesses=0x5
 fft_initialise,memory read,start_addr=0x8abc48,end_addr=0x8abc4f,size=0x8,total_bytes_accessed=0x69,1 byte accesses=0x1,8 byte accesses=0xd
-fft_initialise,memory read,start_addr=0x7fffe4507438,end_addr=0x7fffe450743f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4507838,end_addr=0x7fffe450783f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4507978,end_addr=0x7fffe450797f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4507f64,end_addr=0x7fffe4507f67,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4508304,end_addr=0x7fffe4508307,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4508650,end_addr=0x7fffe4508653,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe45093d4,end_addr=0x7fffe45093db,size=0x8,total_bytes_accessed=0x8,4 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4509c1c,end_addr=0x7fffe4509c1f,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe450a34c,end_addr=0x7fffe450a353,size=0x8,total_bytes_accessed=0x8,4 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe450e608,end_addr=0x7fffe450e60c,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe450e60e,end_addr=0x7fffe450e617,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe45117a0,end_addr=0x7fffe45117a4,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe45117a6,end_addr=0x7fffe45117af,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe45142d8,end_addr=0x7fffe45142dc,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe45142de,end_addr=0x7fffe45142e7,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe45184b0,end_addr=0x7fffe45184cf,size=0x20,total_bytes_accessed=0x21,cache_line_increments=0x1,1 byte accesses=0x1,16 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4519bcb,end_addr=0x7fffe4519bda,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe451c72d,end_addr=0x7fffe451c73c,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe451d8ce,end_addr=0x7fffe451d8dd,size=0x10,total_bytes_accessed=0x22,1 byte accesses=0x2,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe451d970,end_addr=0x7fffe451d98f,size=0x20,total_bytes_accessed=0x21,cache_line_increments=0x1,1 byte accesses=0x1,16 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe451de8e,end_addr=0x7fffe451de8f,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe451e2b0,end_addr=0x7fffe451e2b1,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe451e64a,end_addr=0x7fffe451e64b,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe468ce80,end_addr=0x7fffe468ce80,size=0x1,total_bytes_accessed=0x6,1 byte accesses=0x6
-fft_initialise,memory read,start_addr=0x7fffe468ce82,end_addr=0x7fffe468ce82,size=0x1,total_bytes_accessed=0x4,1 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe468ce84,end_addr=0x7fffe468ce88,size=0x5,total_bytes_accessed=0xf,1 byte accesses=0xf
-fft_initialise,memory read,start_addr=0x7fffe468ce8a,end_addr=0x7fffe468ce8a,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe468ce8c,end_addr=0x7fffe468ce8c,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe468ce8e,end_addr=0x7fffe468ce8e,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe468d100,end_addr=0x7fffe468d103,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe468d36c,end_addr=0x7fffe468d36f,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe468d398,end_addr=0x7fffe468d39b,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe468d40c,end_addr=0x7fffe468d40c,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe468d410,end_addr=0x7fffe468d410,size=0x1,total_bytes_accessed=0x3,1 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe468d415,end_addr=0x7fffe468d415,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4693608,end_addr=0x7fffe4693617,size=0x10,total_bytes_accessed=0x15,1 byte accesses=0x5,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4695130,end_addr=0x7fffe469514f,size=0x20,total_bytes_accessed=0x45,cache_line_increments=0x1,1 byte accesses=0x15,16 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48ca6f8,end_addr=0x7fffe48ca6ff,size=0x8,total_bytes_accessed=0xf8,8 byte accesses=0x1f
-fft_initialise,memory read,start_addr=0x7fffe48ca718,end_addr=0x7fffe48ca71f,size=0x8,total_bytes_accessed=0x68,8 byte accesses=0xd
-fft_initialise,memory read,start_addr=0x7fffe48ca748,end_addr=0x7fffe48ca74f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48ca758,end_addr=0x7fffe48ca75f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48ca770,end_addr=0x7fffe48ca777,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cac18,end_addr=0x7fffe48cac1f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48cac28,end_addr=0x7fffe48cac2f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48cad90,end_addr=0x7fffe48cad97,size=0x8,total_bytes_accessed=0x2218,8 byte accesses=0x443
-fft_initialise,memory read,start_addr=0x7fffe48cadd0,end_addr=0x7fffe48cadd7,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe48cae48,end_addr=0x7fffe48cae4f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cae70,end_addr=0x7fffe48cae7f,size=0x10,total_bytes_accessed=0x40,8 byte accesses=0x8
-fft_initialise,memory read,start_addr=0x7fffe48caeb0,end_addr=0x7fffe48caeb7,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe48caec8,end_addr=0x7fffe48caecf,size=0x8,total_bytes_accessed=0x40,8 byte accesses=0x8
-fft_initialise,memory read,start_addr=0x7fffe48caee0,end_addr=0x7fffe48caee7,size=0x8,total_bytes_accessed=0x2210,8 byte accesses=0x442
-fft_initialise,memory read,start_addr=0x7fffe48caef0,end_addr=0x7fffe48caeff,size=0x10,total_bytes_accessed=0x2a0,8 byte accesses=0x54
-fft_initialise,memory read,start_addr=0x7fffe48caf50,end_addr=0x7fffe48caf57,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48caf70,end_addr=0x7fffe48caf77,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48cb080,end_addr=0x7fffe48cb083,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48cb144,end_addr=0x7fffe48cb147,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cb160,end_addr=0x7fffe48cb177,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
-fft_initialise,memory read,start_addr=0x7fffe48cb1b0,end_addr=0x7fffe48cb1b7,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48cbb00,end_addr=0x7fffe48cbb07,size=0x8,total_bytes_accessed=0x2210,8 byte accesses=0x442
-fft_initialise,memory read,start_addr=0x7fffe48cbb10,end_addr=0x7fffe48cbb17,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cbb20,end_addr=0x7fffe48cbbaf,size=0x90,total_bytes_accessed=0x16cd6,cache_line_increments=0x2,1 byte accesses=0x46,4 byte accesses=0x11a0,8 byte accesses=0x24c2
-fft_initialise,memory read,start_addr=0x7fffe48cbbc8,end_addr=0x7fffe48cbbdf,size=0x18,total_bytes_accessed=0x2d0,8 byte accesses=0x5a
-fft_initialise,memory read,start_addr=0x7fffe48cbbe8,end_addr=0x7fffe48cbc47,size=0x60,total_bytes_accessed=0x2610,cache_line_decrements=0x2,8 byte accesses=0x4c2
-fft_initialise,memory read,start_addr=0x7fffe48cbc50,end_addr=0x7fffe48cbc57,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe48cbc60,end_addr=0x7fffe48cbc87,size=0x28,total_bytes_accessed=0x88,cache_line_increments=0x1,8 byte accesses=0x11
-fft_initialise,memory read,start_addr=0x7fffe48cbc98,end_addr=0x7fffe48cbcb7,size=0x20,total_bytes_accessed=0x68,8 byte accesses=0xd
-fft_initialise,memory read,start_addr=0x7fffe48cbcc8,end_addr=0x7fffe48cbcef,size=0x28,total_bytes_accessed=0x88,8 byte accesses=0x11
-fft_initialise,memory read,start_addr=0x7fffe48cbd00,end_addr=0x7fffe48cbd17,size=0x18,total_bytes_accessed=0x30,8 byte accesses=0x6
-fft_initialise,memory read,start_addr=0x7fffe48cbd28,end_addr=0x7fffe48cbd2f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cbd40,end_addr=0x7fffe48cbd57,size=0x18,total_bytes_accessed=0x30,8 byte accesses=0x6
-fft_initialise,memory read,start_addr=0x7fffe48cbda0,end_addr=0x7fffe48cbdb7,size=0x18,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe48cbdc8,end_addr=0x7fffe48cbdd7,size=0x10,total_bytes_accessed=0x28,8 byte accesses=0x5
-fft_initialise,memory read,start_addr=0x7fffe48cbde0,end_addr=0x7fffe48cbde7,size=0x8,total_bytes_accessed=0x38,8 byte accesses=0x7
-fft_initialise,memory read,start_addr=0x7fffe48cbe08,end_addr=0x7fffe48cbe0f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cbe20,end_addr=0x7fffe48cbe27,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cbec0,end_addr=0x7fffe48cbec7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cbf28,end_addr=0x7fffe48cbf47,size=0x20,total_bytes_accessed=0x50,cache_line_increments=0x1,8 byte accesses=0xa
-fft_initialise,memory read,start_addr=0x7fffe48cbf78,end_addr=0x7fffe48cbf8f,size=0x18,total_bytes_accessed=0x40,cache_line_increments=0x1,8 byte accesses=0x8
-fft_initialise,memory read,start_addr=0x7fffe48cbfb8,end_addr=0x7fffe48cbfbf,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cbfe8,end_addr=0x7fffe48cc00f,size=0x28,total_bytes_accessed=0x68,cache_line_increments=0x1,8 byte accesses=0xd
-fft_initialise,memory read,start_addr=0x7fffe48cc028,end_addr=0x7fffe48cc03f,size=0x18,total_bytes_accessed=0x28,8 byte accesses=0x5
-fft_initialise,memory read,start_addr=0x7fffe48cc058,end_addr=0x7fffe48cc06f,size=0x18,total_bytes_accessed=0x30,8 byte accesses=0x6
-fft_initialise,memory read,start_addr=0x7fffe48cc088,end_addr=0x7fffe48cc08f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe48cc0b8,end_addr=0x7fffe48cc0cf,size=0x18,total_bytes_accessed=0x28,cache_line_increments=0x1,8 byte accesses=0x5
-fft_initialise,memory read,start_addr=0x7fffe48cc0d8,end_addr=0x7fffe48cc0ef,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
-fft_initialise,memory read,start_addr=0x7fffe48cc168,end_addr=0x7fffe48cc18f,size=0x28,total_bytes_accessed=0x68,cache_line_increments=0x1,8 byte accesses=0xd
-fft_initialise,memory read,start_addr=0x7fffe48cc198,end_addr=0x7fffe48cc1cf,size=0x38,total_bytes_accessed=0x108,cache_line_increments=0x1,8 byte accesses=0x21
-fft_initialise,memory read,start_addr=0x7fffe48cc1d8,end_addr=0x7fffe48cc1ef,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
-fft_initialise,memory read,start_addr=0x7fffe48cc208,end_addr=0x7fffe48cc20f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cc228,end_addr=0x7fffe48cc22f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cc248,end_addr=0x7fffe48cc25f,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
-fft_initialise,memory read,start_addr=0x7fffe48cc268,end_addr=0x7fffe48cc26f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cc278,end_addr=0x7fffe48cc2cf,size=0x58,total_bytes_accessed=0x118,cache_line_increments=0x2,8 byte accesses=0x23
-fft_initialise,memory read,start_addr=0x7fffe48cc2d8,end_addr=0x7fffe48cc2df,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cc308,end_addr=0x7fffe48cc30f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48cc358,end_addr=0x7fffe48cc35f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe48cc378,end_addr=0x7fffe48cc387,size=0x10,total_bytes_accessed=0x1818,cache_line_increments=0x1,4 byte accesses=0x606
-fft_initialise,memory read,start_addr=0x7fffe48cc3a0,end_addr=0x7fffe48cc3b7,size=0x18,total_bytes_accessed=0x6050,8 byte accesses=0xc0a
-fft_initialise,memory read,start_addr=0x7fffe48cc620,end_addr=0x7fffe48cc623,size=0x4,total_bytes_accessed=0x160,4 byte accesses=0x58
-fft_initialise,memory read,start_addr=0x7fffe48cc630,end_addr=0x7fffe48cc637,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe48cc640,end_addr=0x7fffe48cc667,size=0x28,total_bytes_accessed=0x5f8,8 byte accesses=0xbf
-fft_initialise,memory read,start_addr=0x7fffe48cc690,end_addr=0x7fffe48cc694,size=0x5,total_bytes_accessed=0x17,1 byte accesses=0x3,4 byte accesses=0x5
-fft_initialise,memory read,start_addr=0x7fffe48cc6a0,end_addr=0x7fffe48cc6a1,size=0x2,total_bytes_accessed=0x6,2 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48cc6a8,end_addr=0x7fffe48cc6b7,size=0x10,total_bytes_accessed=0x60,8 byte accesses=0xc
-fft_initialise,memory read,start_addr=0x7fffe48cc6e0,end_addr=0x7fffe48cc6e3,size=0x4,total_bytes_accessed=0x34,4 byte accesses=0xd
-fft_initialise,memory read,start_addr=0x7fffe48cc6f8,end_addr=0x7fffe48cc6ff,size=0x8,total_bytes_accessed=0x188,8 byte accesses=0x31
-fft_initialise,memory read,start_addr=0x7fffe48cc738,end_addr=0x7fffe48cc73f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe48cd780,end_addr=0x7fffe48cd78f,size=0x10,total_bytes_accessed=0x48,4 byte accesses=0xc,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48cd7a0,end_addr=0x7fffe48cd7af,size=0x10,total_bytes_accessed=0x2b0,8 byte accesses=0x56
-fft_initialise,memory read,start_addr=0x7fffe48cd7f4,end_addr=0x7fffe48cd7ff,size=0xc,total_bytes_accessed=0x6b00,4 byte accesses=0x8da,8 byte accesses=0x8f3
-fft_initialise,memory read,start_addr=0x7fffe48cdf58,end_addr=0x7fffe48cdf5f,size=0x8,total_bytes_accessed=0x28,8 byte accesses=0x5
-fft_initialise,memory read,start_addr=0x7fffe48d0468,end_addr=0x7fffe48d0477,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe48d0730,end_addr=0x7fffe48d0733,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe48d0740,end_addr=0x7fffe48d0743,size=0x4,total_bytes_accessed=0x236c,4 byte accesses=0x8db
-fft_initialise,memory read,start_addr=0x7fffe48d12d0,end_addr=0x7fffe48d12d7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48d1310,end_addr=0x7fffe48d1317,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48d1390,end_addr=0x7fffe48d1397,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe48d1910,end_addr=0x7fffe48d1913,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48d2320,end_addr=0x7fffe48d2323,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48d3768,end_addr=0x7fffe48d376c,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48d376e,end_addr=0x7fffe48d3777,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe48d52d0,end_addr=0x7fffe48d52df,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,16 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe48d5bcd,end_addr=0x7fffe48d5bdc,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe48d5d6e,end_addr=0x7fffe48d5d6f,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4948d80,end_addr=0x7fffe4948d87,size=0x8,total_bytes_accessed=0x50,8 byte accesses=0xa
-fft_initialise,memory read,start_addr=0x7fffe4948da8,end_addr=0x7fffe4948daf,size=0x8,total_bytes_accessed=0x50,8 byte accesses=0xa
-fft_initialise,memory read,start_addr=0x7fffe4948e20,end_addr=0x7fffe4948e27,size=0x8,total_bytes_accessed=0x1a20,8 byte accesses=0x344
-fft_initialise,memory read,start_addr=0x7fffe4948e48,end_addr=0x7fffe4948e4f,size=0x8,total_bytes_accessed=0x68,8 byte accesses=0xd
-fft_initialise,memory read,start_addr=0x7fffe4948e70,end_addr=0x7fffe4948e77,size=0x8,total_bytes_accessed=0x130,8 byte accesses=0x26
-fft_initialise,memory read,start_addr=0x7fffe4948ec8,end_addr=0x7fffe4948ecf,size=0x8,total_bytes_accessed=0x16b0,8 byte accesses=0x2d6
-fft_initialise,memory read,start_addr=0x7fffe494e460,end_addr=0x7fffe494e467,size=0x8,total_bytes_accessed=0x1750,8 byte accesses=0x2ea
-fft_initialise,memory read,start_addr=0x7fffe4959370,end_addr=0x7fffe4959377,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4959398,end_addr=0x7fffe495939f,size=0x8,total_bytes_accessed=0x28,8 byte accesses=0x5
-fft_initialise,memory read,start_addr=0x7fffe49607d0,end_addr=0x7fffe49607d7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe49759c0,end_addr=0x7fffe49759ff,size=0x40,total_bytes_accessed=0x5280,8 byte accesses=0xa50
-fft_initialise,memory read,start_addr=0x7fffe4975a08,end_addr=0x7fffe4975a0f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4975a48,end_addr=0x7fffe4975a77,size=0x30,total_bytes_accessed=0x82c0,8 byte accesses=0x1058
-fft_initialise,memory read,start_addr=0x7fffe4975a88,end_addr=0x7fffe4975a8f,size=0x8,total_bytes_accessed=0x1370,8 byte accesses=0x26e
-fft_initialise,memory read,start_addr=0x7fffe4975ac0,end_addr=0x7fffe4975acf,size=0x10,total_bytes_accessed=0x16b0,8 byte accesses=0x2d6
-fft_initialise,memory read,start_addr=0x7fffe4981348,end_addr=0x7fffe49813a7,size=0x60,total_bytes_accessed=0x60,cache_line_decrements=0x1,8 byte accesses=0xc
-fft_initialise,memory read,start_addr=0x7fffe4982940,end_addr=0x7fffe4982c7f,size=0x340,total_bytes_accessed=0x4d80,cache_line_increments=0xc,8 byte accesses=0x9b0
-fft_initialise,memory read,start_addr=0x7fffe4982d20,end_addr=0x7fffe4982d3f,size=0x20,total_bytes_accessed=0x100,8 byte accesses=0x20
-fft_initialise,memory read,start_addr=0x7fffe4982e00,end_addr=0x7fffe4982e1f,size=0x20,total_bytes_accessed=0x300,8 byte accesses=0x60
-fft_initialise,memory read,start_addr=0x7fffe4982ec0,end_addr=0x7fffe4982edf,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe4982f80,end_addr=0x7fffe4982f9f,size=0x20,total_bytes_accessed=0x400,8 byte accesses=0x80
-fft_initialise,memory read,start_addr=0x7fffe4983060,end_addr=0x7fffe498307f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe4983120,end_addr=0x7fffe498313f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe49831e0,end_addr=0x7fffe49831ff,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe49832a0,end_addr=0x7fffe49832bf,size=0x20,total_bytes_accessed=0x400,8 byte accesses=0x80
-fft_initialise,memory read,start_addr=0x7fffe4983380,end_addr=0x7fffe498339f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe4983440,end_addr=0x7fffe498345f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe4983500,end_addr=0x7fffe498351f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe49835e0,end_addr=0x7fffe49835ff,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
-fft_initialise,memory read,start_addr=0x7fffe4bd8e40,end_addr=0x7fffe4bd8e47,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe4bd8e50,end_addr=0x7fffe4bd8e57,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe4c7f698,end_addr=0x7fffe4c7f69b,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4c7f6c8,end_addr=0x7fffe4c7f6cf,size=0x8,total_bytes_accessed=0x2218,8 byte accesses=0x443
-fft_initialise,memory read,start_addr=0x7fffe4c7f710,end_addr=0x7fffe4c7f71b,size=0xc,total_bytes_accessed=0x2424,4 byte accesses=0x903,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4c7f728,end_addr=0x7fffe4c7f72f,size=0x8,total_bytes_accessed=0x25180,8 byte accesses=0x4a30
-fft_initialise,memory read,start_addr=0x7fffe4cf0000,end_addr=0x7fffe4cf000f,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe4cf0028,end_addr=0x7fffe4cf002f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe4cf0038,end_addr=0x7fffe4cf003f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4cf0068,end_addr=0x7fffe4cf0077,size=0x10,total_bytes_accessed=0x40,8 byte accesses=0x8
-fft_initialise,memory read,start_addr=0x7fffe4cf02e0,end_addr=0x7fffe4cf02e7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4cf02ec,end_addr=0x7fffe4cf030f,size=0x24,total_bytes_accessed=0x68,cache_line_increments=0x1,4 byte accesses=0xc,8 byte accesses=0x7
-fft_initialise,memory read,start_addr=0x7fffe4cf0314,end_addr=0x7fffe4cf0315,size=0x2,total_bytes_accessed=0x5,1 byte accesses=0x5
-fft_initialise,memory read,start_addr=0x7fffe4cf0330,end_addr=0x7fffe4cf0337,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4cf03cc,end_addr=0x7fffe4cf03cf,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4cf0478,end_addr=0x7fffe4cf0487,size=0x10,total_bytes_accessed=0x30,cache_line_increments=0x1,8 byte accesses=0x6
-fft_initialise,memory read,start_addr=0x7fffe4cf0490,end_addr=0x7fffe4cf049f,size=0x10,total_bytes_accessed=0x33,1 byte accesses=0x3,16 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4cf04e0,end_addr=0x7fffe4cf04e7,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4cf0508,end_addr=0x7fffe4cf050f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4cf0548,end_addr=0x7fffe4cf0557,size=0x10,total_bytes_accessed=0x30,8 byte accesses=0x6
-fft_initialise,memory read,start_addr=0x7fffe4cf07c0,end_addr=0x7fffe4cf07c7,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4cf07cc,end_addr=0x7fffe4cf07ef,size=0x24,total_bytes_accessed=0x84,4 byte accesses=0x9,8 byte accesses=0xc
-fft_initialise,memory read,start_addr=0x7fffe4cf07f4,end_addr=0x7fffe4cf07f5,size=0x2,total_bytes_accessed=0x6,1 byte accesses=0x6
-fft_initialise,memory read,start_addr=0x7fffe4cf0810,end_addr=0x7fffe4cf0817,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4cf08ac,end_addr=0x7fffe4cf08af,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffe4cf0a28,end_addr=0x7fffe4cf0a3f,size=0x18,total_bytes_accessed=0x58,8 byte accesses=0xb
-fft_initialise,memory read,start_addr=0x7fffe4cf0a78,end_addr=0x7fffe4cf0a83,size=0xc,total_bytes_accessed=0x20,cache_line_decrements=0x1,4 byte accesses=0x4,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4cf0a88,end_addr=0x7fffe4cf0a8f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory read,start_addr=0x7fffe4cf0aa8,end_addr=0x7fffe4cf0ab3,size=0xc,total_bytes_accessed=0x10,4 byte accesses=0x2,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4cf0ab8,end_addr=0x7fffe4cf0acb,size=0x14,total_bytes_accessed=0x18,cache_line_decrements=0x1,4 byte accesses=0x2,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4cf0ad0,end_addr=0x7fffe4cf0ad7,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4cf0b38,end_addr=0x7fffe4cf0b43,size=0xc,total_bytes_accessed=0xc,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4cf0b80,end_addr=0x7fffe4cf0b8b,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffe4cf0c70,end_addr=0x7fffe4cf0c7b,size=0xc,total_bytes_accessed=0x18,4 byte accesses=0x2,8 byte accesses=0x2
-fft_initialise,memory read,start_addr=0x7fffe4cf0df0,end_addr=0x7fffe4cf0dfb,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3ea6698,end_addr=0x7fffe3ea669b,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe3ea66c8,end_addr=0x7fffe3ea66cf,size=0x8,total_bytes_accessed=0x2218,8 byte accesses=0x443
+fft_initialise,memory read,start_addr=0x7fffe3ea6710,end_addr=0x7fffe3ea671b,size=0xc,total_bytes_accessed=0x2424,4 byte accesses=0x903,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe3ea6728,end_addr=0x7fffe3ea672f,size=0x8,total_bytes_accessed=0x25180,8 byte accesses=0x4a30
+fft_initialise,memory read,start_addr=0x7fffe3eac438,end_addr=0x7fffe3eac43f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eac838,end_addr=0x7fffe3eac83f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eac978,end_addr=0x7fffe3eac97f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eacf64,end_addr=0x7fffe3eacf67,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3ead304,end_addr=0x7fffe3ead307,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3ead650,end_addr=0x7fffe3ead653,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eae3d4,end_addr=0x7fffe3eae3db,size=0x8,total_bytes_accessed=0x8,4 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3eaec1c,end_addr=0x7fffe3eaec1f,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eaf34c,end_addr=0x7fffe3eaf353,size=0x8,total_bytes_accessed=0x8,4 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3eb3608,end_addr=0x7fffe3eb360c,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eb360e,end_addr=0x7fffe3eb3617,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3eb67a0,end_addr=0x7fffe3eb67a4,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eb67a6,end_addr=0x7fffe3eb67af,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3eb92d8,end_addr=0x7fffe3eb92dc,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3eb92de,end_addr=0x7fffe3eb92e7,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3ebd4b0,end_addr=0x7fffe3ebd4cf,size=0x20,total_bytes_accessed=0x21,cache_line_increments=0x1,1 byte accesses=0x1,16 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3ebebcb,end_addr=0x7fffe3ebebda,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3ec172d,end_addr=0x7fffe3ec173c,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3ec28ce,end_addr=0x7fffe3ec28dd,size=0x10,total_bytes_accessed=0x22,1 byte accesses=0x2,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe3ec2970,end_addr=0x7fffe3ec298f,size=0x20,total_bytes_accessed=0x21,cache_line_increments=0x1,1 byte accesses=0x1,16 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe3ec2e8e,end_addr=0x7fffe3ec2e8f,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3ec32b0,end_addr=0x7fffe3ec32b1,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe3ec364a,end_addr=0x7fffe3ec364b,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4031e80,end_addr=0x7fffe4031e80,size=0x1,total_bytes_accessed=0x6,1 byte accesses=0x6
+fft_initialise,memory read,start_addr=0x7fffe4031e82,end_addr=0x7fffe4031e82,size=0x1,total_bytes_accessed=0x4,1 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe4031e84,end_addr=0x7fffe4031e88,size=0x5,total_bytes_accessed=0xf,1 byte accesses=0xf
+fft_initialise,memory read,start_addr=0x7fffe4031e8a,end_addr=0x7fffe4031e8a,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4031e8c,end_addr=0x7fffe4031e8c,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4031e8e,end_addr=0x7fffe4031e8e,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4032100,end_addr=0x7fffe4032103,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe403236c,end_addr=0x7fffe403236f,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4032398,end_addr=0x7fffe403239b,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe403240c,end_addr=0x7fffe403240c,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4032410,end_addr=0x7fffe4032410,size=0x1,total_bytes_accessed=0x3,1 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe4032415,end_addr=0x7fffe4032415,size=0x1,total_bytes_accessed=0x2,1 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4038608,end_addr=0x7fffe4038617,size=0x10,total_bytes_accessed=0x15,1 byte accesses=0x5,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe403a130,end_addr=0x7fffe403a14f,size=0x20,total_bytes_accessed=0x45,cache_line_increments=0x1,1 byte accesses=0x15,16 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe426f6f8,end_addr=0x7fffe426f6ff,size=0x8,total_bytes_accessed=0xf8,8 byte accesses=0x1f
+fft_initialise,memory read,start_addr=0x7fffe426f718,end_addr=0x7fffe426f71f,size=0x8,total_bytes_accessed=0x68,8 byte accesses=0xd
+fft_initialise,memory read,start_addr=0x7fffe426f748,end_addr=0x7fffe426f74f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe426f758,end_addr=0x7fffe426f75f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe426f770,end_addr=0x7fffe426f777,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe426fc18,end_addr=0x7fffe426fc1f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe426fc28,end_addr=0x7fffe426fc2f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe426fd90,end_addr=0x7fffe426fd97,size=0x8,total_bytes_accessed=0x2218,8 byte accesses=0x443
+fft_initialise,memory read,start_addr=0x7fffe426fdd0,end_addr=0x7fffe426fdd7,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe426fe48,end_addr=0x7fffe426fe4f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe426fe70,end_addr=0x7fffe426fe7f,size=0x10,total_bytes_accessed=0x40,8 byte accesses=0x8
+fft_initialise,memory read,start_addr=0x7fffe426feb0,end_addr=0x7fffe426feb7,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe426fec8,end_addr=0x7fffe426fecf,size=0x8,total_bytes_accessed=0x40,8 byte accesses=0x8
+fft_initialise,memory read,start_addr=0x7fffe426fee0,end_addr=0x7fffe426fee7,size=0x8,total_bytes_accessed=0x2210,8 byte accesses=0x442
+fft_initialise,memory read,start_addr=0x7fffe426fef0,end_addr=0x7fffe426feff,size=0x10,total_bytes_accessed=0x2a0,8 byte accesses=0x54
+fft_initialise,memory read,start_addr=0x7fffe426ff50,end_addr=0x7fffe426ff57,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe426ff70,end_addr=0x7fffe426ff77,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe4270080,end_addr=0x7fffe4270083,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe4270144,end_addr=0x7fffe4270147,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4270160,end_addr=0x7fffe4270177,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
+fft_initialise,memory read,start_addr=0x7fffe42701b0,end_addr=0x7fffe42701b7,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe4270b00,end_addr=0x7fffe4270b07,size=0x8,total_bytes_accessed=0x2210,8 byte accesses=0x442
+fft_initialise,memory read,start_addr=0x7fffe4270b10,end_addr=0x7fffe4270b17,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4270b20,end_addr=0x7fffe4270baf,size=0x90,total_bytes_accessed=0x16cd6,cache_line_increments=0x2,1 byte accesses=0x46,4 byte accesses=0x11a0,8 byte accesses=0x24c2
+fft_initialise,memory read,start_addr=0x7fffe4270bc8,end_addr=0x7fffe4270bdf,size=0x18,total_bytes_accessed=0x2d0,8 byte accesses=0x5a
+fft_initialise,memory read,start_addr=0x7fffe4270be8,end_addr=0x7fffe4270c47,size=0x60,total_bytes_accessed=0x2610,cache_line_decrements=0x2,8 byte accesses=0x4c2
+fft_initialise,memory read,start_addr=0x7fffe4270c50,end_addr=0x7fffe4270c57,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4270c60,end_addr=0x7fffe4270c87,size=0x28,total_bytes_accessed=0x88,cache_line_increments=0x1,8 byte accesses=0x11
+fft_initialise,memory read,start_addr=0x7fffe4270c98,end_addr=0x7fffe4270cb7,size=0x20,total_bytes_accessed=0x68,8 byte accesses=0xd
+fft_initialise,memory read,start_addr=0x7fffe4270cc8,end_addr=0x7fffe4270cef,size=0x28,total_bytes_accessed=0x88,8 byte accesses=0x11
+fft_initialise,memory read,start_addr=0x7fffe4270d00,end_addr=0x7fffe4270d17,size=0x18,total_bytes_accessed=0x30,8 byte accesses=0x6
+fft_initialise,memory read,start_addr=0x7fffe4270d28,end_addr=0x7fffe4270d2f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4270d40,end_addr=0x7fffe4270d57,size=0x18,total_bytes_accessed=0x30,8 byte accesses=0x6
+fft_initialise,memory read,start_addr=0x7fffe4270da0,end_addr=0x7fffe4270db7,size=0x18,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe4270dc8,end_addr=0x7fffe4270dd7,size=0x10,total_bytes_accessed=0x28,8 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffe4270de0,end_addr=0x7fffe4270de7,size=0x8,total_bytes_accessed=0x38,8 byte accesses=0x7
+fft_initialise,memory read,start_addr=0x7fffe4270e08,end_addr=0x7fffe4270e0f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4270e20,end_addr=0x7fffe4270e27,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4270ec0,end_addr=0x7fffe4270ec7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4270f28,end_addr=0x7fffe4270f47,size=0x20,total_bytes_accessed=0x50,cache_line_increments=0x1,8 byte accesses=0xa
+fft_initialise,memory read,start_addr=0x7fffe4270f78,end_addr=0x7fffe4270f8f,size=0x18,total_bytes_accessed=0x40,cache_line_increments=0x1,8 byte accesses=0x8
+fft_initialise,memory read,start_addr=0x7fffe4270fb8,end_addr=0x7fffe4270fbf,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4270fe8,end_addr=0x7fffe427100f,size=0x28,total_bytes_accessed=0x68,cache_line_increments=0x1,8 byte accesses=0xd
+fft_initialise,memory read,start_addr=0x7fffe4271028,end_addr=0x7fffe427103f,size=0x18,total_bytes_accessed=0x28,8 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffe4271058,end_addr=0x7fffe427106f,size=0x18,total_bytes_accessed=0x30,8 byte accesses=0x6
+fft_initialise,memory read,start_addr=0x7fffe4271088,end_addr=0x7fffe427108f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe42710b8,end_addr=0x7fffe42710cf,size=0x18,total_bytes_accessed=0x28,cache_line_increments=0x1,8 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffe42710d8,end_addr=0x7fffe42710ef,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
+fft_initialise,memory read,start_addr=0x7fffe4271168,end_addr=0x7fffe427118f,size=0x28,total_bytes_accessed=0x68,cache_line_increments=0x1,8 byte accesses=0xd
+fft_initialise,memory read,start_addr=0x7fffe4271198,end_addr=0x7fffe42711cf,size=0x38,total_bytes_accessed=0x108,cache_line_increments=0x1,8 byte accesses=0x21
+fft_initialise,memory read,start_addr=0x7fffe42711d8,end_addr=0x7fffe42711ef,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
+fft_initialise,memory read,start_addr=0x7fffe4271208,end_addr=0x7fffe427120f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4271228,end_addr=0x7fffe427122f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4271248,end_addr=0x7fffe427125f,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
+fft_initialise,memory read,start_addr=0x7fffe4271268,end_addr=0x7fffe427126f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4271278,end_addr=0x7fffe42712cf,size=0x58,total_bytes_accessed=0x118,cache_line_increments=0x2,8 byte accesses=0x23
+fft_initialise,memory read,start_addr=0x7fffe42712d8,end_addr=0x7fffe42712df,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4271308,end_addr=0x7fffe427130f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4271358,end_addr=0x7fffe427135f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4271378,end_addr=0x7fffe4271387,size=0x10,total_bytes_accessed=0x1818,cache_line_increments=0x1,4 byte accesses=0x606
+fft_initialise,memory read,start_addr=0x7fffe42713a0,end_addr=0x7fffe42713b7,size=0x18,total_bytes_accessed=0x6050,8 byte accesses=0xc0a
+fft_initialise,memory read,start_addr=0x7fffe4271620,end_addr=0x7fffe4271623,size=0x4,total_bytes_accessed=0x160,4 byte accesses=0x58
+fft_initialise,memory read,start_addr=0x7fffe4271630,end_addr=0x7fffe4271637,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe4271640,end_addr=0x7fffe4271667,size=0x28,total_bytes_accessed=0x5f8,8 byte accesses=0xbf
+fft_initialise,memory read,start_addr=0x7fffe4271690,end_addr=0x7fffe4271694,size=0x5,total_bytes_accessed=0x17,1 byte accesses=0x3,4 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffe42716a0,end_addr=0x7fffe42716a1,size=0x2,total_bytes_accessed=0x6,2 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe42716a8,end_addr=0x7fffe42716b7,size=0x10,total_bytes_accessed=0x60,8 byte accesses=0xc
+fft_initialise,memory read,start_addr=0x7fffe42716e0,end_addr=0x7fffe42716e3,size=0x4,total_bytes_accessed=0x34,4 byte accesses=0xd
+fft_initialise,memory read,start_addr=0x7fffe42716f8,end_addr=0x7fffe42716ff,size=0x8,total_bytes_accessed=0x188,8 byte accesses=0x31
+fft_initialise,memory read,start_addr=0x7fffe4271738,end_addr=0x7fffe427173f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4272780,end_addr=0x7fffe427278f,size=0x10,total_bytes_accessed=0x48,4 byte accesses=0xc,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe42727a0,end_addr=0x7fffe42727af,size=0x10,total_bytes_accessed=0x2b0,8 byte accesses=0x56
+fft_initialise,memory read,start_addr=0x7fffe42727f4,end_addr=0x7fffe42727ff,size=0xc,total_bytes_accessed=0x6b00,4 byte accesses=0x8da,8 byte accesses=0x8f3
+fft_initialise,memory read,start_addr=0x7fffe4272f58,end_addr=0x7fffe4272f5f,size=0x8,total_bytes_accessed=0x28,8 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffe4275468,end_addr=0x7fffe4275477,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe4275730,end_addr=0x7fffe4275733,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe4275740,end_addr=0x7fffe4275743,size=0x4,total_bytes_accessed=0x236c,4 byte accesses=0x8db
+fft_initialise,memory read,start_addr=0x7fffe42762d0,end_addr=0x7fffe42762d7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4276310,end_addr=0x7fffe4276317,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4276390,end_addr=0x7fffe4276397,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe4276910,end_addr=0x7fffe4276913,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4277320,end_addr=0x7fffe4277323,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe4278768,end_addr=0x7fffe427876c,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe427876e,end_addr=0x7fffe4278777,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe427a2d0,end_addr=0x7fffe427a2df,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,16 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe427abcd,end_addr=0x7fffe427abdc,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe427ad6e,end_addr=0x7fffe427ad6f,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe42edd80,end_addr=0x7fffe42edd87,size=0x8,total_bytes_accessed=0x50,8 byte accesses=0xa
+fft_initialise,memory read,start_addr=0x7fffe42edda8,end_addr=0x7fffe42eddaf,size=0x8,total_bytes_accessed=0x50,8 byte accesses=0xa
+fft_initialise,memory read,start_addr=0x7fffe42ede20,end_addr=0x7fffe42ede27,size=0x8,total_bytes_accessed=0x1a20,8 byte accesses=0x344
+fft_initialise,memory read,start_addr=0x7fffe42ede48,end_addr=0x7fffe42ede4f,size=0x8,total_bytes_accessed=0x68,8 byte accesses=0xd
+fft_initialise,memory read,start_addr=0x7fffe42ede70,end_addr=0x7fffe42ede77,size=0x8,total_bytes_accessed=0x130,8 byte accesses=0x26
+fft_initialise,memory read,start_addr=0x7fffe42edec8,end_addr=0x7fffe42edecf,size=0x8,total_bytes_accessed=0x16b0,8 byte accesses=0x2d6
+fft_initialise,memory read,start_addr=0x7fffe42f3460,end_addr=0x7fffe42f3467,size=0x8,total_bytes_accessed=0x1750,8 byte accesses=0x2ea
+fft_initialise,memory read,start_addr=0x7fffe42fe370,end_addr=0x7fffe42fe377,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe42fe398,end_addr=0x7fffe42fe39f,size=0x8,total_bytes_accessed=0x28,8 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffe43057d0,end_addr=0x7fffe43057d7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe431a9c0,end_addr=0x7fffe431a9ff,size=0x40,total_bytes_accessed=0x5280,8 byte accesses=0xa50
+fft_initialise,memory read,start_addr=0x7fffe431aa08,end_addr=0x7fffe431aa0f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe431aa48,end_addr=0x7fffe431aa77,size=0x30,total_bytes_accessed=0x82c0,8 byte accesses=0x1058
+fft_initialise,memory read,start_addr=0x7fffe431aa88,end_addr=0x7fffe431aa8f,size=0x8,total_bytes_accessed=0x1370,8 byte accesses=0x26e
+fft_initialise,memory read,start_addr=0x7fffe431aac0,end_addr=0x7fffe431aacf,size=0x10,total_bytes_accessed=0x16b0,8 byte accesses=0x2d6
+fft_initialise,memory read,start_addr=0x7fffe4326348,end_addr=0x7fffe43263a7,size=0x60,total_bytes_accessed=0x60,cache_line_decrements=0x1,8 byte accesses=0xc
+fft_initialise,memory read,start_addr=0x7fffe4327940,end_addr=0x7fffe4327c7f,size=0x340,total_bytes_accessed=0x4d80,cache_line_increments=0xc,8 byte accesses=0x9b0
+fft_initialise,memory read,start_addr=0x7fffe4327d20,end_addr=0x7fffe4327d3f,size=0x20,total_bytes_accessed=0x100,8 byte accesses=0x20
+fft_initialise,memory read,start_addr=0x7fffe4327e00,end_addr=0x7fffe4327e1f,size=0x20,total_bytes_accessed=0x300,8 byte accesses=0x60
+fft_initialise,memory read,start_addr=0x7fffe4327ec0,end_addr=0x7fffe4327edf,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe4327f80,end_addr=0x7fffe4327f9f,size=0x20,total_bytes_accessed=0x400,8 byte accesses=0x80
+fft_initialise,memory read,start_addr=0x7fffe4328060,end_addr=0x7fffe432807f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe4328120,end_addr=0x7fffe432813f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe43281e0,end_addr=0x7fffe43281ff,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe43282a0,end_addr=0x7fffe43282bf,size=0x20,total_bytes_accessed=0x400,8 byte accesses=0x80
+fft_initialise,memory read,start_addr=0x7fffe4328380,end_addr=0x7fffe432839f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe4328440,end_addr=0x7fffe432845f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe4328500,end_addr=0x7fffe432851f,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe43285e0,end_addr=0x7fffe43285ff,size=0x20,total_bytes_accessed=0x200,8 byte accesses=0x40
+fft_initialise,memory read,start_addr=0x7fffe457de40,end_addr=0x7fffe457de47,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe457de50,end_addr=0x7fffe457de57,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe45f1000,end_addr=0x7fffe45f100f,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe45f1028,end_addr=0x7fffe45f102f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe45f1038,end_addr=0x7fffe45f103f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe45f1068,end_addr=0x7fffe45f1077,size=0x10,total_bytes_accessed=0x40,8 byte accesses=0x8
+fft_initialise,memory read,start_addr=0x7fffe45f12e0,end_addr=0x7fffe45f12e7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe45f12ec,end_addr=0x7fffe45f130f,size=0x24,total_bytes_accessed=0x68,cache_line_increments=0x1,4 byte accesses=0xc,8 byte accesses=0x7
+fft_initialise,memory read,start_addr=0x7fffe45f1314,end_addr=0x7fffe45f1315,size=0x2,total_bytes_accessed=0x5,1 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffe45f1330,end_addr=0x7fffe45f1337,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe45f13cc,end_addr=0x7fffe45f13cf,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe45f1478,end_addr=0x7fffe45f1487,size=0x10,total_bytes_accessed=0x30,cache_line_increments=0x1,8 byte accesses=0x6
+fft_initialise,memory read,start_addr=0x7fffe45f1490,end_addr=0x7fffe45f149f,size=0x10,total_bytes_accessed=0x33,1 byte accesses=0x3,16 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe45f14e0,end_addr=0x7fffe45f14e7,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe45f1508,end_addr=0x7fffe45f150f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe45f1548,end_addr=0x7fffe45f1557,size=0x10,total_bytes_accessed=0x30,8 byte accesses=0x6
+fft_initialise,memory read,start_addr=0x7fffe45f17c0,end_addr=0x7fffe45f17c7,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe45f17cc,end_addr=0x7fffe45f17ef,size=0x24,total_bytes_accessed=0x84,4 byte accesses=0x9,8 byte accesses=0xc
+fft_initialise,memory read,start_addr=0x7fffe45f17f4,end_addr=0x7fffe45f17f5,size=0x2,total_bytes_accessed=0x6,1 byte accesses=0x6
+fft_initialise,memory read,start_addr=0x7fffe45f1810,end_addr=0x7fffe45f1817,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe45f18ac,end_addr=0x7fffe45f18af,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffe45f1a28,end_addr=0x7fffe45f1a3f,size=0x18,total_bytes_accessed=0x58,8 byte accesses=0xb
+fft_initialise,memory read,start_addr=0x7fffe45f1a78,end_addr=0x7fffe45f1a83,size=0xc,total_bytes_accessed=0x20,cache_line_decrements=0x1,4 byte accesses=0x4,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe45f1a88,end_addr=0x7fffe45f1a8f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory read,start_addr=0x7fffe45f1aa8,end_addr=0x7fffe45f1ab3,size=0xc,total_bytes_accessed=0x10,4 byte accesses=0x2,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe45f1ab8,end_addr=0x7fffe45f1acb,size=0x14,total_bytes_accessed=0x18,cache_line_decrements=0x1,4 byte accesses=0x2,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe45f1ad0,end_addr=0x7fffe45f1ad7,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe45f1b38,end_addr=0x7fffe45f1b43,size=0xc,total_bytes_accessed=0xc,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe45f1b80,end_addr=0x7fffe45f1b8b,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffe45f1c70,end_addr=0x7fffe45f1c7b,size=0xc,total_bytes_accessed=0x18,4 byte accesses=0x2,8 byte accesses=0x2
+fft_initialise,memory read,start_addr=0x7fffe45f1df0,end_addr=0x7fffe45f1dfb,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
 fft_initialise,memory read,start_addr=0x7ffff7df658c,end_addr=0x7ffff7df6597,size=0xc,total_bytes_accessed=0x24,4 byte accesses=0x9
 fft_initialise,memory read,start_addr=0x7ffff7df659c,end_addr=0x7ffff7df659f,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
 fft_initialise,memory read,start_addr=0x7ffff7df65a8,end_addr=0x7ffff7df65ab,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
@@ -3204,10 +3204,10 @@ fft_initialise,memory read,start_addr=0x7ffff7ffea30,end_addr=0x7ffff7ffea37,siz
 fft_initialise,memory read,start_addr=0x7ffff7ffea88,end_addr=0x7ffff7ffea8f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_initialise,memory read,start_addr=0x7ffff7ffeacc,end_addr=0x7ffff7ffeacf,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
 fft_initialise,memory read,start_addr=0x7ffff7ffed60,end_addr=0x7ffff7ffed6f,size=0x10,total_bytes_accessed=0x33,1 byte accesses=0x3,16 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffffffd174,end_addr=0x7fffffffd177,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory read,start_addr=0x7fffffffd184,end_addr=0x7fffffffd187,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_initialise,memory read,start_addr=0x7fffffffd1d8,end_addr=0x7fffffffdb2f,size=0x958,total_bytes_accessed=0xf9706,cache_line_increments=0x15,cache_line_decrements=0xd,1 byte accesses=0x31c,2 byte accesses=0x11,4 byte accesses=0x122a,8 byte accesses=0x1e8e4,32 byte accesses=0x20
-fft_initialise,memory read,start_addr=0x7fffffffdb38,end_addr=0x7fffffffdb47,size=0x10,total_bytes_accessed=0x28,cache_line_increments=0x1,8 byte accesses=0x5
+fft_initialise,memory read,start_addr=0x7fffffffcff4,end_addr=0x7fffffffcff7,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory read,start_addr=0x7fffffffd004,end_addr=0x7fffffffd007,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_initialise,memory read,start_addr=0x7fffffffd058,end_addr=0x7fffffffd9af,size=0x958,total_bytes_accessed=0xf9706,cache_line_increments=0x15,cache_line_decrements=0xd,1 byte accesses=0x31c,2 byte accesses=0x11,4 byte accesses=0x122a,8 byte accesses=0x1e8e4,32 byte accesses=0x20
+fft_initialise,memory read,start_addr=0x7fffffffd9b8,end_addr=0x7fffffffd9c7,size=0x10,total_bytes_accessed=0x28,cache_line_increments=0x1,8 byte accesses=0x5
 fft_initialise,memory write,start_addr=0x76b038,end_addr=0x76b047,size=0x10,total_bytes_accessed=0x10,cache_line_decrements=0x1,8 byte accesses=0x2
 fft_initialise,memory write,start_addr=0x76b050,end_addr=0x76b057,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_initialise,memory write,start_addr=0x76b068,end_addr=0x76b06f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
@@ -3890,44 +3890,44 @@ fft_initialise,memory write,start_addr=0x89b3b0,end_addr=0x89bbbf,size=0x810,tot
 fft_initialise,memory write,start_addr=0x89bbe0,end_addr=0x89bbf7,size=0x18,total_bytes_accessed=0x38,8 byte accesses=0x7
 fft_initialise,memory write,start_addr=0x89bc10,end_addr=0x8abc1f,size=0x10010,total_bytes_accessed=0x10018,cache_line_increments=0x400,4 byte accesses=0x4000,8 byte accesses=0x3
 fft_initialise,memory write,start_addr=0x8abc48,end_addr=0x8abc4f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory write,start_addr=0x7fffe48cb1b0,end_addr=0x7fffe48cb1b7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory write,start_addr=0x7fffe48cbb10,end_addr=0x7fffe48cbb17,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_initialise,memory write,start_addr=0x7fffe48cbb20,end_addr=0x7fffe48cbbb7,size=0x98,total_bytes_accessed=0x11af0,cache_line_increments=0x2,4 byte accesses=0xd5c,8 byte accesses=0x1cb0
-fft_initialise,memory write,start_addr=0x7fffe48cbbc8,end_addr=0x7fffe48cbc47,size=0x80,total_bytes_accessed=0xb08,cache_line_decrements=0x2,8 byte accesses=0x161
-fft_initialise,memory write,start_addr=0x7fffe48cbc68,end_addr=0x7fffe48cbc87,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
-fft_initialise,memory write,start_addr=0x7fffe48cbc98,end_addr=0x7fffe48cbcb7,size=0x20,total_bytes_accessed=0x60,8 byte accesses=0xc
-fft_initialise,memory write,start_addr=0x7fffe48cbcc8,end_addr=0x7fffe48cbcf7,size=0x30,total_bytes_accessed=0x50,8 byte accesses=0xa
-fft_initialise,memory write,start_addr=0x7fffe48cbd08,end_addr=0x7fffe48cbd17,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cbd28,end_addr=0x7fffe48cbd37,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory write,start_addr=0x7fffe48cbd48,end_addr=0x7fffe48cbd57,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cbda8,end_addr=0x7fffe48cbdb7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cbdc8,end_addr=0x7fffe48cbdd7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cbe08,end_addr=0x7fffe48cbe17,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_initialise,memory write,start_addr=0x7fffe48cbf28,end_addr=0x7fffe48cbf47,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
-fft_initialise,memory write,start_addr=0x7fffe48cbf78,end_addr=0x7fffe48cbf87,size=0x10,total_bytes_accessed=0x20,cache_line_decrements=0x1,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cbfe8,end_addr=0x7fffe48cc007,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
-fft_initialise,memory write,start_addr=0x7fffe48cc028,end_addr=0x7fffe48cc037,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cc058,end_addr=0x7fffe48cc067,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cc0b8,end_addr=0x7fffe48cc0c7,size=0x10,total_bytes_accessed=0x20,cache_line_decrements=0x1,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cc0d8,end_addr=0x7fffe48cc0e7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cc168,end_addr=0x7fffe48cc187,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
-fft_initialise,memory write,start_addr=0x7fffe48cc198,end_addr=0x7fffe48cc1c7,size=0x30,total_bytes_accessed=0xb0,cache_line_decrements=0x1,8 byte accesses=0x16
-fft_initialise,memory write,start_addr=0x7fffe48cc1d8,end_addr=0x7fffe48cc1e7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cc248,end_addr=0x7fffe48cc257,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_initialise,memory write,start_addr=0x7fffe48cc268,end_addr=0x7fffe48cc2c7,size=0x60,total_bytes_accessed=0xb0,cache_line_decrements=0x2,8 byte accesses=0x16
-fft_initialise,memory write,start_addr=0x7fffe48cc378,end_addr=0x7fffe48cc387,size=0x10,total_bytes_accessed=0x10fc,cache_line_increments=0x1,4 byte accesses=0x43f
-fft_initialise,memory write,start_addr=0x7fffe48cc3a0,end_addr=0x7fffe48cc3af,size=0x10,total_bytes_accessed=0x38,8 byte accesses=0x7
-fft_initialise,memory write,start_addr=0x7fffe48cc620,end_addr=0x7fffe48cc623,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_initialise,memory write,start_addr=0x7fffe48cc628,end_addr=0x7fffe48cc667,size=0x40,total_bytes_accessed=0x228,cache_line_increments=0x1,8 byte accesses=0x45
-fft_initialise,memory write,start_addr=0x7fffe48cc6e0,end_addr=0x7fffe48cc6e3,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory write,start_addr=0x7fffe48cd780,end_addr=0x7fffe48cd78f,size=0x10,total_bytes_accessed=0x60,4 byte accesses=0xc,8 byte accesses=0x6
-fft_initialise,memory write,start_addr=0x7fffe48cdf58,end_addr=0x7fffe48cdf5f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe42701b0,end_addr=0x7fffe42701b7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory write,start_addr=0x7fffe4270b10,end_addr=0x7fffe4270b17,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_initialise,memory write,start_addr=0x7fffe4270b20,end_addr=0x7fffe4270bb7,size=0x98,total_bytes_accessed=0x11af0,cache_line_increments=0x2,4 byte accesses=0xd5c,8 byte accesses=0x1cb0
+fft_initialise,memory write,start_addr=0x7fffe4270bc8,end_addr=0x7fffe4270c47,size=0x80,total_bytes_accessed=0xb08,cache_line_decrements=0x2,8 byte accesses=0x161
+fft_initialise,memory write,start_addr=0x7fffe4270c68,end_addr=0x7fffe4270c87,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
+fft_initialise,memory write,start_addr=0x7fffe4270c98,end_addr=0x7fffe4270cb7,size=0x20,total_bytes_accessed=0x60,8 byte accesses=0xc
+fft_initialise,memory write,start_addr=0x7fffe4270cc8,end_addr=0x7fffe4270cf7,size=0x30,total_bytes_accessed=0x50,8 byte accesses=0xa
+fft_initialise,memory write,start_addr=0x7fffe4270d08,end_addr=0x7fffe4270d17,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4270d28,end_addr=0x7fffe4270d37,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory write,start_addr=0x7fffe4270d48,end_addr=0x7fffe4270d57,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4270da8,end_addr=0x7fffe4270db7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4270dc8,end_addr=0x7fffe4270dd7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4270e08,end_addr=0x7fffe4270e17,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_initialise,memory write,start_addr=0x7fffe4270f28,end_addr=0x7fffe4270f47,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
+fft_initialise,memory write,start_addr=0x7fffe4270f78,end_addr=0x7fffe4270f87,size=0x10,total_bytes_accessed=0x20,cache_line_decrements=0x1,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4270fe8,end_addr=0x7fffe4271007,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
+fft_initialise,memory write,start_addr=0x7fffe4271028,end_addr=0x7fffe4271037,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4271058,end_addr=0x7fffe4271067,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe42710b8,end_addr=0x7fffe42710c7,size=0x10,total_bytes_accessed=0x20,cache_line_decrements=0x1,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe42710d8,end_addr=0x7fffe42710e7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4271168,end_addr=0x7fffe4271187,size=0x20,total_bytes_accessed=0x40,cache_line_decrements=0x1,8 byte accesses=0x8
+fft_initialise,memory write,start_addr=0x7fffe4271198,end_addr=0x7fffe42711c7,size=0x30,total_bytes_accessed=0xb0,cache_line_decrements=0x1,8 byte accesses=0x16
+fft_initialise,memory write,start_addr=0x7fffe42711d8,end_addr=0x7fffe42711e7,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4271248,end_addr=0x7fffe4271257,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_initialise,memory write,start_addr=0x7fffe4271268,end_addr=0x7fffe42712c7,size=0x60,total_bytes_accessed=0xb0,cache_line_decrements=0x2,8 byte accesses=0x16
+fft_initialise,memory write,start_addr=0x7fffe4271378,end_addr=0x7fffe4271387,size=0x10,total_bytes_accessed=0x10fc,cache_line_increments=0x1,4 byte accesses=0x43f
+fft_initialise,memory write,start_addr=0x7fffe42713a0,end_addr=0x7fffe42713af,size=0x10,total_bytes_accessed=0x38,8 byte accesses=0x7
+fft_initialise,memory write,start_addr=0x7fffe4271620,end_addr=0x7fffe4271623,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_initialise,memory write,start_addr=0x7fffe4271628,end_addr=0x7fffe4271667,size=0x40,total_bytes_accessed=0x228,cache_line_increments=0x1,8 byte accesses=0x45
+fft_initialise,memory write,start_addr=0x7fffe42716e0,end_addr=0x7fffe42716e3,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory write,start_addr=0x7fffe4272780,end_addr=0x7fffe427278f,size=0x10,total_bytes_accessed=0x60,4 byte accesses=0xc,8 byte accesses=0x6
+fft_initialise,memory write,start_addr=0x7fffe4272f58,end_addr=0x7fffe4272f5f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
 fft_initialise,memory write,start_addr=0x7ffff7ffd9b8,end_addr=0x7ffff7ffd9bf,size=0x8,total_bytes_accessed=0x28,8 byte accesses=0x5
-fft_initialise,memory write,start_addr=0x7fffffffd130,end_addr=0x7fffffffd133,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-fft_initialise,memory write,start_addr=0x7fffffffd138,end_addr=0x7fffffffd157,size=0x20,total_bytes_accessed=0x4c,cache_line_increments=0x1,4 byte accesses=0x3,8 byte accesses=0x8
-fft_initialise,memory write,start_addr=0x7fffffffd160,end_addr=0x7fffffffd1bf,size=0x60,total_bytes_accessed=0x150,cache_line_decrements=0x1,4 byte accesses=0x1c,8 byte accesses=0x1c
-fft_initialise,memory write,start_addr=0x7fffffffd1d8,end_addr=0x7fffffffdb2f,size=0x958,total_bytes_accessed=0x101275,cache_line_increments=0xc,cache_line_decrements=0x18,1 byte accesses=0x445,2 byte accesses=0x4,4 byte accesses=0x2ba6,8 byte accesses=0x1ea96,16 byte accesses=0x6e,32 byte accesses=0x20
-fft_initialise,memory write,start_addr=0x7fffffffdb38,end_addr=0x7fffffffdb47,size=0x10,total_bytes_accessed=0x10,cache_line_decrements=0x1,8 byte accesses=0x2
+fft_initialise,memory write,start_addr=0x7fffffffcfb0,end_addr=0x7fffffffcfb3,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+fft_initialise,memory write,start_addr=0x7fffffffcfb8,end_addr=0x7fffffffcfd7,size=0x20,total_bytes_accessed=0x4c,cache_line_increments=0x1,4 byte accesses=0x3,8 byte accesses=0x8
+fft_initialise,memory write,start_addr=0x7fffffffcfe0,end_addr=0x7fffffffd03f,size=0x60,total_bytes_accessed=0x150,cache_line_decrements=0x1,4 byte accesses=0x1c,8 byte accesses=0x1c
+fft_initialise,memory write,start_addr=0x7fffffffd058,end_addr=0x7fffffffd9af,size=0x958,total_bytes_accessed=0x101275,cache_line_increments=0xc,cache_line_decrements=0x18,1 byte accesses=0x445,2 byte accesses=0x4,4 byte accesses=0x2ba6,8 byte accesses=0x1ea96,16 byte accesses=0x6e,32 byte accesses=0x20
+fft_initialise,memory write,start_addr=0x7fffffffd9b8,end_addr=0x7fffffffd9c7,size=0x10,total_bytes_accessed=0x10,cache_line_decrements=0x1,8 byte accesses=0x2
 set_fft_data,enter
 set_fft_data,exit
 set_fft_data,memory read,start_addr=0x4002a8,end_addr=0x4002af,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
@@ -3947,45 +3947,45 @@ set_fft_data,memory read,start_addr=0x76af90,end_addr=0x76af97,size=0x8,total_by
 set_fft_data,memory read,start_addr=0x76b008,end_addr=0x76b017,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
 set_fft_data,memory read,start_addr=0x76b098,end_addr=0x76b09f,size=0x8,total_bytes_accessed=0x100000,8 byte accesses=0x20000
 set_fft_data,memory read,start_addr=0x76b0f0,end_addr=0x76b0ff,size=0x10,total_bytes_accessed=0x100000,8 byte accesses=0x20000
-set_fft_data,memory read,start_addr=0x7fffe4507a80,end_addr=0x7fffe4507a87,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4508320,end_addr=0x7fffe4508323,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4509c68,end_addr=0x7fffe4509c6b,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4511968,end_addr=0x7fffe451196c,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe451196e,end_addr=0x7fffe4511977,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe45188f0,end_addr=0x7fffe45188ff,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,16 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe451d8ce,end_addr=0x7fffe451d8dd,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe451e2d6,end_addr=0x7fffe451e2d7,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe48cac18,end_addr=0x7fffe48cac1f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe48cac28,end_addr=0x7fffe48cac2f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe48cb0a4,end_addr=0x7fffe48cb11f,size=0x7c,total_bytes_accessed=0x100000,cache_line_increments=0x2,4 byte accesses=0x40000
-set_fft_data,memory read,start_addr=0x7fffe48cb620,end_addr=0x7fffe48cb63b,size=0x1c,total_bytes_accessed=0x380000,4 byte accesses=0x20000,8 byte accesses=0x60000
-set_fft_data,memory read,start_addr=0x7fffe48cb648,end_addr=0x7fffe48cb64f,size=0x8,total_bytes_accessed=0x100000,8 byte accesses=0x20000
-set_fft_data,memory read,start_addr=0x7fffe48cd480,end_addr=0x7fffe48cd483,size=0x4,total_bytes_accessed=0x100000,4 byte accesses=0x40000
-set_fft_data,memory read,start_addr=0x7fffe48d0740,end_addr=0x7fffe48d0743,size=0x4,total_bytes_accessed=0x100000,4 byte accesses=0x40000
-set_fft_data,memory read,start_addr=0x7fffe48d13d8,end_addr=0x7fffe48d13df,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4bd8e40,end_addr=0x7fffe4bd8e47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4bd8e50,end_addr=0x7fffe4bd8e57,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4c7f718,end_addr=0x7fffe4c7f71b,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe4cf0008,end_addr=0x7fffe4cf000f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0028,end_addr=0x7fffe4cf002f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0038,end_addr=0x7fffe4cf003f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0068,end_addr=0x7fffe4cf0077,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe4cf02ec,end_addr=0x7fffe4cf02ff,size=0x14,total_bytes_accessed=0x14,4 byte accesses=0x3,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0315,end_addr=0x7fffe4cf0315,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0478,end_addr=0x7fffe4cf0487,size=0x10,total_bytes_accessed=0x10,cache_line_increments=0x1,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe4cf0490,end_addr=0x7fffe4cf049f,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,16 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf04e0,end_addr=0x7fffe4cf04e7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0508,end_addr=0x7fffe4cf050f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0548,end_addr=0x7fffe4cf0557,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe4cf07c0,end_addr=0x7fffe4cf07c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf07cc,end_addr=0x7fffe4cf07ef,size=0x24,total_bytes_accessed=0x2c,4 byte accesses=0x3,8 byte accesses=0x4
-set_fft_data,memory read,start_addr=0x7fffe4cf07f4,end_addr=0x7fffe4cf07f5,size=0x2,total_bytes_accessed=0x2,1 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe4cf0810,end_addr=0x7fffe4cf0817,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf08ac,end_addr=0x7fffe4cf08af,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0a28,end_addr=0x7fffe4cf0a3f,size=0x18,total_bytes_accessed=0x18,8 byte accesses=0x3
-set_fft_data,memory read,start_addr=0x7fffe4cf0a78,end_addr=0x7fffe4cf0a83,size=0xc,total_bytes_accessed=0x10,cache_line_decrements=0x1,4 byte accesses=0x2,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffe4cf0a88,end_addr=0x7fffe4cf0a8f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffe4cf0c70,end_addr=0x7fffe4cf0c7b,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe3ea6718,end_addr=0x7fffe3ea671b,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe3eaca80,end_addr=0x7fffe3eaca87,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe3ead320,end_addr=0x7fffe3ead323,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe3eaec68,end_addr=0x7fffe3eaec6b,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe3eb6968,end_addr=0x7fffe3eb696c,size=0x5,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe3eb696e,end_addr=0x7fffe3eb6977,size=0xa,total_bytes_accessed=0x12,2 byte accesses=0x1,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe3ebd8f0,end_addr=0x7fffe3ebd8ff,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,16 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe3ec28ce,end_addr=0x7fffe3ec28dd,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe3ec32d6,end_addr=0x7fffe3ec32d7,size=0x2,total_bytes_accessed=0x2,2 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe426fc18,end_addr=0x7fffe426fc1f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe426fc28,end_addr=0x7fffe426fc2f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe42700a4,end_addr=0x7fffe427011f,size=0x7c,total_bytes_accessed=0x100000,cache_line_increments=0x2,4 byte accesses=0x40000
+set_fft_data,memory read,start_addr=0x7fffe4270620,end_addr=0x7fffe427063b,size=0x1c,total_bytes_accessed=0x380000,4 byte accesses=0x20000,8 byte accesses=0x60000
+set_fft_data,memory read,start_addr=0x7fffe4270648,end_addr=0x7fffe427064f,size=0x8,total_bytes_accessed=0x100000,8 byte accesses=0x20000
+set_fft_data,memory read,start_addr=0x7fffe4272480,end_addr=0x7fffe4272483,size=0x4,total_bytes_accessed=0x100000,4 byte accesses=0x40000
+set_fft_data,memory read,start_addr=0x7fffe4275740,end_addr=0x7fffe4275743,size=0x4,total_bytes_accessed=0x100000,4 byte accesses=0x40000
+set_fft_data,memory read,start_addr=0x7fffe42763d8,end_addr=0x7fffe42763df,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe457de40,end_addr=0x7fffe457de47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe457de50,end_addr=0x7fffe457de57,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1008,end_addr=0x7fffe45f100f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1028,end_addr=0x7fffe45f102f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1038,end_addr=0x7fffe45f103f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1068,end_addr=0x7fffe45f1077,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe45f12ec,end_addr=0x7fffe45f12ff,size=0x14,total_bytes_accessed=0x14,4 byte accesses=0x3,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1315,end_addr=0x7fffe45f1315,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1478,end_addr=0x7fffe45f1487,size=0x10,total_bytes_accessed=0x10,cache_line_increments=0x1,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe45f1490,end_addr=0x7fffe45f149f,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,16 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f14e0,end_addr=0x7fffe45f14e7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1508,end_addr=0x7fffe45f150f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1548,end_addr=0x7fffe45f1557,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe45f17c0,end_addr=0x7fffe45f17c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f17cc,end_addr=0x7fffe45f17ef,size=0x24,total_bytes_accessed=0x2c,4 byte accesses=0x3,8 byte accesses=0x4
+set_fft_data,memory read,start_addr=0x7fffe45f17f4,end_addr=0x7fffe45f17f5,size=0x2,total_bytes_accessed=0x2,1 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe45f1810,end_addr=0x7fffe45f1817,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f18ac,end_addr=0x7fffe45f18af,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1a28,end_addr=0x7fffe45f1a3f,size=0x18,total_bytes_accessed=0x18,8 byte accesses=0x3
+set_fft_data,memory read,start_addr=0x7fffe45f1a78,end_addr=0x7fffe45f1a83,size=0xc,total_bytes_accessed=0x10,cache_line_decrements=0x1,4 byte accesses=0x2,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffe45f1a88,end_addr=0x7fffe45f1a8f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffe45f1c70,end_addr=0x7fffe45f1c7b,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
 set_fft_data,memory read,start_addr=0x7ffff7df658c,end_addr=0x7ffff7df658f,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
 set_fft_data,memory read,start_addr=0x7ffff7df65a4,end_addr=0x7ffff7df65a7,size=0x4,total_bytes_accessed=0x4,4 byte accesses=0x1
 set_fft_data,memory read,start_addr=0x7ffff7ffcca0,end_addr=0x7ffff7ffcca3,size=0x4,total_bytes_accessed=0x7,1 byte accesses=0x3,4 byte accesses=0x1
@@ -4005,56 +4005,56 @@ set_fft_data,memory read,start_addr=0x7ffff7ffe4c0,end_addr=0x7ffff7ffe4c7,size=
 set_fft_data,memory read,start_addr=0x7ffff7ffe4e8,end_addr=0x7ffff7ffe4ef,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 set_fft_data,memory read,start_addr=0x7ffff7ffe6e0,end_addr=0x7ffff7ffe6ff,size=0x20,total_bytes_accessed=0x32,1 byte accesses=0x2,8 byte accesses=0x2,16 byte accesses=0x2
 set_fft_data,memory read,start_addr=0x7ffff7ffed60,end_addr=0x7ffff7ffed6f,size=0x10,total_bytes_accessed=0x11,1 byte accesses=0x1,16 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffffffd6c8,end_addr=0x7fffffffd6cf,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffffffd6d8,end_addr=0x7fffffffd703,size=0x2c,total_bytes_accessed=0x2c,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0x5
-set_fft_data,memory read,start_addr=0x7fffffffd708,end_addr=0x7fffffffd72f,size=0x28,total_bytes_accessed=0x60,8 byte accesses=0xc
-set_fft_data,memory read,start_addr=0x7fffffffd738,end_addr=0x7fffffffd75b,size=0x24,total_bytes_accessed=0x4c,cache_line_decrements=0x1,4 byte accesses=0x3,8 byte accesses=0x8
-set_fft_data,memory read,start_addr=0x7fffffffd760,end_addr=0x7fffffffd760,size=0x1,total_bytes_accessed=0x3,1 byte accesses=0x3
-set_fft_data,memory read,start_addr=0x7fffffffd768,end_addr=0x7fffffffd787,size=0x20,total_bytes_accessed=0x20,cache_line_increments=0x1,8 byte accesses=0x4
-set_fft_data,memory read,start_addr=0x7fffffffd790,end_addr=0x7fffffffd79b,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffffffd7a0,end_addr=0x7fffffffd7a7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffffffd7c8,end_addr=0x7fffffffd813,size=0x4c,total_bytes_accessed=0x74,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0xe
-set_fft_data,memory read,start_addr=0x7fffffffd818,end_addr=0x7fffffffd823,size=0xc,total_bytes_accessed=0x18,4 byte accesses=0x2,8 byte accesses=0x2
-set_fft_data,memory read,start_addr=0x7fffffffd828,end_addr=0x7fffffffd82f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory read,start_addr=0x7fffffffd848,end_addr=0x7fffffffd85f,size=0x18,total_bytes_accessed=0x20,8 byte accesses=0x4
-set_fft_data,memory read,start_addr=0x7fffffffd864,end_addr=0x7fffffffd87f,size=0x1c,total_bytes_accessed=0x1c,4 byte accesses=0x1,8 byte accesses=0x3
-set_fft_data,memory read,start_addr=0x7fffffffd890,end_addr=0x7fffffffd89f,size=0x10,total_bytes_accessed=0x18,8 byte accesses=0x3
-set_fft_data,memory read,start_addr=0x7fffffffd8f8,end_addr=0x7fffffffd93f,size=0x48,total_bytes_accessed=0x58,cache_line_increments=0x1,4 byte accesses=0x2,8 byte accesses=0xa
-set_fft_data,memory read,start_addr=0x7fffffffd948,end_addr=0x7fffffffda5f,size=0x118,total_bytes_accessed=0x128,cache_line_increments=0x4,8 byte accesses=0x5,32 byte accesses=0x8
-set_fft_data,memory read,start_addr=0x7fffffffdaa0,end_addr=0x7fffffffdadf,size=0x40,total_bytes_accessed=0x100038,cache_line_decrements=0x1,8 byte accesses=0x20007
-set_fft_data,memory read,start_addr=0x7fffffffdaec,end_addr=0x7fffffffdb0f,size=0x24,total_bytes_accessed=0x280018,cache_line_decrements=0x1,4 byte accesses=0x20000,8 byte accesses=0x40003
-set_fft_data,memory read,start_addr=0x7fffffffdb18,end_addr=0x7fffffffdb1f,size=0x8,total_bytes_accessed=0x80000,8 byte accesses=0x10000
-set_fft_data,memory read,start_addr=0x7fffffffdb2c,end_addr=0x7fffffffdb2f,size=0x4,total_bytes_accessed=0x100004,4 byte accesses=0x40001
-set_fft_data,memory read,start_addr=0x7fffffffdb38,end_addr=0x7fffffffdb47,size=0x10,total_bytes_accessed=0x10,cache_line_increments=0x1,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffffffd548,end_addr=0x7fffffffd54f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffffffd558,end_addr=0x7fffffffd583,size=0x2c,total_bytes_accessed=0x2c,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0x5
+set_fft_data,memory read,start_addr=0x7fffffffd588,end_addr=0x7fffffffd5af,size=0x28,total_bytes_accessed=0x60,8 byte accesses=0xc
+set_fft_data,memory read,start_addr=0x7fffffffd5b8,end_addr=0x7fffffffd5db,size=0x24,total_bytes_accessed=0x4c,cache_line_decrements=0x1,4 byte accesses=0x3,8 byte accesses=0x8
+set_fft_data,memory read,start_addr=0x7fffffffd5e0,end_addr=0x7fffffffd5e0,size=0x1,total_bytes_accessed=0x3,1 byte accesses=0x3
+set_fft_data,memory read,start_addr=0x7fffffffd5e8,end_addr=0x7fffffffd607,size=0x20,total_bytes_accessed=0x20,cache_line_increments=0x1,8 byte accesses=0x4
+set_fft_data,memory read,start_addr=0x7fffffffd610,end_addr=0x7fffffffd61b,size=0xc,total_bytes_accessed=0xc,4 byte accesses=0x1,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffffffd620,end_addr=0x7fffffffd627,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffffffd648,end_addr=0x7fffffffd693,size=0x4c,total_bytes_accessed=0x74,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0xe
+set_fft_data,memory read,start_addr=0x7fffffffd698,end_addr=0x7fffffffd6a3,size=0xc,total_bytes_accessed=0x18,4 byte accesses=0x2,8 byte accesses=0x2
+set_fft_data,memory read,start_addr=0x7fffffffd6a8,end_addr=0x7fffffffd6af,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory read,start_addr=0x7fffffffd6c8,end_addr=0x7fffffffd6df,size=0x18,total_bytes_accessed=0x20,8 byte accesses=0x4
+set_fft_data,memory read,start_addr=0x7fffffffd6e4,end_addr=0x7fffffffd6ff,size=0x1c,total_bytes_accessed=0x1c,4 byte accesses=0x1,8 byte accesses=0x3
+set_fft_data,memory read,start_addr=0x7fffffffd710,end_addr=0x7fffffffd71f,size=0x10,total_bytes_accessed=0x18,8 byte accesses=0x3
+set_fft_data,memory read,start_addr=0x7fffffffd778,end_addr=0x7fffffffd7bf,size=0x48,total_bytes_accessed=0x58,cache_line_increments=0x1,4 byte accesses=0x2,8 byte accesses=0xa
+set_fft_data,memory read,start_addr=0x7fffffffd7c8,end_addr=0x7fffffffd8df,size=0x118,total_bytes_accessed=0x128,cache_line_increments=0x4,8 byte accesses=0x5,32 byte accesses=0x8
+set_fft_data,memory read,start_addr=0x7fffffffd920,end_addr=0x7fffffffd95f,size=0x40,total_bytes_accessed=0x100038,cache_line_decrements=0x1,8 byte accesses=0x20007
+set_fft_data,memory read,start_addr=0x7fffffffd96c,end_addr=0x7fffffffd98f,size=0x24,total_bytes_accessed=0x280018,cache_line_decrements=0x1,4 byte accesses=0x20000,8 byte accesses=0x40003
+set_fft_data,memory read,start_addr=0x7fffffffd998,end_addr=0x7fffffffd99f,size=0x8,total_bytes_accessed=0x80000,8 byte accesses=0x10000
+set_fft_data,memory read,start_addr=0x7fffffffd9ac,end_addr=0x7fffffffd9af,size=0x4,total_bytes_accessed=0x100004,4 byte accesses=0x40001
+set_fft_data,memory read,start_addr=0x7fffffffd9b8,end_addr=0x7fffffffd9c7,size=0x10,total_bytes_accessed=0x10,cache_line_increments=0x1,8 byte accesses=0x2
 set_fft_data,memory write,start_addr=0x76b098,end_addr=0x76b09f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 set_fft_data,memory write,start_addr=0x76c040,end_addr=0x7ec03f,size=0x80000,total_bytes_accessed=0x80000,cache_line_increments=0x1fff,4 byte accesses=0x20000
 set_fft_data,memory write,start_addr=0x7ec0a0,end_addr=0x86c09f,size=0x80000,total_bytes_accessed=0x80000,cache_line_decrements=0x2000,4 byte accesses=0x20000
-set_fft_data,memory write,start_addr=0x7fffe48cb0a4,end_addr=0x7fffe48cb11f,size=0x7c,total_bytes_accessed=0x80000,cache_line_increments=0x2,4 byte accesses=0x20000
-set_fft_data,memory write,start_addr=0x7fffe48cb620,end_addr=0x7fffe48cb62f,size=0x10,total_bytes_accessed=0x200000,8 byte accesses=0x40000
-set_fft_data,memory write,start_addr=0x7fffe48cd480,end_addr=0x7fffe48cd483,size=0x4,total_bytes_accessed=0x100000,4 byte accesses=0x40000
+set_fft_data,memory write,start_addr=0x7fffe42700a4,end_addr=0x7fffe427011f,size=0x7c,total_bytes_accessed=0x80000,cache_line_increments=0x2,4 byte accesses=0x20000
+set_fft_data,memory write,start_addr=0x7fffe4270620,end_addr=0x7fffe427062f,size=0x10,total_bytes_accessed=0x200000,8 byte accesses=0x40000
+set_fft_data,memory write,start_addr=0x7fffe4272480,end_addr=0x7fffe4272483,size=0x4,total_bytes_accessed=0x100000,4 byte accesses=0x40000
 set_fft_data,memory write,start_addr=0x7ffff7ffd9b8,end_addr=0x7ffff7ffd9bf,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory write,start_addr=0x7fffffffd6c8,end_addr=0x7fffffffd6cf,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
-set_fft_data,memory write,start_addr=0x7fffffffd6d8,end_addr=0x7fffffffd72f,size=0x58,total_bytes_accessed=0xa0,cache_line_decrements=0x1,8 byte accesses=0x14
-set_fft_data,memory write,start_addr=0x7fffffffd738,end_addr=0x7fffffffd763,size=0x2c,total_bytes_accessed=0x2c,cache_line_increments=0x1,4 byte accesses=0x1,8 byte accesses=0x5
-set_fft_data,memory write,start_addr=0x7fffffffd768,end_addr=0x7fffffffd79b,size=0x34,total_bytes_accessed=0x54,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0xa
-set_fft_data,memory write,start_addr=0x7fffffffd7a0,end_addr=0x7fffffffd7a7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-set_fft_data,memory write,start_addr=0x7fffffffd7b4,end_addr=0x7fffffffd7bf,size=0xc,total_bytes_accessed=0x24,4 byte accesses=0x3,8 byte accesses=0x3
-set_fft_data,memory write,start_addr=0x7fffffffd7c8,end_addr=0x7fffffffd82f,size=0x68,total_bytes_accessed=0x78,cache_line_decrements=0x1,8 byte accesses=0xf
-set_fft_data,memory write,start_addr=0x7fffffffd848,end_addr=0x7fffffffd85f,size=0x18,total_bytes_accessed=0x18,8 byte accesses=0x3
-set_fft_data,memory write,start_addr=0x7fffffffd864,end_addr=0x7fffffffd887,size=0x24,total_bytes_accessed=0x24,cache_line_increments=0x1,4 byte accesses=0x1,8 byte accesses=0x4
-set_fft_data,memory write,start_addr=0x7fffffffd890,end_addr=0x7fffffffd89f,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
-set_fft_data,memory write,start_addr=0x7fffffffd8f8,end_addr=0x7fffffffd93f,size=0x48,total_bytes_accessed=0x48,cache_line_decrements=0x1,8 byte accesses=0x9
-set_fft_data,memory write,start_addr=0x7fffffffd948,end_addr=0x7fffffffda5f,size=0x118,total_bytes_accessed=0x120,cache_line_increments=0x4,8 byte accesses=0x4,32 byte accesses=0x8
-set_fft_data,memory write,start_addr=0x7fffffffdaa0,end_addr=0x7fffffffdadf,size=0x40,total_bytes_accessed=0x100038,cache_line_increments=0x1,8 byte accesses=0x20007
-set_fft_data,memory write,start_addr=0x7fffffffdaec,end_addr=0x7fffffffdb0f,size=0x24,total_bytes_accessed=0x280018,cache_line_decrements=0x1,4 byte accesses=0x20000,8 byte accesses=0x40003
-set_fft_data,memory write,start_addr=0x7fffffffdb18,end_addr=0x7fffffffdb1f,size=0x8,total_bytes_accessed=0x80000,8 byte accesses=0x10000
-set_fft_data,memory write,start_addr=0x7fffffffdb2c,end_addr=0x7fffffffdb2f,size=0x4,total_bytes_accessed=0x40004,4 byte accesses=0x10001
-set_fft_data,memory write,start_addr=0x7fffffffdb38,end_addr=0x7fffffffdb47,size=0x10,total_bytes_accessed=0x10,cache_line_decrements=0x1,8 byte accesses=0x2
+set_fft_data,memory write,start_addr=0x7fffffffd548,end_addr=0x7fffffffd54f,size=0x8,total_bytes_accessed=0x10,8 byte accesses=0x2
+set_fft_data,memory write,start_addr=0x7fffffffd558,end_addr=0x7fffffffd5af,size=0x58,total_bytes_accessed=0xa0,cache_line_decrements=0x1,8 byte accesses=0x14
+set_fft_data,memory write,start_addr=0x7fffffffd5b8,end_addr=0x7fffffffd5e3,size=0x2c,total_bytes_accessed=0x2c,cache_line_increments=0x1,4 byte accesses=0x1,8 byte accesses=0x5
+set_fft_data,memory write,start_addr=0x7fffffffd5e8,end_addr=0x7fffffffd61b,size=0x34,total_bytes_accessed=0x54,cache_line_decrements=0x1,4 byte accesses=0x1,8 byte accesses=0xa
+set_fft_data,memory write,start_addr=0x7fffffffd620,end_addr=0x7fffffffd627,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+set_fft_data,memory write,start_addr=0x7fffffffd634,end_addr=0x7fffffffd63f,size=0xc,total_bytes_accessed=0x24,4 byte accesses=0x3,8 byte accesses=0x3
+set_fft_data,memory write,start_addr=0x7fffffffd648,end_addr=0x7fffffffd6af,size=0x68,total_bytes_accessed=0x78,cache_line_decrements=0x1,8 byte accesses=0xf
+set_fft_data,memory write,start_addr=0x7fffffffd6c8,end_addr=0x7fffffffd6df,size=0x18,total_bytes_accessed=0x18,8 byte accesses=0x3
+set_fft_data,memory write,start_addr=0x7fffffffd6e4,end_addr=0x7fffffffd707,size=0x24,total_bytes_accessed=0x24,cache_line_increments=0x1,4 byte accesses=0x1,8 byte accesses=0x4
+set_fft_data,memory write,start_addr=0x7fffffffd710,end_addr=0x7fffffffd71f,size=0x10,total_bytes_accessed=0x20,8 byte accesses=0x4
+set_fft_data,memory write,start_addr=0x7fffffffd778,end_addr=0x7fffffffd7bf,size=0x48,total_bytes_accessed=0x48,cache_line_decrements=0x1,8 byte accesses=0x9
+set_fft_data,memory write,start_addr=0x7fffffffd7c8,end_addr=0x7fffffffd8df,size=0x118,total_bytes_accessed=0x120,cache_line_increments=0x4,8 byte accesses=0x4,32 byte accesses=0x8
+set_fft_data,memory write,start_addr=0x7fffffffd920,end_addr=0x7fffffffd95f,size=0x40,total_bytes_accessed=0x100038,cache_line_increments=0x1,8 byte accesses=0x20007
+set_fft_data,memory write,start_addr=0x7fffffffd96c,end_addr=0x7fffffffd98f,size=0x24,total_bytes_accessed=0x280018,cache_line_decrements=0x1,4 byte accesses=0x20000,8 byte accesses=0x40003
+set_fft_data,memory write,start_addr=0x7fffffffd998,end_addr=0x7fffffffd99f,size=0x8,total_bytes_accessed=0x80000,8 byte accesses=0x10000
+set_fft_data,memory write,start_addr=0x7fffffffd9ac,end_addr=0x7fffffffd9af,size=0x4,total_bytes_accessed=0x40004,4 byte accesses=0x10001
+set_fft_data,memory write,start_addr=0x7fffffffd9b8,end_addr=0x7fffffffd9c7,size=0x10,total_bytes_accessed=0x10,cache_line_decrements=0x1,8 byte accesses=0x2
 copy_input_data,enter
 copy_input_data,exit
 copy_input_data,memory read,start_addr=0x76b108,end_addr=0x76b108,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
-copy_input_data,memory read,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-copy_input_data,memory write,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory read,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory write,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_execute,enter
 fft_execute,exit
 fft_execute,memory read,start_addr=0x547120,end_addr=0x54713f,size=0x20,total_bytes_accessed=0x820,32 byte accesses=0x41
@@ -4088,16 +4088,16 @@ fft_execute,memory read,start_addr=0x88f658,end_addr=0x88f66f,size=0x18,total_by
 fft_execute,memory read,start_addr=0x88f700,end_addr=0x88f707,size=0x8,total_bytes_accessed=0x100,8 byte accesses=0x20
 fft_execute,memory read,start_addr=0x88ff00,end_addr=0x8906ff,size=0x800,total_bytes_accessed=0x10000,cache_line_increments=0xf,cache_line_decrements=0x10,32 byte accesses=0x800
 fft_execute,memory read,start_addr=0x89bc20,end_addr=0x8abc1f,size=0x10000,total_bytes_accessed=0x10000,cache_line_increments=0x200,cache_line_decrements=0x200,32 byte accesses=0x800
-fft_execute,memory read,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
-fft_execute,memory read,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
+fft_execute,memory read,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
+fft_execute,memory read,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
 fft_execute,memory write,start_addr=0x7ec0a0,end_addr=0x86c09f,size=0x80000,total_bytes_accessed=0x180000,cache_line_decrements=0x2000,8 byte accesses=0x10000,32 byte accesses=0x8000
-fft_execute,memory write,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
-fft_execute,memory write,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
+fft_execute,memory write,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
+fft_execute,memory write,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
 copy_input_data,enter
 copy_input_data,exit
 copy_input_data,memory read,start_addr=0x76b108,end_addr=0x76b108,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
-copy_input_data,memory read,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-copy_input_data,memory write,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory read,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory write,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_execute,enter
 fft_execute,exit
 fft_execute,memory read,start_addr=0x547120,end_addr=0x54713f,size=0x20,total_bytes_accessed=0x820,32 byte accesses=0x41
@@ -4131,16 +4131,16 @@ fft_execute,memory read,start_addr=0x88f658,end_addr=0x88f66f,size=0x18,total_by
 fft_execute,memory read,start_addr=0x88f700,end_addr=0x88f707,size=0x8,total_bytes_accessed=0x100,8 byte accesses=0x20
 fft_execute,memory read,start_addr=0x88ff00,end_addr=0x8906ff,size=0x800,total_bytes_accessed=0x10000,cache_line_increments=0xf,cache_line_decrements=0x10,32 byte accesses=0x800
 fft_execute,memory read,start_addr=0x89bc20,end_addr=0x8abc1f,size=0x10000,total_bytes_accessed=0x10000,cache_line_increments=0x200,cache_line_decrements=0x200,32 byte accesses=0x800
-fft_execute,memory read,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
-fft_execute,memory read,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
+fft_execute,memory read,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
+fft_execute,memory read,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
 fft_execute,memory write,start_addr=0x7ec0a0,end_addr=0x86c09f,size=0x80000,total_bytes_accessed=0x180000,cache_line_decrements=0x2000,8 byte accesses=0x10000,32 byte accesses=0x8000
-fft_execute,memory write,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
-fft_execute,memory write,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
+fft_execute,memory write,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
+fft_execute,memory write,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
 copy_input_data,enter
 copy_input_data,exit
 copy_input_data,memory read,start_addr=0x76b108,end_addr=0x76b108,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
-copy_input_data,memory read,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-copy_input_data,memory write,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory read,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory write,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_execute,enter
 fft_execute,exit
 fft_execute,memory read,start_addr=0x547120,end_addr=0x54713f,size=0x20,total_bytes_accessed=0x820,32 byte accesses=0x41
@@ -4174,16 +4174,16 @@ fft_execute,memory read,start_addr=0x88f658,end_addr=0x88f66f,size=0x18,total_by
 fft_execute,memory read,start_addr=0x88f700,end_addr=0x88f707,size=0x8,total_bytes_accessed=0x100,8 byte accesses=0x20
 fft_execute,memory read,start_addr=0x88ff00,end_addr=0x8906ff,size=0x800,total_bytes_accessed=0x10000,cache_line_increments=0xf,cache_line_decrements=0x10,32 byte accesses=0x800
 fft_execute,memory read,start_addr=0x89bc20,end_addr=0x8abc1f,size=0x10000,total_bytes_accessed=0x10000,cache_line_increments=0x200,cache_line_decrements=0x200,32 byte accesses=0x800
-fft_execute,memory read,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
-fft_execute,memory read,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
+fft_execute,memory read,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
+fft_execute,memory read,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
 fft_execute,memory write,start_addr=0x7ec0a0,end_addr=0x86c09f,size=0x80000,total_bytes_accessed=0x180000,cache_line_decrements=0x2000,8 byte accesses=0x10000,32 byte accesses=0x8000
-fft_execute,memory write,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
-fft_execute,memory write,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
+fft_execute,memory write,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
+fft_execute,memory write,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
 copy_input_data,enter
 copy_input_data,exit
 copy_input_data,memory read,start_addr=0x76b108,end_addr=0x76b108,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
-copy_input_data,memory read,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-copy_input_data,memory write,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory read,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory write,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_execute,enter
 fft_execute,exit
 fft_execute,memory read,start_addr=0x547120,end_addr=0x54713f,size=0x20,total_bytes_accessed=0x820,32 byte accesses=0x41
@@ -4217,16 +4217,16 @@ fft_execute,memory read,start_addr=0x88f658,end_addr=0x88f66f,size=0x18,total_by
 fft_execute,memory read,start_addr=0x88f700,end_addr=0x88f707,size=0x8,total_bytes_accessed=0x100,8 byte accesses=0x20
 fft_execute,memory read,start_addr=0x88ff00,end_addr=0x8906ff,size=0x800,total_bytes_accessed=0x10000,cache_line_increments=0xf,cache_line_decrements=0x10,32 byte accesses=0x800
 fft_execute,memory read,start_addr=0x89bc20,end_addr=0x8abc1f,size=0x10000,total_bytes_accessed=0x10000,cache_line_increments=0x200,cache_line_decrements=0x200,32 byte accesses=0x800
-fft_execute,memory read,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
-fft_execute,memory read,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
+fft_execute,memory read,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
+fft_execute,memory read,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
 fft_execute,memory write,start_addr=0x7ec0a0,end_addr=0x86c09f,size=0x80000,total_bytes_accessed=0x180000,cache_line_decrements=0x2000,8 byte accesses=0x10000,32 byte accesses=0x8000
-fft_execute,memory write,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
-fft_execute,memory write,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
+fft_execute,memory write,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
+fft_execute,memory write,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
 copy_input_data,enter
 copy_input_data,exit
 copy_input_data,memory read,start_addr=0x76b108,end_addr=0x76b108,size=0x1,total_bytes_accessed=0x1,1 byte accesses=0x1
-copy_input_data,memory read,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-copy_input_data,memory write,start_addr=0x7fffffffdb40,end_addr=0x7fffffffdb47,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory read,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+copy_input_data,memory write,start_addr=0x7fffffffd9c0,end_addr=0x7fffffffd9c7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_execute,enter
 fft_execute,exit
 fft_execute,memory read,start_addr=0x547120,end_addr=0x54713f,size=0x20,total_bytes_accessed=0x820,32 byte accesses=0x41
@@ -4260,11 +4260,11 @@ fft_execute,memory read,start_addr=0x88f658,end_addr=0x88f66f,size=0x18,total_by
 fft_execute,memory read,start_addr=0x88f700,end_addr=0x88f707,size=0x8,total_bytes_accessed=0x100,8 byte accesses=0x20
 fft_execute,memory read,start_addr=0x88ff00,end_addr=0x8906ff,size=0x800,total_bytes_accessed=0x10000,cache_line_increments=0xf,cache_line_decrements=0x10,32 byte accesses=0x800
 fft_execute,memory read,start_addr=0x89bc20,end_addr=0x8abc1f,size=0x10000,total_bytes_accessed=0x10000,cache_line_increments=0x200,cache_line_decrements=0x200,32 byte accesses=0x800
-fft_execute,memory read,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
-fft_execute,memory read,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
+fft_execute,memory read,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x332000,cache_line_increments=0x14,cache_line_decrements=0xc,8 byte accesses=0x400,32 byte accesses=0x19800
+fft_execute,memory read,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0xa8,cache_line_increments=0x2,8 byte accesses=0x15
 fft_execute,memory write,start_addr=0x7ec0a0,end_addr=0x86c09f,size=0x80000,total_bytes_accessed=0x180000,cache_line_decrements=0x2000,8 byte accesses=0x10000,32 byte accesses=0x8000
-fft_execute,memory write,start_addr=0x7fffffffd2c0,end_addr=0x7fffffffdadf,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
-fft_execute,memory write,start_addr=0x7fffffffdae8,end_addr=0x7fffffffdb47,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
+fft_execute,memory write,start_addr=0x7fffffffd140,end_addr=0x7fffffffd95f,size=0x820,total_bytes_accessed=0x265940,cache_line_increments=0x7,cache_line_decrements=0x18,8 byte accesses=0x328,32 byte accesses=0x13200
+fft_execute,memory write,start_addr=0x7fffffffd968,end_addr=0x7fffffffd9c7,size=0x60,total_bytes_accessed=0x90,cache_line_decrements=0x2,8 byte accesses=0x12
 fft_free,enter
 fft_free,free,data_ptr=0x88ff00,size=0x800,caller=fftwf_twiddle_awake
 fft_free,free,data_ptr=0x88f700,size=0x40,caller=fftwf_twiddle_awake
@@ -4388,32 +4388,32 @@ fft_free,memory read,start_addr=0x890850,end_addr=0x890858,size=0x9,total_bytes_
 fft_free,memory read,start_addr=0x899328,end_addr=0x89934f,size=0x28,total_bytes_accessed=0xd0,cache_line_increments=0x1,8 byte accesses=0x1a
 fft_free,memory read,start_addr=0x89bc10,end_addr=0x89bc1f,size=0x10,total_bytes_accessed=0x21,1 byte accesses=0x1,8 byte accesses=0x4
 fft_free,memory read,start_addr=0x8abc48,end_addr=0x8abc4f,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_free,memory read,start_addr=0x7fffe48caef8,end_addr=0x7fffe48caeff,size=0x8,total_bytes_accessed=0xb8,8 byte accesses=0x17
-fft_free,memory read,start_addr=0x7fffe48cb160,end_addr=0x7fffe48cb167,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_free,memory read,start_addr=0x7fffe48cbb20,end_addr=0x7fffe48cbb7f,size=0x60,total_bytes_accessed=0x31a,cache_line_increments=0x1,1 byte accesses=0x12,4 byte accesses=0x28,8 byte accesses=0x4d
-fft_free,memory read,start_addr=0x7fffe48cbb88,end_addr=0x7fffe48cbb97,size=0x10,total_bytes_accessed=0x108,8 byte accesses=0x21
-fft_free,memory read,start_addr=0x7fffe48cbbb0,end_addr=0x7fffe48cbbb7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_free,memory read,start_addr=0x7fffe48cbc98,end_addr=0x7fffe48cbcb7,size=0x20,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_free,memory read,start_addr=0x7fffe48cbce8,end_addr=0x7fffe48cbcf7,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory read,start_addr=0x7fffe48cbd28,end_addr=0x7fffe48cbd37,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory read,start_addr=0x7fffe48cbe08,end_addr=0x7fffe48cbe17,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory read,start_addr=0x7fffe48cc1b8,end_addr=0x7fffe48cc1cf,size=0x18,total_bytes_accessed=0x18,cache_line_decrements=0x1,8 byte accesses=0x3
-fft_free,memory read,start_addr=0x7fffe48cc268,end_addr=0x7fffe48cc27f,size=0x18,total_bytes_accessed=0x18,8 byte accesses=0x3
-fft_free,memory read,start_addr=0x7fffe48cc3a0,end_addr=0x7fffe48cc3a7,size=0x8,total_bytes_accessed=0xb8,8 byte accesses=0x17
-fft_free,memory read,start_addr=0x7fffe48cd7a8,end_addr=0x7fffe48cd7af,size=0x8,total_bytes_accessed=0xb8,8 byte accesses=0x17
-fft_free,memory read,start_addr=0x7fffe48cd7f4,end_addr=0x7fffe48cd7ff,size=0xc,total_bytes_accessed=0x124,4 byte accesses=0x17,8 byte accesses=0x19
-fft_free,memory read,start_addr=0x7fffe48d0740,end_addr=0x7fffe48d0743,size=0x4,total_bytes_accessed=0x78,4 byte accesses=0x1e
-fft_free,memory read,start_addr=0x7fffe4c7f718,end_addr=0x7fffe4c7f71b,size=0x4,total_bytes_accessed=0x48,4 byte accesses=0x12
-fft_free,memory read,start_addr=0x7fffe4c7f728,end_addr=0x7fffe4c7f72f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_free,memory read,start_addr=0x7fffffffd890,end_addr=0x7fffffffd897,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_free,memory read,start_addr=0x7fffffffd8a0,end_addr=0x7fffffffd8a7,size=0x8,total_bytes_accessed=0x50,8 byte accesses=0xa
-fft_free,memory read,start_addr=0x7fffffffd8e4,end_addr=0x7fffffffd8e7,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
-fft_free,memory read,start_addr=0x7fffffffd908,end_addr=0x7fffffffd93f,size=0x38,total_bytes_accessed=0x3c,4 byte accesses=0x1,8 byte accesses=0x7
-fft_free,memory read,start_addr=0x7fffffffd944,end_addr=0x7fffffffd97f,size=0x3c,total_bytes_accessed=0x80,4 byte accesses=0x4,8 byte accesses=0xe
-fft_free,memory read,start_addr=0x7fffffffd9a0,end_addr=0x7fffffffd9df,size=0x40,total_bytes_accessed=0x130,cache_line_increments=0x1,8 byte accesses=0x26
-fft_free,memory read,start_addr=0x7fffffffd9e4,end_addr=0x7fffffffd9e7,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
-fft_free,memory read,start_addr=0x7fffffffd9f4,end_addr=0x7fffffffd9ff,size=0xc,total_bytes_accessed=0x20,4 byte accesses=0x6,8 byte accesses=0x1
-fft_free,memory read,start_addr=0x7fffffffda04,end_addr=0x7fffffffdb47,size=0x144,total_bytes_accessed=0x9fc,cache_line_increments=0x5,4 byte accesses=0x25,8 byte accesses=0x12d
+fft_free,memory read,start_addr=0x7fffe3ea6718,end_addr=0x7fffe3ea671b,size=0x4,total_bytes_accessed=0x48,4 byte accesses=0x12
+fft_free,memory read,start_addr=0x7fffe3ea6728,end_addr=0x7fffe3ea672f,size=0x8,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_free,memory read,start_addr=0x7fffe426fef8,end_addr=0x7fffe426feff,size=0x8,total_bytes_accessed=0xb8,8 byte accesses=0x17
+fft_free,memory read,start_addr=0x7fffe4270160,end_addr=0x7fffe4270167,size=0x8,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_free,memory read,start_addr=0x7fffe4270b20,end_addr=0x7fffe4270b7f,size=0x60,total_bytes_accessed=0x31a,cache_line_increments=0x1,1 byte accesses=0x12,4 byte accesses=0x28,8 byte accesses=0x4d
+fft_free,memory read,start_addr=0x7fffe4270b88,end_addr=0x7fffe4270b97,size=0x10,total_bytes_accessed=0x108,8 byte accesses=0x21
+fft_free,memory read,start_addr=0x7fffe4270bb0,end_addr=0x7fffe4270bb7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_free,memory read,start_addr=0x7fffe4270c98,end_addr=0x7fffe4270cb7,size=0x20,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_free,memory read,start_addr=0x7fffe4270ce8,end_addr=0x7fffe4270cf7,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_free,memory read,start_addr=0x7fffe4270d28,end_addr=0x7fffe4270d37,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_free,memory read,start_addr=0x7fffe4270e08,end_addr=0x7fffe4270e17,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_free,memory read,start_addr=0x7fffe42711b8,end_addr=0x7fffe42711cf,size=0x18,total_bytes_accessed=0x18,cache_line_decrements=0x1,8 byte accesses=0x3
+fft_free,memory read,start_addr=0x7fffe4271268,end_addr=0x7fffe427127f,size=0x18,total_bytes_accessed=0x18,8 byte accesses=0x3
+fft_free,memory read,start_addr=0x7fffe42713a0,end_addr=0x7fffe42713a7,size=0x8,total_bytes_accessed=0xb8,8 byte accesses=0x17
+fft_free,memory read,start_addr=0x7fffe42727a8,end_addr=0x7fffe42727af,size=0x8,total_bytes_accessed=0xb8,8 byte accesses=0x17
+fft_free,memory read,start_addr=0x7fffe42727f4,end_addr=0x7fffe42727ff,size=0xc,total_bytes_accessed=0x124,4 byte accesses=0x17,8 byte accesses=0x19
+fft_free,memory read,start_addr=0x7fffe4275740,end_addr=0x7fffe4275743,size=0x4,total_bytes_accessed=0x78,4 byte accesses=0x1e
+fft_free,memory read,start_addr=0x7fffffffd710,end_addr=0x7fffffffd717,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_free,memory read,start_addr=0x7fffffffd720,end_addr=0x7fffffffd727,size=0x8,total_bytes_accessed=0x50,8 byte accesses=0xa
+fft_free,memory read,start_addr=0x7fffffffd764,end_addr=0x7fffffffd767,size=0x4,total_bytes_accessed=0xc,4 byte accesses=0x3
+fft_free,memory read,start_addr=0x7fffffffd788,end_addr=0x7fffffffd7bf,size=0x38,total_bytes_accessed=0x3c,4 byte accesses=0x1,8 byte accesses=0x7
+fft_free,memory read,start_addr=0x7fffffffd7c4,end_addr=0x7fffffffd7ff,size=0x3c,total_bytes_accessed=0x80,4 byte accesses=0x4,8 byte accesses=0xe
+fft_free,memory read,start_addr=0x7fffffffd820,end_addr=0x7fffffffd85f,size=0x40,total_bytes_accessed=0x130,cache_line_increments=0x1,8 byte accesses=0x26
+fft_free,memory read,start_addr=0x7fffffffd864,end_addr=0x7fffffffd867,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
+fft_free,memory read,start_addr=0x7fffffffd874,end_addr=0x7fffffffd87f,size=0xc,total_bytes_accessed=0x20,4 byte accesses=0x6,8 byte accesses=0x1
+fft_free,memory read,start_addr=0x7fffffffd884,end_addr=0x7fffffffd9c7,size=0x144,total_bytes_accessed=0x9fc,cache_line_increments=0x5,4 byte accesses=0x25,8 byte accesses=0x12d
 fft_free,memory write,start_addr=0x76b318,end_addr=0x76b31f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_free,memory write,start_addr=0x76b3c8,end_addr=0x76b3cf,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_free,memory write,start_addr=0x76c008,end_addr=0x76c02f,size=0x28,total_bytes_accessed=0x78,8 byte accesses=0xf
@@ -4483,19 +4483,19 @@ fft_free,memory write,start_addr=0x88fb78,end_addr=0x88fb9f,size=0x28,total_byte
 fft_free,memory write,start_addr=0x890850,end_addr=0x890857,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_free,memory write,start_addr=0x899328,end_addr=0x89932f,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
 fft_free,memory write,start_addr=0x899340,end_addr=0x89934f,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory write,start_addr=0x7fffe48cbb20,end_addr=0x7fffe48cbb7f,size=0x60,total_bytes_accessed=0x188,cache_line_increments=0x1,4 byte accesses=0x28,8 byte accesses=0x1d
-fft_free,memory write,start_addr=0x7fffe48cbb88,end_addr=0x7fffe48cbb97,size=0x10,total_bytes_accessed=0x108,8 byte accesses=0x21
-fft_free,memory write,start_addr=0x7fffe48cbbb0,end_addr=0x7fffe48cbbb7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
-fft_free,memory write,start_addr=0x7fffe48cbc98,end_addr=0x7fffe48cbcb7,size=0x20,total_bytes_accessed=0x20,8 byte accesses=0x4
-fft_free,memory write,start_addr=0x7fffe48cbce8,end_addr=0x7fffe48cbcf7,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory write,start_addr=0x7fffe48cbd28,end_addr=0x7fffe48cbd37,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory write,start_addr=0x7fffe48cbe08,end_addr=0x7fffe48cbe17,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory write,start_addr=0x7fffe48cc1b8,end_addr=0x7fffe48cc1c7,size=0x10,total_bytes_accessed=0x10,cache_line_decrements=0x1,8 byte accesses=0x2
-fft_free,memory write,start_addr=0x7fffe48cc268,end_addr=0x7fffe48cc277,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
-fft_free,memory write,start_addr=0x7fffffffd890,end_addr=0x7fffffffd8b7,size=0x28,total_bytes_accessed=0x28,8 byte accesses=0x5
-fft_free,memory write,start_addr=0x7fffffffd8e4,end_addr=0x7fffffffd8e7,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
-fft_free,memory write,start_addr=0x7fffffffd908,end_addr=0x7fffffffd93f,size=0x38,total_bytes_accessed=0x3c,4 byte accesses=0x1,8 byte accesses=0x7
-fft_free,memory write,start_addr=0x7fffffffd944,end_addr=0x7fffffffd97f,size=0x3c,total_bytes_accessed=0x7c,4 byte accesses=0x3,8 byte accesses=0xe
-fft_free,memory write,start_addr=0x7fffffffd9a0,end_addr=0x7fffffffd9df,size=0x40,total_bytes_accessed=0x108,cache_line_decrements=0x1,8 byte accesses=0x21
-fft_free,memory write,start_addr=0x7fffffffd9e4,end_addr=0x7fffffffdb47,size=0x164,total_bytes_accessed=0xa28,cache_line_increments=0x2,cache_line_decrements=0x4,4 byte accesses=0x20,8 byte accesses=0x135
+fft_free,memory write,start_addr=0x7fffe4270b20,end_addr=0x7fffe4270b7f,size=0x60,total_bytes_accessed=0x188,cache_line_increments=0x1,4 byte accesses=0x28,8 byte accesses=0x1d
+fft_free,memory write,start_addr=0x7fffe4270b88,end_addr=0x7fffe4270b97,size=0x10,total_bytes_accessed=0x108,8 byte accesses=0x21
+fft_free,memory write,start_addr=0x7fffe4270bb0,end_addr=0x7fffe4270bb7,size=0x8,total_bytes_accessed=0x8,8 byte accesses=0x1
+fft_free,memory write,start_addr=0x7fffe4270c98,end_addr=0x7fffe4270cb7,size=0x20,total_bytes_accessed=0x20,8 byte accesses=0x4
+fft_free,memory write,start_addr=0x7fffe4270ce8,end_addr=0x7fffe4270cf7,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_free,memory write,start_addr=0x7fffe4270d28,end_addr=0x7fffe4270d37,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_free,memory write,start_addr=0x7fffe4270e08,end_addr=0x7fffe4270e17,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_free,memory write,start_addr=0x7fffe42711b8,end_addr=0x7fffe42711c7,size=0x10,total_bytes_accessed=0x10,cache_line_decrements=0x1,8 byte accesses=0x2
+fft_free,memory write,start_addr=0x7fffe4271268,end_addr=0x7fffe4271277,size=0x10,total_bytes_accessed=0x10,8 byte accesses=0x2
+fft_free,memory write,start_addr=0x7fffffffd710,end_addr=0x7fffffffd737,size=0x28,total_bytes_accessed=0x28,8 byte accesses=0x5
+fft_free,memory write,start_addr=0x7fffffffd764,end_addr=0x7fffffffd767,size=0x4,total_bytes_accessed=0x8,4 byte accesses=0x2
+fft_free,memory write,start_addr=0x7fffffffd788,end_addr=0x7fffffffd7bf,size=0x38,total_bytes_accessed=0x3c,4 byte accesses=0x1,8 byte accesses=0x7
+fft_free,memory write,start_addr=0x7fffffffd7c4,end_addr=0x7fffffffd7ff,size=0x3c,total_bytes_accessed=0x7c,4 byte accesses=0x3,8 byte accesses=0xe
+fft_free,memory write,start_addr=0x7fffffffd820,end_addr=0x7fffffffd85f,size=0x40,total_bytes_accessed=0x108,cache_line_decrements=0x1,8 byte accesses=0x21
+fft_free,memory write,start_addr=0x7fffffffd864,end_addr=0x7fffffffd9c7,size=0x164,total_bytes_accessed=0xa28,cache_line_increments=0x2,cache_line_decrements=0x4,4 byte accesses=0x20,8 byte accesses=0x135
 N/A,outstanding_allocations,0x86c100(0x38),0x86c160(0x38),0x86c360(0x120),0x86c4c0(0x30),0x86c520(0x28),0x86c600(0x18),0x86c620(0x38),0x86c660(0x38),0x86c6a0(0x28),0x86c720(0x18),0x86c760(0x38),0x86c800(0x10),0x86c820(0x28),0x86c8a0(0x28),0x86c900(0x38),0x86c960(0x28),0x86c9e0(0x28),0x86ca40(0x38),0x86cac0(0x28),0x86cb40(0x18),0x86cb60(0x28),0x86cbe0(0x28),0x86cc60(0x18),0x86cc80(0x28),0x86cd00(0x10),0x86cd40(0x28),0x86cdc0(0x10),0x86cde0(0x28),0x86ce60(0x10),0x86cea0(0x30),0x86cee0(0x38),0x86cf80(0x10),0x86cfc0(0x30),0x86d000(0x28),0x86d080(0x38),0x86d0e0(0x38),0x86d120(0x38),0x86d160(0x28),0x86d1e0(0x38),0x86d220(0x28),0x86d2a0(0x38),0x86d300(0x38),0x86d340(0x28),0x86d3c0(0x38),0x86d400(0x28),0x86d480(0x38),0x86d4c0(0x38),0x86d500(0x28),0x86d580(0x38),0x86d5e0(0x38),0x86d620(0x28),0x86d6a0(0x38),0x86d700(0x38),0x86d740(0x28),0x86d7c0(0x38),0x86d880(0x38),0x86d8e0(0x38),0x86d920(0x28),0x86d9a0(0x38),0x86da00(0x38),0x86da40(0x28),0x86dac0(0x38),0x86db20(0x38),0x86db60(0x38),0x86dba0(0x28),0x86dc20(0x38),0x86dc80(0x38),0x86dcc0(0x28),0x86dd40(0x38),0x86dda0(0x38),0x86dde0(0x28),0x86de60(0x38),0x86dec0(0x38),0x86df00(0x28),0x86df80(0x28),0x86e000(0x28),0x86e080(0x28),0x86e0e0(0x48),0x86e180(0x48),0x86e220(0x48),0x86e2c0(0x48),0x86e360(0x48),0x86e400(0x48),0x86e4a0(0x48),0x86e540(0x48),0x86e5e0(0x48),0x86e680(0x48),0x86e720(0x48),0x86e7c0(0x48),0x86e860(0x48),0x86e900(0x48),0x86e9a0(0x48),0x86ea40(0x48),0x86eae0(0x48),0x86eb80(0x48),0x86ec20(0x48),0x86ece0(0x28),0x86ed60(0x28),0x86ede0(0x28),0x86ee60(0x28),0x86eee0(0x28),0x86ef60(0x28),0x86efe0(0x28),0x86f060(0x28),0x86f0e0(0x28),0x86f160(0x28),0x86f1e0(0x28),0x86f260(0x28),0x86f2e0(0x28),0x86f360(0x28),0x86f3e0(0x48),0x86f480(0x48),0x86f520(0x48),0x86f5c0(0x48),0x86f660(0x48),0x86f700(0x48),0x86f7a0(0x48),0x86f840(0x48),0x86f8e0(0x48),0x86f980(0x48),0x86fa20(0x48),0x86fac0(0x48),0x86fb60(0x48),0x86fc00(0x48),0x86fca0(0x48),0x86fd40(0x48),0x86fde0(0x48),0x86fe80(0x48),0x86ff20(0x48),0x86ffc0(0x48),0x870060(0x48),0x870100(0x48),0x8701a0(0x48),0x870240(0x48),0x8702e0(0x48),0x870380(0x48),0x870420(0x40),0x8704c0(0x40),0x870560(0x40),0x870600(0x48),0x8706a0(0x48),0x870740(0x48),0x8707e0(0x48),0x870880(0x48),0x870920(0x28),0x8709a0(0x28),0x870a20(0x28),0x870aa0(0x28),0x870b20(0x28),0x870ba0(0x28),0x870c20(0x28),0x870ca0(0x28),0x870d20(0x28),0x870da0(0x28),0x870e20(0x28),0x870ea0(0x28),0x870f20(0x28),0x870fa0(0x28),0x871020(0x28),0x8710a0(0x28),0x871120(0x28),0x8711a0(0x28),0x871220(0x28),0x8712a0(0x28),0x871320(0x28),0x8713a0(0x28),0x871420(0x28),0x8714a0(0x28),0x871520(0x28),0x8715a0(0x28),0x871620(0x28),0x8716a0(0x28),0x871720(0x28),0x8717a0(0x28),0x871820(0x28),0x8718a0(0x28),0x871920(0x28),0x8719a0(0x28),0x871a20(0x28),0x871aa0(0x28),0x871b20(0x28),0x871ba0(0x18),0x871be0(0x40),0x871c80(0x40),0x871d20(0x40),0x871dc0(0x28),0x871e40(0x28),0x871ec0(0x28),0x871f40(0x28),0x871fc0(0x28),0x872040(0x28),0x8720c0(0x28),0x872140(0x28),0x8721c0(0x28),0x872240(0x28),0x8722c0(0x28),0x872340(0x28),0x8723c0(0x28),0x872440(0x28),0x8724c0(0x28),0x872540(0x28),0x8725c0(0x28),0x872640(0x28),0x8726c0(0x28),0x872740(0x28),0x8727c0(0x28),0x872840(0x28),0x8728c0(0x28),0x872940(0x28),0x8729c0(0x28),0x872a40(0x28),0x872ac0(0x28),0x872b40(0x28),0x872bc0(0x28),0x872c40(0x28),0x872cc0(0x28),0x872d40(0x28),0x872dc0(0x28),0x872e40(0x28),0x872ec0(0x28),0x872f40(0x28),0x872fc0(0x28),0x873040(0x28),0x8730c0(0x28),0x873140(0x28),0x8731c0(0x28),0x873240(0x28),0x8732c0(0x28),0x873340(0x28),0x8733c0(0x28),0x873440(0x28),0x8734c0(0x28),0x873540(0x28),0x8735c0(0x28),0x873640(0x28),0x8736c0(0x28),0x873740(0x28),0x8737c0(0x28),0x873840(0x28),0x8738c0(0x28),0x873940(0x28),0x8739c0(0x28),0x873a40(0x28),0x873ac0(0x28),0x873b40(0x28),0x873bc0(0x28),0x873c40(0x28),0x873cc0(0x28),0x873d40(0x28),0x873dc0(0x28),0x873e40(0x28),0x873ec0(0x28),0x873f40(0x28),0x873fc0(0x28),0x874040(0x28),0x8740c0(0x28),0x874140(0x28),0x8741c0(0x28),0x874240(0x28),0x8742c0(0x28),0x874340(0x28),0x8743c0(0x28),0x874440(0x28),0x8744c0(0x28),0x874540(0x28),0x8745c0(0x28),0x874640(0x28),0x8746c0(0x28),0x874740(0x28),0x8747c0(0x28),0x874840(0x28),0x8748c0(0x28),0x874940(0x28),0x8749c0(0x28),0x874a40(0x28),0x874ac0(0x28),0x874b40(0x28),0x874bc0(0x28),0x874c40(0x28),0x874cc0(0x28),0x874d40(0x28),0x874dc0(0x48),0x874e60(0x48),0x874f00(0x48),0x874fa0(0x48),0x875040(0x48),0x8750e0(0x48),0x875180(0x48),0x875220(0x48),0x8752c0(0x48),0x875360(0x48),0x8753e0(0x28),0x875460(0x48),0x875500(0x48),0x8755a0(0x48),0x875640(0x48),0x8756e0(0x48),0x875780(0x48),0x875820(0x48),0x8758c0(0x48),0x875960(0x48),0x875a00(0x48),0x875aa0(0x48),0x875b40(0x48),0x875be0(0x48),0x875c80(0x48),0x875d20(0x48),0x875dc0(0x48),0x875e60(0x48),0x875f00(0x48),0x875fa0(0x48),0x876040(0x48),0x8760e0(0x48),0x876180(0x48),0x876220(0x48),0x8762c0(0x48),0x876360(0x48),0x876400(0x48),0x8764a0(0x48),0x876540(0x48),0x8765e0(0x48),0x876680(0x48),0x876720(0x48),0x8767c0(0x48),0x876860(0x48),0x876900(0x48),0x8769a0(0x48),0x876a40(0x48),0x876ae0(0x48),0x876b80(0x48),0x876c20(0x48),0x876cc0(0x48),0x876d60(0x48),0x876e00(0x48),0x876ea0(0x48),0x876f40(0x48),0x876fe0(0x48),0x877080(0x48),0x877120(0x48),0x8771c0(0x48),0x877260(0x48),0x877300(0x48),0x8773a0(0x48),0x877440(0x48),0x8774e0(0x48),0x877580(0x48),0x877620(0x48),0x8776c0(0x48),0x877760(0x48),0x877800(0x48),0x8778a0(0x18),0x8778e0(0x48),0x877980(0x48),0x877a20(0x48),0x877ac0(0x48),0x877b60(0x48),0x877c00(0x48),0x877ca0(0x48),0x877d40(0x48),0x877de0(0x48),0x877e80(0x48),0x877f20(0x48),0x877fc0(0x48),0x878060(0x48),0x878100(0x48),0x8781a0(0x48),0x878240(0x48),0x8782e0(0x48),0x878380(0x48),0x878420(0x48),0x8784c0(0x48),0x878560(0x48),0x878600(0x48),0x8786a0(0x48),0x878740(0x48),0x8787e0(0x48),0x878880(0x48),0x878920(0x48),0x8789c0(0x48),0x878a60(0x48),0x878b00(0x48),0x878ba0(0x48),0x878c40(0x48),0x878ce0(0x48),0x878d80(0x48),0x878e20(0x48),0x878ec0(0x48),0x878f60(0x48),0x879000(0x48),0x8790a0(0x48),0x879140(0x48),0x8791e0(0x48),0x879280(0x48),0x879320(0x48),0x8793c0(0x48),0x879460(0x48),0x879500(0x48),0x8795a0(0x48),0x879640(0x48),0x8796e0(0x48),0x879780(0x48),0x879820(0x48),0x8798c0(0x48),0x879960(0x48),0x879a00(0x48),0x879aa0(0x48),0x879b40(0x48),0x879be0(0x48),0x879c80(0x48),0x879d20(0x48),0x879dc0(0x48),0x879e60(0x48),0x879f00(0x48),0x879fa0(0x48),0x87a040(0x48),0x87a0e0(0x48),0x87a180(0x48),0x87a220(0x48),0x87a2c0(0x48),0x87a360(0x48),0x87a400(0x48),0x87a4a0(0x48),0x87a540(0x48),0x87a5e0(0x48),0x87a680(0x48),0x87a720(0x48),0x87a7c0(0x48),0x87a860(0x48),0x87a900(0x48),0x87a9a0(0x48),0x87aa40(0x48),0x87aae0(0x48),0x87ab80(0x48),0x87ac20(0x48),0x87acc0(0x48),0x87ad60(0x48),0x87ae00(0x48),0x87aea0(0x48),0x87af40(0x48),0x87afe0(0x48),0x87b080(0x48),0x87b120(0x48),0x87b1c0(0x48),0x87b260(0x48),0x87b300(0x48),0x87b3a0(0x48),0x87b440(0x48),0x87b4e0(0x48),0x87b580(0x48),0x87b620(0x48),0x87b6c0(0x48),0x87b760(0x48),0x87b800(0x48),0x87b8a0(0x48),0x87b940(0x48),0x87b9e0(0x40),0x87ba80(0x40),0x87bb20(0x40),0x87bbc0(0x40),0x87bc60(0x40),0x87bd00(0x40),0x87bda0(0x40),0x87be40(0x40),0x87bee0(0x28),0x87bf60(0x28),0x87bfe0(0x28),0x87c060(0x28),0x87c0e0(0x28),0x87c160(0x28),0x87c1e0(0x28),0x87c260(0x28),0x87c2e0(0x28),0x87c360(0x18),0x87c3a0(0x18),0x87c3c0(0x20),0x87c440(0x18),0x87c480(0x28),0x87c500(0x28),0x87c580(0x10),0x87c5a0(0x28),0x87c620(0x18),0x87c660(0x18),0x87c680(0x28),0x87c700(0x18),0x87c740(0x18),0x87c760(0x20),0x87c7e0(0x28),0x87c860(0x28),0x87c8e0(0x28),0x87c960(0x10),0x87c9a0(0x10),0x87c9c0(0x28),0x87ca40(0x10),0x87ca80(0x18),0x87caa0(0x28),0x87cb20(0x18),0x87cb60(0x28),0x87cbe0(0x28),0x87cc60(0x10),0x87cc80(0x20),0x87cd00(0x10),0x87cd40(0x18),0x87cd60(0x28),0x87cde0(0x18),0x87ce20(0x28),0x87cea0(0x28),0x87cf20(0x28),0x87cfa0(0x10),0x87cfc0(0x28),0x87d040(0x20),0x87d0c0(0x28),0x87d140(0x28),0x87d1c0(0x20),0x87d240(0x28),0x87d2c0(0x28),0x87d340(0x20),0x87d3c0(0x28),0x87d440(0x28),0x87d4c0(0x20),0x87d540(0x28),0x87d5c0(0x28),0x87d640(0x20),0x87d6c0(0x28),0x87d740(0x28),0x87d7c0(0x20),0x87d840(0x28),0x87d8c0(0x28),0x87d940(0x20),0x87d9c0(0x28),0x87da40(0x28),0x87dac0(0x20),0x87db40(0x28),0x87dbc0(0x28),0x87dc40(0x20),0x87dcc0(0x28),0x87dd40(0x28),0x87ddc0(0x20),0x87de40(0x28),0x87dec0(0x28),0x87df40(0x20),0x87dfc0(0x28),0x87e040(0x28),0x87e0c0(0x20),0x87e140(0x28),0x87e1c0(0x28),0x87e240(0x20),0x87e2c0(0x28),0x87e340(0x28),0x87e3c0(0x20),0x87e440(0x28),0x87e4c0(0x28),0x87e540(0x20),0x87e5c0(0x28),0x87e640(0x28),0x87e6c0(0x20),0x87e740(0x28),0x87e7c0(0x28),0x87e840(0x20),0x87e8c0(0x28),0x87e940(0x10),0x87e980(0x48),0x87ea20(0x48),0x87eac0(0x48),0x87eb60(0x48),0x87ec00(0x48),0x87eca0(0x48),0x87ed40(0x48),0x87ede0(0x48),0x87ee80(0x48),0x87ef20(0x48),0x87efc0(0x48),0x87f060(0x48),0x87f100(0x48),0x87f1a0(0x48),0x87f240(0x48),0x87f2e0(0x48),0x87f380(0x48),0x87f420(0x48),0x87f4c0(0x38),0x87f520(0x38),0x87f560(0x28),0x87f5e0(0x38),0x87f640(0x38),0x87f680(0x28),0x87f700(0x38),0x87f760(0x38),0x87f7a0(0x20),0x87f820(0x38),0x87f880(0x38),0x87f8c0(0x28),0x87f940(0x38),0x87f9a0(0x38),0x87f9e0(0x28),0x87fa60(0x38),0x87fac0(0x38),0x87fb00(0x20),0x87fb80(0x38),0x87fbe0(0x38),0x87fc20(0x28),0x87fca0(0x38),0x87fd00(0x38),0x87fd40(0x28),0x87fdc0(0x38),0x87fe20(0x38),0x87fe60(0x20),0x87fee0(0x38),0x87ff40(0x38),0x87ff80(0x28),0x880000(0x38),0x880060(0x38),0x8800a0(0x28),0x880120(0x38),0x880180(0x38),0x8801c0(0x20),0x880240(0x38),0x8802a0(0x38),0x8802e0(0x28),0x880360(0x38),0x8803c0(0x38),0x880400(0x28),0x880480(0x38),0x8804e0(0x38),0x880520(0x20),0x8805a0(0x38),0x880600(0x38),0x880640(0x28),0x8806c0(0x38),0x880720(0x38),0x880760(0x28),0x8807e0(0x38),0x880840(0x38),0x880880(0x20),0x880900(0x38),0x880960(0x38),0x8809a0(0x28),0x880a20(0x38),0x880a80(0x38),0x880ac0(0x28),0x880b40(0x38),0x880ba0(0x38),0x880be0(0x20),0x880c60(0x38),0x880cc0(0x38),0x880d00(0x28),0x880d80(0x38),0x880de0(0x38),0x880e20(0x28),0x880ea0(0x28),0x880f20(0x28),0x880fa0(0x20),0x881020(0x28),0x8810a0(0x28),0x881120(0x20),0x8811a0(0x28),0x881220(0x28),0x8812a0(0x20),0x881320(0x28),0x8813a0(0x28),0x881420(0x20),0x8814a0(0x28),0x881520(0x28),0x8815a0(0x20),0x881620(0x28),0x8816a0(0x28),0x881720(0x20),0x8817a0(0x28),0x881820(0x28),0x8818a0(0x20),0x881920(0x28),0x8819a0(0x28),0x881a20(0x20),0x881aa0(0x28),0x881b20(0x28),0x881ba0(0x20),0x881c20(0x28),0x881ca0(0x28),0x881d20(0x20),0x881da0(0x28),0x881e20(0x28),0x881ea0(0x20),0x881f20(0x28),0x881fa0(0x28),0x882020(0x20),0x8820a0(0x28),0x882120(0x28),0x8821a0(0x20),0x882220(0x28),0x8822a0(0x28),0x882320(0x20),0x8823a0(0x28),0x882420(0x28),0x8824a0(0x20),0x882520(0x28),0x8825a0(0x28),0x882620(0x20),0x8826a0(0x40),0x882740(0x40),0x8827e0(0x40),0x882880(0x40),0x882920(0x40),0x8829c0(0x40),0x882a60(0x40),0x882b00(0x40),0x882ba0(0x40),0x882c40(0x40),0x882ce0(0x40),0x882d80(0x40),0x882e20(0x40),0x882ec0(0x40),0x882f60(0x40),0x883000(0x40),0x8830a0(0x40),0x883140(0x40),0x8831e0(0x40),0x883280(0x40),0x883320(0x40),0x8833c0(0x40),0x883460(0x40),0x883500(0x40),0x8835a0(0x40),0x883640(0x40),0x8836e0(0x40),0x883780(0x40),0x883820(0x40),0x8838c0(0x40),0x883960(0x40),0x883a00(0x40),0x883aa0(0x40),0x883b40(0x40),0x883c00(0x28),0x883c80(0x20),0x883d00(0x40),0x883da0(0x40),0x883e40(0x40),0x883ee0(0x40),0x883f80(0x40),0x884020(0x40),0x8840c0(0x40),0x884160(0x40),0x884200(0x40),0x8842a0(0x40),0x884340(0x40),0x8843e0(0x40),0x884480(0x40),0x884520(0x40),0x8845c0(0x40),0x884660(0x40),0x884700(0x40),0x8847a0(0x20),0x884820(0x28),0x8848a0(0x28),0x884920(0x20),0x8849a0(0x28),0x884a20(0x28),0x884aa0(0x20),0x884b20(0x28),0x884ba0(0x28),0x884c20(0x20),0x884ca0(0x28),0x884d20(0x28),0x884da0(0x20),0x884e20(0x28),0x884ea0(0x28),0x884f20(0x20),0x884fa0(0x28),0x885020(0x28),0x8850a0(0x20),0x885120(0x28),0x8851a0(0x28),0x885220(0x20),0x8852a0(0x28),0x885320(0x28),0x8853a0(0x20),0x885420(0x28),0x8854a0(0x28),0x885520(0x20),0x8855a0(0x28),0x885620(0x28),0x8856a0(0x20),0x885720(0x28),0x8857a0(0x28),0x885820(0x20),0x8858a0(0x28),0x885920(0x28),0x8859a0(0x20),0x885a20(0x38),0x885a80(0x38),0x885b40(0x38),0x885ba0(0x38),0x885c60(0x38),0x885cc0(0x38),0x885d80(0x38),0x885de0(0x38),0x885ea0(0x38),0x885f00(0x38),0x885fc0(0x38),0x886020(0x38),0x8860e0(0x38),0x886140(0x38),0x886200(0x38),0x886260(0x38),0x886320(0x38),0x886380(0x38),0x886440(0x38),0x8864a0(0x38),0x886560(0x38),0x8865c0(0x38),0x886680(0x38),0x8866e0(0x38),0x8867a0(0x38),0x886800(0x38),0x8868c0(0x38),0x886920(0x38),0x8869e0(0x38),0x886a40(0x38),0x886b00(0x38),0x886b60(0x38),0x886c20(0x38),0x886c80(0x38),0x886d40(0x38),0x886da0(0x38),0x886e60(0x38),0x886ec0(0x38),0x886f80(0x38),0x886fe0(0x38),0x8870a0(0x38),0x887100(0x38),0x8871c0(0x38),0x887220(0x38),0x887260(0x20),0x8872e0(0x38),0x887340(0x38),0x887380(0x20),0x887400(0x28),0x887480(0x28),0x887500(0x20),0x887580(0x28),0x887600(0x28),0x887680(0x20),0x887700(0x28),0x887780(0x28),0x887800(0x20),0x887880(0x28),0x887900(0x28),0x887980(0x20),0x887a00(0x28),0x887a80(0x28),0x887b00(0x20),0x887b80(0x28),0x887c00(0x28),0x887c80(0x20),0x887d00(0x28),0x887d80(0x28),0x887e00(0x20),0x887e80(0x28),0x887f00(0x28),0x887f80(0x20),0x888000(0x28),0x888080(0x28),0x888100(0x20),0x888180(0x28),0x888200(0x28),0x888280(0x20),0x888300(0x28),0x888380(0x28),0x888400(0x20),0x888480(0x28),0x888500(0x28),0x888580(0x20),0x888600(0x28),0x888680(0x28),0x888700(0x20),0x888780(0x28),0x888800(0x28),0x888880(0x20),0x888900(0x28),0x888980(0x28),0x888a00(0x20),0x888a80(0x28),0x888b00(0x28),0x888b80(0x20),0x888c00(0x40),0x888ca0(0x40),0x888d40(0x40),0x888de0(0x40),0x888e80(0x40),0x888f20(0x40),0x888fc0(0x40),0x889060(0x40),0x889100(0x40),0x8891a0(0x40),0x889240(0x40),0x8892e0(0x40),0x889380(0x40),0x889420(0x40),0x8894c0(0x40),0x889560(0x40),0x889600(0x40),0x8896a0(0x40),0x889740(0x40),0x8897e0(0x40),0x889880(0x40),0x889920(0x40),0x8899c0(0x40),0x889a60(0x40),0x889b00(0x40),0x889ba0(0x40),0x889c40(0x40),0x889ce0(0x40),0x889d80(0x40),0x889e20(0x40),0x889ec0(0x40),0x889f60(0x40),0x88a000(0x40),0x88a0a0(0x40),0x88a140(0x40),0x88a1e0(0x40),0x88a280(0x40),0x88a320(0x40),0x88a3c0(0x40),0x88a460(0x40),0x88a500(0x40),0x88a5a0(0x40),0x88a640(0x40),0x88a6e0(0x40),0x88a780(0x40),0x88a820(0x40),0x88a8c0(0x40),0x88a960(0x40),0x88aa00(0x40),0x88aaa0(0x40),0x88ab40(0x40),0x88abe0(0x40),0x88ac80(0x40),0x88ad20(0x40),0x88adc0(0x40),0x88ae60(0x40),0x88af00(0x40),0x88afa0(0x40),0x88b040(0x40),0x88b0e0(0x40),0x88b180(0x40),0x88b220(0x40),0x88b2c0(0x40),0x88b360(0x40),0x88b400(0x40),0x88b4a0(0x40),0x88b540(0x40),0x88b5e0(0x40),0x88b680(0x40),0x88b720(0x40),0x88b7c0(0x40),0x88b860(0x40),0x88b900(0x40),0x88b9a0(0x40),0x88ba40(0x40),0x88bae0(0x40),0x88bb80(0x40),0x88bc20(0x40),0x88bcc0(0x40),0x88bd60(0x40),0x88be00(0x40),0x88bea0(0x40),0x88bf40(0x40),0x88bfe0(0x40),0x88c080(0x40),0x88c120(0x40),0x88c1c0(0x40),0x88c260(0x40),0x88c300(0x40),0x88c3a0(0x40),0x88c440(0x40),0x88c4e0(0x40),0x88c580(0x40),0x88c620(0x40),0x88c6c0(0x40),0x88c760(0x40),0x88c800(0x40),0x88c8a0(0x10),0x88c8e0(0x10),0x88c980(0x10),0x88c9c0(0x10),0x88ca60(0x10),0x88f580(0x78),0x890860(0x8aa0)

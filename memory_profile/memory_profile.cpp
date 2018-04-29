@@ -83,7 +83,7 @@ public:
     void display (const std::string &prefix);
     void record_access (ADDRINT memory_addr, UINT32 bytes_accessed);
 
-    memory_regions_usage() : cache_line_size(sysconf (_SC_LEVEL1_DCACHE_LINESIZE)) {};
+    memory_regions_usage() {};
 private:
     static const UINT32 max_mem_access_size = 64;
 
@@ -109,7 +109,8 @@ private:
     std::map<ADDRINT,region_info> memory_regions;
     typedef std::map<ADDRINT,region_info>::iterator region_iter;
 
-    const ADDRINT cache_line_size;
+    /* @todo Hard coded as sysconf (_SC_LEVEL1_DCACHE_LINESIZE) is not supported by the PinCRT */
+    static const ADDRINT cache_line_size = 64;
 
     /**
      * @details

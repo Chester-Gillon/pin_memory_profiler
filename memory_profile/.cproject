@@ -4,7 +4,7 @@
 		<cconfiguration id="cdt.managedbuild.config.gnu.so.debug.250684695">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.so.debug.250684695" moduleId="org.eclipse.cdt.core.settings" name="Debug">
 				<macros>
-					<stringMacro name="PIN_ROOT_DIR" type="VALUE_PATH_DIR" value="${HOME}/pin-2.14-67254-gcc.4.4.7-linux"/>
+					<stringMacro name="PIN_ROOT_DIR" type="VALUE_PATH_DIR" value="${HOME}/pin-3.6-97554-gcc-linux"/>
 				</macros>
 				<externalSettings>
 					<externalSetting>
@@ -36,7 +36,8 @@
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/include/pin&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/include/pin/gen&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/components/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed2-intel64/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed-intel64/include/xed&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/tools/InstLib&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1799990935" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="BIGARRAY_MULTIPLIER=1"/>
@@ -44,8 +45,10 @@
 									<listOptionValue builtIn="false" value="HOST_IA32E"/>
 									<listOptionValue builtIn="false" value="TARGET_LINUX"/>
 									<listOptionValue builtIn="false" value="_GLIBCXX_USE_CXX11_ABI=0"/>
+									<listOptionValue builtIn="false" value="PIN_CRT=1"/>
+									<listOptionValue builtIn="false" value="__PIN__=1"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.other.other.1956052256" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -fPIC -fabi-version=2" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.1956052256" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-fno-stack-protector -fno-exceptions -funwind-tables -fasynchronous-unwind-tables -fno-rtti -c -fmessage-length=0 -fPIC -fabi-version=2 -isystem ${PIN_ROOT_DIR}/extras/stlport/include -isystem ${PIN_ROOT_DIR}/extras/libstdc++/include -isystem ${PIN_ROOT_DIR}/extras/crt/include -isystem ${PIN_ROOT_DIR}/extras/crt/include/arch-x86_64 -isystem ${PIN_ROOT_DIR}/extras/crt/include/kernel/uapi -isystem ${PIN_ROOT_DIR}/extras/crt/include/kernel/uapi/asm-x86" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.dialect.std.366324602" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1771105882" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -66,19 +69,27 @@
 									<listOptionValue builtIn="false" value="-Bsymbolic"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1180899770" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/cpplibs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/pincrt&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/lib-ext&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/glibc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed2-intel64/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed-intel64/lib&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.415740685" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="pin"/>
 									<listOptionValue builtIn="false" value="xed"/>
-									<listOptionValue builtIn="false" value="dwarf"/>
-									<listOptionValue builtIn="false" value="elf"/>
-									<listOptionValue builtIn="false" value="dl"/>
+									<listOptionValue builtIn="false" value="pin3dwarf"/>
+									<listOptionValue builtIn="false" value="dl-dynamic"/>
+									<listOptionValue builtIn="false" value="stlport-dynamic"/>
+									<listOptionValue builtIn="false" value="m-dynamic"/>
+									<listOptionValue builtIn="false" value="c-dynamic"/>
+									<listOptionValue builtIn="false" value="unwind-dynamic"/>
 								</option>
+								<option id="gnu.cpp.link.option.userobjs.483618755" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/pincrt/crtbeginS.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/pincrt/crtendS.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/tools/InstLib/obj-intel64/controller.a&quot;"/>
+								</option>
+								<option id="gnu.cpp.link.option.nostdlibs.372915639" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.2058235631" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -98,7 +109,7 @@
 		<cconfiguration id="cdt.managedbuild.config.gnu.so.release.1960647617">
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.so.release.1960647617" moduleId="org.eclipse.cdt.core.settings" name="Release">
 				<macros>
-					<stringMacro name="PIN_ROOT_DIR" type="VALUE_PATH_DIR" value="${HOME}/pin-2.14-67254-gcc.4.4.7-linux"/>
+					<stringMacro name="PIN_ROOT_DIR" type="VALUE_PATH_DIR" value="${HOME}/pin-3.6-97554-gcc-linux"/>
 				</macros>
 				<externalSettings>
 					<externalSetting>
@@ -132,14 +143,17 @@
 									<listOptionValue builtIn="false" value="HOST_IA32E"/>
 									<listOptionValue builtIn="false" value="TARGET_LINUX"/>
 									<listOptionValue builtIn="false" value="_GLIBCXX_USE_CXX11_ABI=0"/>
+									<listOptionValue builtIn="false" value="PIN_CRT=1"/>
+									<listOptionValue builtIn="false" value="__PIN__=1"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.include.paths.1588851097" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/include/pin&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/include/pin/gen&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/components/include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed2-intel64/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed-intel64/include/xed&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/tools/InstLib&quot;"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.other.other.2024984385" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -fPIC -fabi-version=2" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.other.other.2024984385" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-fno-stack-protector -fno-exceptions -funwind-tables -fasynchronous-unwind-tables -fno-rtti -c -fmessage-length=0 -fPIC -fabi-version=2 -isystem ${PIN_ROOT_DIR}/extras/stlport/include -isystem ${PIN_ROOT_DIR}/extras/libstdc++/include -isystem ${PIN_ROOT_DIR}/extras/crt/include -isystem ${PIN_ROOT_DIR}/extras/crt/include/arch-x86_64 -isystem ${PIN_ROOT_DIR}/extras/crt/include/kernel/uapi -isystem ${PIN_ROOT_DIR}/extras/crt/include/kernel/uapi/asm-x86" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.dialect.std.2134436479" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.39656886" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -156,22 +170,30 @@
 								<option id="gnu.cpp.link.option.libs.778139404" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="pin"/>
 									<listOptionValue builtIn="false" value="xed"/>
-									<listOptionValue builtIn="false" value="dwarf"/>
-									<listOptionValue builtIn="false" value="elf"/>
-									<listOptionValue builtIn="false" value="dl"/>
+									<listOptionValue builtIn="false" value="pin3dwarf"/>
+									<listOptionValue builtIn="false" value="dl-dynamic"/>
+									<listOptionValue builtIn="false" value="stlport-dynamic"/>
+									<listOptionValue builtIn="false" value="m-dynamic"/>
+									<listOptionValue builtIn="false" value="c-dynamic"/>
+									<listOptionValue builtIn="false" value="unwind-dynamic"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1760885301" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/cpplibs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/pincrt&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/lib-ext&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/glibc&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed2-intel64/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/extras/xed-intel64/lib&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.other.735639514" name="Other options (-Xlinker [option])" superClass="gnu.cpp.link.option.other" useByScannerDiscovery="false" valueType="stringList">
 									<listOptionValue builtIn="false" value="--hash-style=sysv"/>
 									<listOptionValue builtIn="false" value="--version-script=&quot;${PIN_ROOT_DIR}/source/include/pin/pintool.ver&quot;"/>
 									<listOptionValue builtIn="false" value="-Bsymbolic"/>
 								</option>
+								<option id="gnu.cpp.link.option.userobjs.1826375394" name="Other objects" superClass="gnu.cpp.link.option.userobjs" useByScannerDiscovery="false" valueType="userObjs">
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/pincrt/crtbeginS.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/intel64/runtime/pincrt/crtendS.o&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${PIN_ROOT_DIR}/source/tools/InstLib/obj-intel64/controller.a&quot;"/>
+								</option>
+								<option id="gnu.cpp.link.option.nostdlibs.1944412043" name="No startup or default libs (-nostdlib)" superClass="gnu.cpp.link.option.nostdlibs" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.325445406" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
